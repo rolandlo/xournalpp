@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-13 17:12+0000\n"
-"PO-Revision-Date: 2020-04-15 22:53\n"
+"PO-Revision-Date: 2020-04-21 21:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Basque\n"
 "Language: eu_ES\n"
@@ -1182,7 +1182,7 @@ msgstr "Lodia"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:81
 msgid "Thickness - don't change"
-msgstr "Zabalera - ez aldatu"
+msgstr "Lodiera - ez aldatu"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:82
 msgid "Thin"
@@ -1689,7 +1689,7 @@ msgstr "<i>Hardware zehatz batzuetarako sistemaren korritze / ukipen portaera ez
 msgid "<i>If the document already was saved you can find it in the same folder with the extension .autosave.xoj\n"
 "If the file was not yet saved you can find it in your home directory, in ~/.xournalpp/autosave</i>"
 msgstr "<i>Dokumentua dagoeneko gorde baduzu .autosave.xoj luzapenarekin aurki dezakezu karpeta berean \n"
-"Fitxategia oraindik gorde ez baduzu zure karpeta nagusian aurki dezakezu ~ / .xournalpp / autosave</i>"
+"Fitxategia oraindik gorde ez baduzu zure karpeta nagusian aurki dezakezu ~/.xournalpp/autosave</i>"
 
 #: ../ui/settings.glade:2868
 msgid "<i>If you add additional space beside the pages you can choose the area of the screen you would like to work on.</i>"
@@ -1731,7 +1731,7 @@ msgstr "<i>Zehaztu hautatuko diren tresnak arkatzaren botoi bat sakatzen bada ed
 
 #: ../ui/settings.glade:353
 msgid "<i>This name will be proposed if you save a new document.</i>"
-msgstr "<i>Izen hori proposatuko da dokumentu berri bat gordetzen baduzu.</i>"
+msgstr "<i>Izen hauproposatuko da dokumentu berri bat gordetzen baduzu.</i>"
 
 #: ../ui/settings.glade:2692
 msgid "<i>To make sure on 100% zoom the size of elements is natural. (requires restart)</i>"
@@ -1739,7 +1739,7 @@ msgstr "<i>Ziurtatzeko zooma %100ean elementuen tamaina naturala da. (berrabiara
 
 #: ../ui/settings.glade:1962
 msgid "<i>Toggle visibility of menubar with F10</i>"
-msgstr "<i>Aldatu menu-barraren ikusgarritasuna F10-rekin</i>"
+msgstr "<i>Aldatu menu-barraren ikusgarritasuna F10ekin</i>"
 
 #: ../ui/settings.glade:1755
 msgid "<i>Use pinch gestures to zoom journal pages.</i>"
@@ -1811,7 +1811,7 @@ msgstr "Gorde automatikoki"
 
 #: ../ui/settings.glade:472
 msgid "Available Placeholders"
-msgstr "Leku-markak eskuragarri"
+msgstr "Leku-marka eskuragarriak"
 
 #: ../ui/settings.glade:2026
 msgid "Background color between pages"
@@ -2025,7 +2025,7 @@ msgstr "Ezabagailu mota - ez aldatu"
 
 #: ../ui/settings.glade:677
 msgid "Experimental Input System"
-msgstr "Sarrera sistema esperimentala"
+msgstr "Sarreren sistema esperimentala"
 
 #: ../ui/exportSettings.glade:25
 msgid "Export"
@@ -2145,7 +2145,7 @@ msgstr "Sarrerako gailuak"
 
 #: ../ui/settings.glade:869
 msgid "Input System"
-msgstr "Sarrerako sistema"
+msgstr "Sarreren sistema"
 
 #: ../ui/texdialog.glade:9
 msgid "Insert Latex"
@@ -2325,7 +2325,7 @@ msgstr "Aurkezpen modua"
 
 #: ../ui/settings.glade:1136
 msgid "Pressure Sensitivity"
-msgstr "Presio sentsibilitatea"
+msgstr "Presioaren sentsibilitatea"
 
 #: ../ui/about.glade:167
 msgid "RELEASE_IDENTIFIER"
@@ -2634,11 +2634,11 @@ msgstr "_PDF oharpenak"
 
 #: ../ui/main.glade:593
 msgid "_Bottom to Top"
-msgstr "_Goitik behera"
+msgstr "_Behetik gora"
 
 #: ../ui/main.glade:608
 msgid "_Cols/Rows"
-msgstr "_Zut/Errenk"
+msgstr "_Zutabe/Errenkada"
 
 #: ../ui/main.glade:868
 msgid "_Customize"
@@ -2730,7 +2730,7 @@ msgstr "_Arkatza"
 
 #: ../ui/main.glade:1896
 msgid "_Plugin"
-msgstr "_Gehigarria"
+msgstr "_Pluginak"
 
 #: ../ui/main.glade:475
 msgid "_Presentation Mode"
@@ -2822,7 +2822,7 @@ msgstr "gaituta,"
 
 #: ../ui/settings.glade:266
 msgid "every"
-msgstr "bakoitza"
+msgstr "maiztasuna"
 
 #: ../ui/pageTemplate.glade:51
 msgid "load from file"
