@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-13 17:12+0000\n"
-"PO-Revision-Date: 2020-04-13 17:26\n"
+"PO-Revision-Date: 2020-04-26 05:33\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
@@ -36,7 +36,7 @@ msgstr ""
 
 #: ../src/gui/dialog/SettingsDialog.cpp:102
 msgid "<b>No devices were found. This seems wrong - maybe file a bug report?</b>"
-msgstr ""
+msgstr "<b>לא נמצא שום מכשיר. נראה שישנה בעיה - תרצה לדווח על באג?</b>"
 
 #: ../src/control/XournalMain.cpp:504
 msgid "<span foreground='red' size='x-large'>Missing the needed UI file:\n"
@@ -57,20 +57,20 @@ msgstr ""
 
 #: ../src/control/stockdlg/XojOpenDlg.cpp:35
 msgid "All files"
-msgstr ""
+msgstr "כל הקבצים"
 
 #: ../src/control/pagetype/PageTypeMenu.cpp:197
 msgid "Apply to all pages"
-msgstr ""
+msgstr "יישם לכל הדפים"
 
 #: ../src/control/pagetype/PageTypeMenu.cpp:188
 msgid "Apply to current page"
-msgstr ""
+msgstr "יישם לדף הנוכחי"
 
 #: ../src/control/stockdlg/ImageOpenDlg.cpp:27
 #: ../src/control/stockdlg/XojOpenDlg.cpp:112
 msgid "Attach file to the journal"
-msgstr ""
+msgstr "הצמד קובץ אל היומן"
 
 #: ../src/control/xojfile/LoadHandlerHelper.cpp:104
 msgid "Attribute \"{1}\" could not be parsed as double, the value is \"{2}\""
@@ -105,53 +105,54 @@ msgstr ""
 #: ../src/control/AudioController.cpp:92
 msgid "Audio folder not set! Recording won't work!\n"
 "Please set the recording folder under \"Preferences > Audio recording\""
-msgstr ""
+msgstr "לא נבחרה תיקית שמע! הקלטה לא תעבוד!\n"
+"אנא בחר תיקיית אודיו תחת העדפות>הקלטת שמע\""
 
 #: ../src/control/Control.cpp:239
 msgid "Autosave failed with an error: {1}"
-msgstr ""
+msgstr "שמירה אוטומטית נכשלה עם שגיאה: {1}"
 
 #: ../src/control/Control.cpp:205
 msgid "Autosave renamed from {1} to {2}"
-msgstr ""
+msgstr "שמירה אוטומטית החליפה שם מ- {1} ל- {2}"
 
 #: ../src/control/jobs/AutosaveJob.cpp:44
 msgid "Autosaving to {1}"
-msgstr ""
+msgstr "שומר אוטומטית ל- {1}"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:365
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:436
 msgid "Back"
-msgstr ""
+msgstr "חזרה"
 
 #: ../src/gui/sidebar/previews/layer/SidebarPreviewLayerEntry.cpp:19
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:191
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:231
 msgid "Background"
-msgstr ""
+msgstr "רקע"
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:10
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:103
 msgid "Black"
-msgstr ""
+msgstr "שחור"
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:14
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:107
 msgid "Blue"
-msgstr ""
+msgstr "כחול"
 
 #: ../src/control/Control.cpp:1997 ../src/control/Control.cpp:2449
 #: ../src/control/XournalMain.cpp:119
 msgid "Cancel"
-msgstr ""
+msgstr "ביטול"
 
 #: ../src/undo/ColorUndoAction.cpp:90
 msgid "Change color"
-msgstr ""
+msgstr "שנה צבע"
 
 #: ../src/undo/FontUndoAction.cpp:105
 msgid "Change font"
-msgstr ""
+msgstr "שנה גופן"
 
 #: ../src/undo/FillUndoAction.cpp:79
 msgid "Change stroke fill"
@@ -167,29 +168,29 @@ msgstr ""
 
 #: ../src/gui/sidebar/indextree/SidebarIndexPage.cpp:226
 msgid "Contents"
-msgstr ""
+msgstr "תוכן"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:331
 #: ../src/gui/toolbarMenubar/model/ToolbarModel.cpp:75
 #: ../src/gui/toolbarMenubar/model/ToolbarModel.cpp:81
 msgid "Copy"
-msgstr ""
+msgstr "העתק"
 
 #: ../src/control/pagetype/PageTypeHandler.cpp:28
 msgid "Copy current"
-msgstr ""
+msgstr "העתק נוכחי"
 
 #: ../src/undo/CopyUndoAction.cpp:60
 msgid "Copy page"
-msgstr ""
+msgstr "העתק דף"
 
 #: ../src/control/jobs/SaveJob.cpp:99
 msgid "Could not create backup! (The file was created from an older Xournal version)"
-msgstr ""
+msgstr "לא ניתן ליצור גיבוי! (הקובץ נוצר בגרסה ישנה יותר של Xournal)"
 
 #: ../src/util/Util.cpp:104
 msgid "Could not create folder: {1}"
-msgstr ""
+msgstr "לא ניתן ליצור תיקייה: {1}"
 
 #: ../src/control/LatexController.cpp:69
 msgid "Could not find pdflatex in PATH.\n"
@@ -240,7 +241,7 @@ msgstr ""
 
 #: ../src/control/xojfile/LoadHandler.cpp:154
 msgid "Could not open file: \"{1}\""
-msgstr ""
+msgstr "קובץ \"{1}\" לא ניתן לפתיחה"
 
 #: ../src/gui/MainWindow.cpp:86
 msgid "Could not parse custom toolbar.ini file: {1}\n"
@@ -255,12 +256,13 @@ msgstr ""
 #: ../src/control/xojfile/LoadHandler.cpp:340
 #: ../src/control/xojfile/LoadHandler.cpp:364
 msgid "Could not read image: {1}. Error message: {2}"
-msgstr ""
+msgstr "לא ניתן לקרוא את התמונה: {1}. הודעת שגיאה {2}"
 
 #: ../src/undo/UndoRedoHandler.cpp:137
 msgid "Could not redo \"{1}\"\n"
 "Something went wrong… Please write a bug report…"
-msgstr ""
+msgstr "לא ניתן לבטל פעולה \"{1}\"\n"
+"ישנה בעיה…אנא דווח על באג…"
 
 #: ../src/gui/dialog/toolbarCustomize/ToolbarAdapter.cpp:169
 msgid "Could not remove tool item from Toolbar {1} on position {2}"
@@ -297,15 +299,15 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:74
 msgid "Create new layer"
-msgstr ""
+msgstr "צור שכבה חדשה"
 
 #: ../src/gui/dialog/FormatDialog.cpp:67
 msgid "Custom"
-msgstr ""
+msgstr "מותאם אישית"
 
 #: ../src/control/jobs/CustomExportJob.cpp:18
 msgid "Custom Export"
-msgstr ""
+msgstr "ייצוא מותאם אישית"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:354
 msgid "Customize Toolbars"
@@ -313,40 +315,40 @@ msgstr ""
 
 #: ../src/gui/dialog/ToolbarManageDialog.cpp:29
 msgid "Customized"
-msgstr ""
+msgstr "הותאם אישית"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:330
 msgid "Cut"
-msgstr ""
+msgstr "חתוך"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:401
 msgid "Default Tool"
-msgstr ""
+msgstr "כלי ברירת מחדל"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:336
 #: ../src/undo/DeleteUndoAction.cpp:74
 msgid "Delete"
-msgstr ""
+msgstr "מחק"
 
 #: ../src/control/XournalMain.cpp:118
 msgid "Delete Logfile"
-msgstr ""
+msgstr "מחק קובץ לוג"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:385
 msgid "Delete current page"
-msgstr ""
+msgstr "מחק דף נוכחי"
 
 #: ../src/control/XournalMain.cpp:162
 msgid "Delete file"
-msgstr ""
+msgstr "מחק קובץ"
 
 #: ../src/undo/RemoveLayerUndoAction.cpp:28
 msgid "Delete layer"
-msgstr ""
+msgstr "מחק שכבה"
 
 #: ../src/control/Control.cpp:2446
 msgid "Discard"
-msgstr ""
+msgstr "השלך"
 
 #: ../src/control/Control.cpp:1938
 msgid "Do not open Autosave files. They may will be overwritten!\n"
@@ -360,7 +362,7 @@ msgstr ""
 
 #: ../src/control/Control.cpp:2440
 msgid "Document file was removed."
-msgstr ""
+msgstr "קובץ המסמך הוסר."
 
 #: ../src/control/xojfile/LoadHandler.cpp:233
 msgid "Document is corrupted (no pages found in file)"
@@ -382,18 +384,18 @@ msgstr ""
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:30
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:406
 msgid "Draw Arrow"
-msgstr ""
+msgstr "צייר חץ"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:99
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:29
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:405
 msgid "Draw Circle"
-msgstr ""
+msgstr "צייר עיגול"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:95
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:31
 msgid "Draw Line"
-msgstr ""
+msgstr "צייר קו"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:97
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:24
@@ -402,7 +404,7 @@ msgstr ""
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:94
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:404
 msgid "Draw Rectangle"
-msgstr ""
+msgstr "צייר מלבן"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:107
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:34
@@ -426,7 +428,7 @@ msgstr ""
 
 #: ../src/undo/TextBoxUndoAction.cpp:36
 msgid "Edit text"
-msgstr ""
+msgstr "ערוך טקסט"
 
 #: ../src/undo/EmergencySaveRestore.cpp:19
 msgid "Emergency saved document"
@@ -440,7 +442,7 @@ msgstr ""
 #: ../src/gui/dialog/ButtonConfigGui.cpp:58
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:247
 msgid "Eraser"
-msgstr ""
+msgstr "מחק"
 
 #: ../src/control/Control.cpp:2187
 msgid "Error annotate PDF file \"{1}\"\n"
@@ -453,11 +455,11 @@ msgstr ""
 
 #: ../src/control/Control.cpp:2019
 msgid "Error opening file \"{1}\""
-msgstr ""
+msgstr "שגיאה בפתיחת קובץ \"{1}\""
 
 #: ../src/util/OutputStream.cpp:25
 msgid "Error opening file: \"{1}\""
-msgstr ""
+msgstr "שגיאה בפתיחת קובץ \"{1}\""
 
 #: ../src/control/xojfile/LoadHandler.cpp:439
 #: ../src/control/xojfile/LoadHandler.cpp:460
@@ -478,7 +480,7 @@ msgstr ""
 
 #: ../src/control/jobs/AutosaveJob.cpp:15
 msgid "Error while autosaving: {1}"
-msgstr ""
+msgstr "שגיאה תוך כדי שמירה אוטומטית: {1}"
 
 #: ../src/util/Util.cpp:167
 msgid "Error {1} executing system command: {2}"
@@ -486,7 +488,7 @@ msgstr ""
 
 #: ../src/util/CrashHandler.cpp:39
 msgid "Error: {1}"
-msgstr ""
+msgstr "שגיאה: {1}"
 
 #: ../src/control/LatexController.cpp:84
 msgid "Error: {1}\n"
@@ -500,7 +502,7 @@ msgstr ""
 
 #: ../src/control/jobs/BaseExportJob.cpp:16
 msgid "Export PDF"
-msgstr ""
+msgstr "ייצא PDF"
 
 #: ../src/util/Util.cpp:123 ../src/util/Util.cpp:140
 msgid "File couldn't be opened. You have to do it manually:\n"
@@ -509,7 +511,7 @@ msgstr ""
 
 #: ../src/control/Control.cpp:1963
 msgid "Filename: {1}"
-msgstr ""
+msgstr "שם קובץ: {1}"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:458
 msgid "Fill"
@@ -525,35 +527,35 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/FontButton.cpp:54
 msgid "Font"
-msgstr ""
+msgstr "גופן"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:433
 msgid "Forward"
-msgstr ""
+msgstr "קדימה"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:364
 msgid "Go to first page"
-msgstr ""
+msgstr "עבור לדף הראשון"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:368
 msgid "Go to last page"
-msgstr ""
+msgstr "עבור לדף האחרון"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:371
 msgid "Go to next layer"
-msgstr ""
+msgstr "עבור לשכבה הבאה"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:366
 msgid "Go to page"
-msgstr ""
+msgstr "עבור לדף"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:370
 msgid "Go to previous layer"
-msgstr ""
+msgstr "עבור לשכבה הקודמת"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:372
 msgid "Go to top layer"
-msgstr ""
+msgstr "עבור לשכבה העליונה"
 
 #: ../src/control/pagetype/PageTypeHandler.cpp:23
 msgid "Graph"
@@ -562,12 +564,12 @@ msgstr ""
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:15
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:108
 msgid "Gray"
-msgstr ""
+msgstr "אפור"
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:11
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:104
 msgid "Green"
-msgstr ""
+msgstr "ירוק"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:342
 msgid "Grid Snapping"
@@ -580,7 +582,7 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:68
 msgid "Hide all"
-msgstr ""
+msgstr "הסתר הכל"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:59
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:396
@@ -590,11 +592,11 @@ msgstr ""
 #: ../src/control/pagetype/PageTypeHandler.cpp:30
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:400
 msgid "Image"
-msgstr ""
+msgstr "תמונה"
 
 #: ../src/control/XournalMain.cpp:225
 msgid "Image file successfully created"
-msgstr ""
+msgstr "קובץ תמונה נוצר בהצלחה"
 
 #: ../src/control/XournalMain.cpp:272
 msgid "Image output filename (.png / .svg)"
@@ -602,15 +604,15 @@ msgstr ""
 
 #: ../src/control/stockdlg/ImageOpenDlg.cpp:17
 msgid "Images"
-msgstr ""
+msgstr "תמונות"
 
 #: ../src/undo/InsertUndoAction.cpp:79
 msgid "Insert elements"
-msgstr ""
+msgstr "הכנס אלמנטים"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:61 ../src/undo/InsertUndoAction.cpp:34
 msgid "Insert image"
-msgstr ""
+msgstr "הכנס תמונה"
 
 #: ../src/undo/InsertUndoAction.cpp:36
 msgid "Insert latex"
@@ -618,11 +620,11 @@ msgstr ""
 
 #: ../src/undo/InsertLayerUndoAction.cpp:26
 msgid "Insert layer"
-msgstr ""
+msgstr "הכנס שכבה"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:381
 msgid "Insert page"
-msgstr ""
+msgstr "הכנס דף"
 
 #: ../src/control/XournalMain.cpp:273
 msgid "Jump to Page (first Page: 1)"
@@ -630,42 +632,42 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:246
 msgid "Layer"
-msgstr ""
+msgstr "שכבה"
 
 #: ../src/gui/sidebar/previews/layer/SidebarPreviewLayers.cpp:56
 msgid "Layer Preview"
-msgstr ""
+msgstr "תצוגה מקדימה של שכבה"
 
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:236
 msgid "Layer selection"
-msgstr ""
+msgstr "בחירת שכבה"
 
 #: ../src/gui/sidebar/previews/layer/SidebarPreviewLayerEntry.cpp:21
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:182
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:229
 msgid "Layer {1}"
-msgstr ""
+msgstr "שכבה {1}"
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:12
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:105
 msgid "Light Blue"
-msgstr ""
+msgstr "כחול בהיר"
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:13
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:106
 msgid "Light Green"
-msgstr ""
+msgstr "ירוק בהיר"
 
 #: ../src/gui/PageView.cpp:687
 #: ../src/gui/sidebar/previews/base/SidebarPreviewBaseEntry.cpp:76
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:15
 msgid "Loading..."
-msgstr ""
+msgstr "טוען..."
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:17
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:110
 msgid "Magenta"
-msgstr ""
+msgstr "מג'נטה"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:353
 msgid "Manage Toolbars"
@@ -800,31 +802,31 @@ msgstr ""
 
 #: ../src/control/jobs/CustomExportJob.cpp:23
 msgid "PNG with transparent background"
-msgstr ""
+msgstr "PNG עם רקע שקוף"
 
 #: ../src/gui/toolbarMenubar/ToolPageSpinner.cpp:42
 msgid "Page"
-msgstr ""
+msgstr "דף"
 
 #: ../src/gui/sidebar/previews/page/SidebarPreviewPages.cpp:62
 msgid "Page Preview"
-msgstr ""
+msgstr "תצוגת עמוד מקדימה"
 
 #: ../src/undo/PageBackgroundChangedUndoAction.cpp:81
 msgid "Page background changed"
-msgstr ""
+msgstr "רקע השתנה"
 
 #: ../src/undo/InsertDeletePageUndoAction.cpp:98
 msgid "Page deleted"
-msgstr ""
+msgstr "דף נמחק"
 
 #: ../src/undo/InsertDeletePageUndoAction.cpp:94
 msgid "Page inserted"
-msgstr ""
+msgstr "דף הוכנס"
 
 #: ../src/gui/toolbarMenubar/ToolPageSpinner.cpp:31
 msgid "Page number"
-msgstr ""
+msgstr "מספר דף"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:348
 msgid "Paired pages"
@@ -833,16 +835,16 @@ msgstr ""
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:332
 #: ../src/undo/AddUndoAction.cpp:77
 msgid "Paste"
-msgstr ""
+msgstr "הדבק"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:427
 msgid "Pause / Play"
-msgstr ""
+msgstr "השהה / נגן"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:57
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:228
 msgid "Pen"
-msgstr ""
+msgstr "עט"
 
 #: ../src/control/pagetype/PageTypeHandler.cpp:19
 msgid "Plain"
@@ -856,37 +858,37 @@ msgstr ""
 
 #: ../src/gui/dialog/ToolbarManageDialog.cpp:17
 msgid "Predefined"
-msgstr ""
+msgstr "מוגדר מראש"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:350
 msgid "Presentation mode"
-msgstr ""
+msgstr "מצב תצוגה"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:425
 msgid "Record Audio / Stop Recording"
-msgstr ""
+msgstr "הקלט שמע / עצור הקלטה"
 
 #: ../src/control/Control.cpp:898
 msgid "Recorder could not be started."
-msgstr ""
+msgstr "לא ניתן להתחיל הקלטה."
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:16
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:109
 msgid "Red"
-msgstr ""
+msgstr "אדום"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:326
 #: ../src/undo/UndoRedoHandler.cpp:215
 msgid "Redo"
-msgstr ""
+msgstr "בצע מחדש"
 
 #: ../src/undo/UndoRedoHandler.cpp:210
 msgid "Redo: "
-msgstr ""
+msgstr "בצע מחדש: "
 
 #: ../src/control/Control.cpp:1996
 msgid "Remove PDF Background"
-msgstr ""
+msgstr "הסר רקע מ-PDF"
 
 #: ../src/gui/dialog/toolbarCustomize/ToolbarAdapter.cpp:160
 msgid "Removed tool item from Toolbar {1} ID {2}"
@@ -898,7 +900,7 @@ msgstr ""
 
 #: ../src/util/XojMsgBox.cpp:71
 msgid "Replace"
-msgstr ""
+msgstr "החלף"
 
 #: ../src/control/xojfile/LoadHandler.cpp:1041
 msgid "Requested temporary file was not found for attachment {1}"
@@ -906,11 +908,11 @@ msgstr ""
 
 #: ../src/control/XournalMain.cpp:163
 msgid "Restore file"
-msgstr ""
+msgstr "שחזר קובץ"
 
 #: ../src/undo/RotateUndoAction.cpp:53
 msgid "Rotation"
-msgstr ""
+msgstr "סיבוב"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:340
 msgid "Rotation Snapping"
@@ -926,7 +928,7 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:409
 msgid "Ruler"
-msgstr ""
+msgstr "סרגל"
 
 #: ../src/control/jobs/CustomExportJob.cpp:24
 msgid "SVG graphics"
@@ -939,20 +941,20 @@ msgstr ""
 #: ../src/control/Control.cpp:2441 ../src/control/jobs/SaveJob.cpp:13
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:319
 msgid "Save"
-msgstr ""
+msgstr "שמור"
 
 #: ../src/control/Control.cpp:2441
 msgid "Save As..."
-msgstr ""
+msgstr "שמירה בשם..."
 
 #: ../src/control/Control.cpp:2277 ../src/gui/dialog/PageTemplateDialog.cpp:83
 msgid "Save File"
-msgstr ""
+msgstr "שמור קובץ"
 
 #: ../src/control/jobs/CustomExportJob.cpp:128
 #: ../src/control/jobs/SaveJob.cpp:112
 msgid "Save file error: {1}"
-msgstr ""
+msgstr "שגיאה בשמירת קובץ: {1}"
 
 #: ../src/undo/ScaleUndoAction.cpp:52
 msgid "Scale"
@@ -960,11 +962,11 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:334
 msgid "Search"
-msgstr ""
+msgstr "חפש"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:421
 msgid "Select Font"
-msgstr ""
+msgstr "בחר גופן"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:416
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:19
@@ -978,42 +980,42 @@ msgstr ""
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:56
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:86
 msgid "Select Rectangle"
-msgstr ""
+msgstr "בחר מלבן"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:412
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:18
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:61
 msgid "Select Region"
-msgstr ""
+msgstr "בחר אזור"
 
 #: ../src/control/Control.cpp:1995
 msgid "Select another PDF"
-msgstr ""
+msgstr "בחר קובץ PDF נוסף"
 
 #: ../src/util/XojMsgBox.cpp:70
 msgid "Select another name"
-msgstr ""
+msgstr "בחר שם נוסף"
 
 #: ../src/gui/dialog/SelectBackgroundColorDialog.cpp:114
 msgid "Select background color"
-msgstr ""
+msgstr "בחר צבע רקע"
 
 #: ../src/gui/toolbarMenubar/ColorToolItem.cpp:39
 #: ../src/gui/toolbarMenubar/ColorToolItem.cpp:91
 msgid "Select color"
-msgstr ""
+msgstr "בחר צבע"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:64
 msgid "Select rectangle"
-msgstr ""
+msgstr "בחר מלבן"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:63
 msgid "Select region"
-msgstr ""
+msgstr "בחר אזור"
 
 #: ../src/control/XournalMain.cpp:115
 msgid "Send Bugreport"
-msgstr ""
+msgstr "שלח דיווח על באג"
 
 #: ../src/gui/dialog/toolbarCustomize/ToolbarCustomizeDialog.cpp:50
 msgid "Separator"
