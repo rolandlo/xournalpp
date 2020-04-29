@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 17:12+0000\n"
-"PO-Revision-Date: 2020-04-28 16:27\n"
+"POT-Creation-Date: 2020-04-29 17:18+0000\n"
+"PO-Revision-Date: 2020-04-29 17:26\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -32,7 +32,7 @@ msgctxt "Page {pagenumber} \"of {pagecount}\""
 msgid " of {1}{2}"
 msgstr " of {1}{2}"
 
-#: ../src/control/settings/Settings.cpp:100
+#: ../src/control/settings/Settings.cpp:105
 msgid "%F-Note-%H-%M"
 msgstr "%F-Note-%H-%M"
 
@@ -195,7 +195,7 @@ msgstr "Sayfayı kopyala"
 msgid "Could not create backup! (The file was created from an older Xournal version)"
 msgstr "Yedek oluşturulamadı! (Dosya daha eski bir Xournal sürümünden oluşturulmuş)"
 
-#: ../src/util/Util.cpp:104
+#: ../src/util/Util.cpp:107
 msgid "Could not create folder: {1}"
 msgstr "Klasör oluşturulamadı: {1}"
 
@@ -497,7 +497,7 @@ msgstr "Resim #2 kaydedilirken hata oluştu"
 msgid "Error while autosaving: {1}"
 msgstr "Otomatik kaydetme hatası: {1}"
 
-#: ../src/util/Util.cpp:167
+#: ../src/util/Util.cpp:170
 msgid "Error {1} executing system command: {2}"
 msgstr "Sistem komutu yürütülürken {1} hatası: {2}"
 
@@ -521,7 +521,7 @@ msgstr "Hata günlüğü silinemez. Elle yapmalısınız.\n"
 msgid "Export PDF"
 msgstr "PDF olarak dışa aktar"
 
-#: ../src/util/Util.cpp:123 ../src/util/Util.cpp:140
+#: ../src/util/Util.cpp:126 ../src/util/Util.cpp:143
 msgid "File couldn't be opened. You have to do it manually:\n"
 "URL: {1}"
 msgstr "Dosya açılamadı. Elle yapmalısınız:\n"
@@ -1521,7 +1521,7 @@ msgstr "xoj-preview-extractor: \"{1}\" çıktı dosyası açılamadı"
 msgid "xoj-preview-extractor: successfully extracted"
 msgstr "xoj-preview-extractor: başarıyla çıkarıldı"
 
-#: ../src/util/Util.cpp:96
+#: ../src/util/Util.cpp:99
 msgid "xournalpp-{1}"
 msgstr "xournalpp-{1}"
 
@@ -1529,11 +1529,11 @@ msgstr "xournalpp-{1}"
 msgid " = Floating Toolbox (experimental) ="
 msgstr " = Kayan Araç Kutusu (deneysel) ="
 
-#: ../ui/settings.glade:2635 ../ui/settings.glade:2646
+#: ../ui/settings.glade:2842 ../ui/settings.glade:2853
 msgid "%"
 msgstr "%"
 
-#: ../ui/settings.glade:425
+#: ../ui/settings.glade:436
 msgid "%a\t\tAbbreviated weekday name (e.g. Thu)\n"
 "%A\t\tFull weekday name (e.g. Thursday)\n"
 "%b\t\tAbbreviated month name (e.g. Aug)\n"
@@ -1581,15 +1581,19 @@ msgstr "%a\t\tKısaltılmış hafta içi adı (ör. Per)\n"
 "%Z\t\tSaat dilimi adı veya kısaltması (ör. CDT)\n"
 "%%\tA % sign"
 
-#: ../ui/settings.glade:3360
+#: ../ui/settings.glade:3567
 msgid "... AND How much time must have passed since last stroke.\n\n"
 "<i>Recommended: 500ms</i>"
 msgstr "... VE Son vuruştan bu yana ne kadar zaman geçmiş olmalı.\n\n"
 "<i>Önerilen: 500ms</i>"
 
-#: ../ui/settings.glade:3968
+#: ../ui/settings.glade:4175
 msgid "1,00"
 msgstr "1,00"
+
+#: ../ui/settings.glade:2285
+msgid "30"
+msgstr ""
 
 #: ../ui/images.glade:88
 msgid "<b>... or select already used Image:</b>"
@@ -1625,7 +1629,7 @@ msgstr "<b>Son sayfayı kopyala</b>\n"
 msgid "<b>Default Tools</b>"
 msgstr "<b>Varsayılan Araçlar</b>"
 
-#: ../ui/settings.glade:3568
+#: ../ui/settings.glade:3775
 msgid "<b>Default</b>"
 msgstr "<b>Varsayılan</b>"
 
@@ -1659,19 +1663,19 @@ msgstr "<b>Sayfa boyutu</b>"
 msgid "<b>Separator</b>"
 msgstr "<b>Ayırıcı</b>"
 
-#: ../ui/settings.glade:708
+#: ../ui/settings.glade:719
 msgid "<i>Assign device classes to each input device of your system. Only change these values if your devices are not correctly matched. (e.g. your pen shows up as touchscreen)</i>"
 msgstr "<i>Sisteminizin her giriş aygıtına aygıt sınıfları atayın. Bu değerleri yalnızca aygıtlarınız doğru eşleşmediğinde değiştirin. (örneğin kaleminiz dokunmatik ekran olarak görünürse)</i>"
 
-#: ../ui/settings.glade:3659
+#: ../ui/settings.glade:3866
 msgid "<i>Audio recordings are currently stored in a separate folder and referenced from the journal.</i>"
 msgstr "<i>Ses kayıtları şu anda ayrı bir klasörde saklanmakta ve günlükten kaynaklanmaktadır.</i>"
 
-#: ../ui/settings.glade:4002
+#: ../ui/settings.glade:4209
 msgid "<i>Changes take only effect on new recordings and playbacks.</i>"
 msgstr "<i>Değişiklikler yalnızca yeni kayıtlar ve oynatmalar üzerinde etkili olur.</i>"
 
-#: ../ui/settings.glade:920
+#: ../ui/settings.glade:931
 msgid "<i>Define which tools will be selected if you press a mouse button. After you release the button the previously selected tool will be selected.</i>"
 msgstr "<i>Fare düğmesine basarsanız hangi araçların seçileceğini tanımlayın. Düğmeyi bıraktıktan sonra, önceden seçilen araç seçilecektir.</i>"
 
@@ -1679,73 +1683,73 @@ msgstr "<i>Fare düğmesine basarsanız hangi araçların seçileceğini tanıml
 msgid "<i>Example:</i> 1-3 or 1,3,5-7 etc."
 msgstr "<i>Örnek:</i> 1-3 veya 1,3,5-7 vb."
 
-#: ../ui/settings.glade:1820
+#: ../ui/settings.glade:1831
 msgid "<i>For some specific hardware the scroll / touch behaviour of the system is not as expected. For these cases Xournal++ has a workaround.\n"
 "This also enables touch drawing.</i>"
 msgstr "<i>Bazı özel donanımlar için, sistemin kaydırma / dokunma davranışı beklendiği gibi değildir. Bu durumlar için Xournal++ 'nın bir çözümü vardır.\n"
 "Bu ayrıca dokunmatik çizimi mümkün kılar.</i>"
 
-#: ../ui/settings.glade:222
+#: ../ui/settings.glade:233
 msgid "<i>If the document already was saved you can find it in the same folder with the extension .autosave.xoj\n"
 "If the file was not yet saved you can find it in your home directory, in ~/.xournalpp/autosave</i>"
 msgstr "<i>Belge önceden kaydedilmişse, belgeyi .autosave.xoj uzantısıyla aynı klasörde bulabilirsiniz.\n"
 "Dosya henüz kaydedilmemişse, ev dizini içinde ~/.xournalpp/autosave adıyla bulabilirsiniz.</i>"
 
-#: ../ui/settings.glade:2868
+#: ../ui/settings.glade:3075
 msgid "<i>If you add additional space beside the pages you can choose the area of the screen you would like to work on.</i>"
 msgstr "<i>Sayfaların yanına ek boşluk eklerseniz, ekranın üzerinde çalışmak istediğiniz alanı seçebilirsiniz.</i>"
 
-#: ../ui/settings.glade:529
+#: ../ui/settings.glade:540
 msgid "<i>If you open a PDF and there is a Xournal file with the same name it will open the xoj file.</i>"
 msgstr "<i>Bir PDF açarsanız ve aynı ada sahip bir Xournal dosyası varsa, xoj dosyasını açar.</i>"
 
-#: ../ui/settings.glade:1451
+#: ../ui/settings.glade:1462
 msgid "<i>If your hardware does not support hand recognition, Xournal++ can disable your touchscreen when your pen is near the screen.</i>"
 msgstr "<i>Donanımınız el tanımayı desteklemiyorsa, kaleminiz ekrana yakın olduğunda Xournal++ dokunmatik ekranınızı devre dışı bırakabilir.</i>"
 
-#: ../ui/settings.glade:1099
+#: ../ui/settings.glade:1110
 msgid "<i>Pressure Sensitivity allows you to draw lines with different widths, depending on how much pressure you apply to the pen. If your tablet does not support this feature this setting has no effect.</i>"
 msgstr "<i>Basınç Hassasiyeti, kaleme ne kadar basınç uyguladığınıza bağlı olarak, farklı genişliklerde çizgiler çizmenize olanak tanır. Tabletiniz bu özelliği desteklemiyorsa, bu ayarın bir etkisi yoktur.</i>"
 
-#: ../ui/settings.glade:2714
+#: ../ui/settings.glade:2921
 msgid "<i>Put a ruler on your screen and move the slider until both rulers match.</i>"
 msgstr "<i>Ekranınıza bir cetvel koyun ve her iki cetvel eşleşene kadar kaydırıcıyı hareket ettirin.</i>"
 
-#: ../ui/settings.glade:3513
+#: ../ui/settings.glade:3720
 msgid "<i>Select the tool and Settings if you press the Default Button.</i>"
 msgstr "<i>Varsayılan Düğmeye basarsanız aracı ve Ayarlar'ı seçin.</i>"
 
-#: ../ui/settings.glade:1592
+#: ../ui/settings.glade:1603
 msgid "<i>Specify commands that are called once Hand Recognition triggers. The commands will be executed in the UI Thread, make sure they are not blocking!</i>"
 msgstr "<i>El Tanıma tetikleyicilerini bir kez çağıran komutları belirtin. Komutlar UI İş Parçacığında yürütülür, engellenmediklerinden emin olun.</i>"
 
-#: ../ui/settings.glade:3749
+#: ../ui/settings.glade:3956
 msgid "<i>Specify the audio devices used for recording and playback of audio attachments. \n"
 "If available select <small><tt>pulse</tt></small> as input / output device.</i>"
 msgstr "<i>Ses eklerinin kaydedilmesi ve çalınması için kullanılan ses aygıtlarını belirtin. \n"
 "Varsa, giriş / çıkış aygıtı olarak <small><tt>darbeyi</tt></small> seçin.</i>"
 
-#: ../ui/settings.glade:1167
+#: ../ui/settings.glade:1178
 msgid "<i>Specify the tools that will be selected if a button of the stylus is pressed or the eraser is used. After releasing the button, the previous tool will be selected.</i>"
 msgstr "<i>Kalemin bir düğmesine basılırsa veya silgi kullanılırsa seçilecek araçları belirtin. Düğmeyi bıraktıktan sonra, önceki araç seçilecektir.</i>"
 
-#: ../ui/settings.glade:353
+#: ../ui/settings.glade:364
 msgid "<i>This name will be proposed if you save a new document.</i>"
 msgstr "<i>Yeni bir belge kaydederseniz bu ad önerilecektir.</i>"
 
-#: ../ui/settings.glade:2692
+#: ../ui/settings.glade:2899
 msgid "<i>To make sure on 100% zoom the size of elements is natural. (requires restart)</i>"
 msgstr "<i>100% yakınlaştırmada öğelerin boyutunun doğal olduğundan emin olmak için. (yeniden başlatma gerekir)</i>"
 
-#: ../ui/settings.glade:1962
+#: ../ui/settings.glade:1973
 msgid "<i>Toggle visibility of menubar with F10</i>"
 msgstr "<i>Menü çubuğunun görünürlüğünü F10 ile değiştirin</i>"
 
-#: ../ui/settings.glade:1755
+#: ../ui/settings.glade:1766
 msgid "<i>Use pinch gestures to zoom journal pages.</i>"
 msgstr "<i>Günlük sayfalarını yakınlaştırmak için sıkıştırma hareketlerini kullanın.</i>"
 
-#: ../ui/settings.glade:1384
+#: ../ui/settings.glade:1395
 msgid "<i>You can configure devices, not identified by GTK as touchscreen, to behave as if they were one.</i>"
 msgstr "<i>GTK tarafından dokunmatik ekran olarak tanımlanmayan aygıtları, sanki onlardan biriymiş gibi davranacak şekilde yapılandırabilirsiniz.</i>"
 
@@ -1759,15 +1763,15 @@ msgstr "<span size=\"xx-large\" weight=\"bold\">Xournal++</span>\n"
 msgid "About Xournal++"
 msgstr "Xournal++ Hakkında"
 
-#: ../ui/settings.glade:3430
+#: ../ui/settings.glade:3637
 msgid "Action on Tool Tap"
 msgstr "Araç Dokunma İşlemi"
 
-#: ../ui/settings.glade:2921
+#: ../ui/settings.glade:3128
 msgid "Add additional horizontal space of"
 msgstr "Ek yatay alan ekle"
 
-#: ../ui/settings.glade:2899
+#: ../ui/settings.glade:3106
 msgid "Add additional vertical space of"
 msgstr "Ek dikey alan ekle"
 
@@ -1775,17 +1779,17 @@ msgstr "Ek dikey alan ekle"
 msgid "All pages"
 msgstr "Tüm sayfalar"
 
-#: ../ui/settings.glade:3396
+#: ../ui/settings.glade:3603
 msgid "All three conditions must be met before stroke is ignored.\n"
 "It must be short in time and length and we can't have ignored another stroke recently."
 msgstr "Vuruş yok sayılmadan önce her üç koşul da yerine getirilmelidir.\n"
 "Zaman ve uzunluk açısından kısa olmalı ve son zamanlarda başka bir vuruşu görmezden gelemeyiz."
 
-#: ../ui/settings.glade:3830
+#: ../ui/settings.glade:4037
 msgid "Audio Devices"
 msgstr "Ses Aygıtları"
 
-#: ../ui/settings.glade:4035
+#: ../ui/settings.glade:4242
 msgid "Audio Recording"
 msgstr "Ses Kaydediliyor"
 
@@ -1797,35 +1801,43 @@ msgstr "Yazar: "
 msgid "Authors:"
 msgstr "Yazarlar:"
 
-#: ../ui/settings.glade:1522
+#: ../ui/settings.glade:1533
 msgid "Autodetect"
 msgstr "Otomatik algılama"
 
-#: ../ui/settings.glade:566
+#: ../ui/settings.glade:577
 msgid "Autoloading Journals"
 msgstr "Otomatik Yükleme Günlükleri"
 
-#: ../ui/settings.glade:323
+#: ../ui/settings.glade:334
 msgid "Autosaving"
 msgstr "Otomatik kayıt"
 
-#: ../ui/settings.glade:472
+#: ../ui/settings.glade:483
 msgid "Available Placeholders"
 msgstr "Kullanılabilir Yer Tutucuları"
 
-#: ../ui/settings.glade:2026
+#: ../ui/settings.glade:2037
 msgid "Background color between pages"
 msgstr "Sayfalar arasındaki arka plan rengi"
 
-#: ../ui/settings.glade:2160
+#: ../ui/settings.glade:2368
 msgid "Big cursor for pen"
 msgstr "Kalem için büyük imleç"
 
-#: ../ui/settings.glade:2015
+#: ../ui/settings.glade:2340
+msgid "Border Color"
+msgstr ""
+
+#: ../ui/settings.glade:2301
+msgid "Border Width"
+msgstr ""
+
+#: ../ui/settings.glade:2026
 msgid "Border color"
 msgstr "Kenarlık rengi"
 
-#: ../ui/settings.glade:2000
+#: ../ui/settings.glade:2011
 msgid "Border color for current page and other selections"
 msgstr "Geçerli sayfa ve diğer seçimler için kenarlık rengi"
 
@@ -1833,15 +1845,23 @@ msgstr "Geçerli sayfa ve diğer seçimler için kenarlık rengi"
 msgid "Built on"
 msgstr "Üzerine inşa"
 
-#: ../ui/settings.glade:1208
+#: ../ui/settings.glade:1219
 msgid "Button 1"
 msgstr "Düğme 1"
 
-#: ../ui/settings.glade:1246
+#: ../ui/settings.glade:1257
 msgid "Button 2"
 msgstr "Düğme 2"
 
-#: ../ui/settings.glade:2096
+#: ../ui/settings.glade:2183 ../ui/settings.glade:2326
+msgid "Choose the color to use for \"Highlight cursor position\""
+msgstr ""
+
+#: ../ui/settings.glade:2197
+msgid "Circle Color"
+msgstr ""
+
+#: ../ui/settings.glade:2107
 msgid "Colors"
 msgstr "Renkler"
 
@@ -1861,31 +1881,31 @@ msgstr "Son sayfa boyutunu kopyala"
 msgid "Current page"
 msgstr "Geçerli sayfa"
 
-#: ../ui/settings.glade:2182
+#: ../ui/settings.glade:2389
 msgid "Cursor"
 msgstr "İmleç"
 
-#: ../ui/settings.glade:1699
+#: ../ui/settings.glade:1710
 msgid "Custom Commands (for Method \"Custom\")"
 msgstr "Özel Komutlar (\"Özel\" Yöntemi için)"
 
-#: ../ui/settings.glade:2074
+#: ../ui/settings.glade:2085
 msgid "Dark Theme (requires restart)"
 msgstr "Koyu Tema (yeniden başlatma gerekir)"
 
-#: ../ui/settings.glade:498
+#: ../ui/settings.glade:509
 msgid "Default Save Name"
 msgstr "Varsayılan Dosya Adı"
 
-#: ../ui/settings.glade:3955
+#: ../ui/settings.glade:4162
 msgid "Default Seek Time (in seconds)"
 msgstr "Varsayılan Arama Süresi (saniye olarak)"
 
-#: ../ui/settings.glade:386
+#: ../ui/settings.glade:397
 msgid "Default name: "
 msgstr "Varsayılan ad: "
 
-#: ../ui/settings.glade:3608
+#: ../ui/settings.glade:3815
 msgid "Defaults"
 msgstr "Varsayılanlar"
 
@@ -1905,7 +1925,7 @@ msgstr "Bu sayfayı sil"
 msgid "Device"
 msgstr "Aygıt"
 
-#: ../ui/settings.glade:1627
+#: ../ui/settings.glade:1638
 msgid "Disable"
 msgstr "Devre dışı bırak"
 
@@ -1913,7 +1933,7 @@ msgstr "Devre dışı bırak"
 msgid "Disable drawing for this device"
 msgstr "Buaygıt için çizimi devre dışı bırak"
 
-#: ../ui/settings.glade:2308
+#: ../ui/settings.glade:2515
 msgid "Disable scrollbar fade out"
 msgstr "Kaydırma çubuğu solmasını devre dışı bırak"
 
@@ -1921,19 +1941,19 @@ msgstr "Kaydırma çubuğu solmasını devre dışı bırak"
 msgid "Disabled"
 msgstr "Devre dışı"
 
-#: ../ui/settings.glade:1496
+#: ../ui/settings.glade:1507
 msgid "Disabling Method"
 msgstr "Devre Dışı Bırakma Yöntemi"
 
-#: ../ui/settings.glade:2786
+#: ../ui/settings.glade:2993
 msgid "Display DPI Calibration"
 msgstr "Ekran DPI Kalibrasyonu"
 
-#: ../ui/settings.glade:3271
+#: ../ui/settings.glade:3478
 msgid "Do not draw for inputs of short time and length unless it comes in short succession. Instead, show floating toolbox."
 msgstr "Kısa süre ve uzunluktaki girişler için art arda gelmedikçe çizim yapma. Bunun yerine, kayan araç kutusunu göster."
 
-#: ../ui/settings.glade:648 ../ui/settings.glade:815 ../ui/settings.glade:3184
+#: ../ui/settings.glade:659 ../ui/settings.glade:826 ../ui/settings.glade:3391
 msgid "Drag LEFT from start point acts like shift key is being held.\n"
 "Drag UP acts as if Control key is being held.\n\n"
 "Determination Radius: Radius at which modifiers will lock in until finished drawing.\n\n"
@@ -1951,11 +1971,15 @@ msgstr "Bileşenleri buradan araç çubuklarına sürükleyip bırakın."
 msgid "Draw _Line"
 msgstr "Çi_zgi Çiz"
 
-#: ../ui/settings.glade:3462
+#: ../ui/settings.glade:2165
+msgid "Draw a transparent circle around the cursor"
+msgstr ""
+
+#: ../ui/settings.glade:3669
 msgid "Drawing Area"
 msgstr "Çizim Alanı"
 
-#: ../ui/settings.glade:3234
+#: ../ui/settings.glade:3441
 msgid "Drawing Tools - Set Modifiers by Draw Direction (Experimental)"
 msgstr "Çizim Araçları - Değiştiricileri Çizim Yönüne Göre Ayarla (Deneysel)"
 
@@ -1967,47 +1991,47 @@ msgstr "Çoğalt"
 msgid "Edit (not implemented yet)"
 msgstr "Düzenle (henüz uygulanmadı)"
 
-#: ../ui/settings.glade:1615
+#: ../ui/settings.glade:1626
 msgid "Enable"
 msgstr "Etkinleştir"
 
-#: ../ui/settings.glade:3179
+#: ../ui/settings.glade:3386
 msgid "Enable  with determination radius of "
 msgstr "Belirleme yarıçapıyla etkinleştir "
 
-#: ../ui/settings.glade:544
+#: ../ui/settings.glade:555
 msgid "Enable Autoloading of Journals"
 msgstr "Günlüklerin Otomatik Yüklenmesini Etkinleştir"
 
-#: ../ui/settings.glade:242
+#: ../ui/settings.glade:253
 msgid "Enable Autosaving"
 msgstr "Otomatik Kaydetmeyi Etkinleştir"
 
-#: ../ui/settings.glade:1836
+#: ../ui/settings.glade:1847
 msgid "Enable GTK Touch / Scrolling workaround  (requires restart)"
 msgstr "GTK Dokunma / Kaydırma geçici çözümünü etkinleştir (yeniden başlatma gerekir)"
 
-#: ../ui/settings.glade:1114
+#: ../ui/settings.glade:1125
 msgid "Enable Pressure Sensitivity"
 msgstr "Basınç Hassasiyetini Etkinleştir"
 
-#: ../ui/settings.glade:3266
+#: ../ui/settings.glade:3473
 msgid "Enable Tap action"
 msgstr "Dokunma eylemini etkinleştir"
 
-#: ../ui/settings.glade:796
+#: ../ui/settings.glade:807
 msgid "Enable drawing outside of window <i>(Drawing will not stop at the border of the window)</i>"
 msgstr "Pencerenin dışında çizimi etkinleştir <i>(Çizim pencerenin sınırında durmaz)</i>"
 
-#: ../ui/settings.glade:1466
+#: ../ui/settings.glade:1477
 msgid "Enable internal Hand Recognition"
 msgstr "Dahili El Tanıma'yı etkinleştir"
 
-#: ../ui/settings.glade:643
+#: ../ui/settings.glade:654
 msgid "Enable new input system (Requires restart)"
 msgstr "Yeni giriş sistemini etkinleştir (Yeniden başlatma gerektirir)"
 
-#: ../ui/settings.glade:1767
+#: ../ui/settings.glade:1778
 msgid "Enable zoom gestures (requires restart)"
 msgstr "Yakınlaştırma hareketlerini etkinleştir (yeniden başlatma gerekir)"
 
@@ -2023,7 +2047,7 @@ msgstr "Silgi _Seçenekleri"
 msgid "Eraser Type - don't change"
 msgstr "Silgi Türü - değiştirmeyin"
 
-#: ../ui/settings.glade:677
+#: ../ui/settings.glade:688
 msgid "Experimental Input System"
 msgstr "Deneysel Giriş Sistemi"
 
@@ -2051,11 +2075,11 @@ msgstr "Arama dizesinin bir sonraki tekrarlamasını bul"
 msgid "Find previous occurrence of the search string"
 msgstr "Arama dizesinin bir önceki tekrarlamasını bul"
 
-#: ../ui/settings.glade:3026
+#: ../ui/settings.glade:3233
 msgid "First Page Offset "
 msgstr "İlk Sayfa Ofseti "
 
-#: ../ui/main.glade:485 ../ui/settings.glade:2395
+#: ../ui/main.glade:485 ../ui/settings.glade:2602
 msgid "Fullscreen"
 msgstr "Tam Ekran"
 
@@ -2063,7 +2087,7 @@ msgstr "Tam Ekran"
 msgid "GNU GPLv2 or later"
 msgstr "GNU GPLv2 veya üstü"
 
-#: ../ui/settings.glade:3874
+#: ../ui/settings.glade:4081
 msgid "Gain"
 msgstr "Kazanç"
 
@@ -2071,7 +2095,7 @@ msgstr "Kazanç"
 msgid "Git commit"
 msgstr "Git işlemesi"
 
-#: ../ui/settings.glade:2114
+#: ../ui/settings.glade:2125
 msgid "Global"
 msgstr "Küresel"
 
@@ -2079,7 +2103,7 @@ msgstr "Küresel"
 msgid "Go to Page"
 msgstr "Sayfaya Git"
 
-#: ../ui/settings.glade:3104
+#: ../ui/settings.glade:3311
 msgid "Grid snapping tolerance"
 msgstr "Izgara yapıştırma toleransı"
 
@@ -2087,7 +2111,7 @@ msgstr "Izgara yapıştırma toleransı"
 msgid "H_and Tool"
 msgstr "El _Aracı"
 
-#: ../ui/settings.glade:1724
+#: ../ui/settings.glade:1735
 msgid "Hand Recognition"
 msgstr "El Tanıma"
 
@@ -2095,23 +2119,23 @@ msgstr "El Tanıma"
 msgid "Height:"
 msgstr "Yükseklik:"
 
-#: ../ui/main.glade:888 ../ui/settings.glade:2357 ../ui/settings.glade:2424
+#: ../ui/main.glade:888 ../ui/settings.glade:2564 ../ui/settings.glade:2631
 msgid "Hide Menubar"
 msgstr "Menü Çubuğunu Gizle"
 
-#: ../ui/settings.glade:2373 ../ui/settings.glade:2440
+#: ../ui/settings.glade:2580 ../ui/settings.glade:2647
 msgid "Hide Sidebar"
 msgstr "Kenar Çubuğunu Gizle"
 
-#: ../ui/settings.glade:2278
+#: ../ui/settings.glade:2485
 msgid "Hide the horizontal scrollbar"
 msgstr "Yatay kaydırma çubuğunu gizle"
 
-#: ../ui/settings.glade:2293
+#: ../ui/settings.glade:2500
 msgid "Hide the vertical scrollbar"
 msgstr "Dikey kaydırma çubuğunu gizle"
 
-#: ../ui/settings.glade:2144
+#: ../ui/settings.glade:2160
 msgid "Highlight cursor position"
 msgstr "İmleç konumunu vurgula"
 
@@ -2119,31 +2143,31 @@ msgstr "İmleç konumunu vurgula"
 msgid "Highlighter Opti_ons"
 msgstr "Vurgulayıcı Seçenek_leri"
 
-#: ../ui/settings.glade:3317
+#: ../ui/settings.glade:3524
 msgid "How short (screen mm)  of the stroke  AND...\n\n"
 "<i>Recommended: 1 mm</i>"
 msgstr "Konturun ne kadar kısa (ekran mm) VE...\n\n"
 "<i>Önerilen: 1 mm</i>"
 
-#: ../ui/settings.glade:3297
+#: ../ui/settings.glade:3504
 msgid "How short (time)  AND...\n\n"
 "<i>Recommended: 150ms</i>"
 msgstr "Ne kadar kısa (zaman) VE...\n\n"
 "<i>Önerilen: 150ms</i>"
 
-#: ../ui/settings.glade:3284
+#: ../ui/settings.glade:3491
 msgid "Ignore Time (ms)"
 msgstr "Zamanı Yoksay (ms)"
 
-#: ../ui/settings.glade:3773
+#: ../ui/settings.glade:3980
 msgid "Input Device"
 msgstr "Giriş Aygıtı"
 
-#: ../ui/settings.glade:744
+#: ../ui/settings.glade:755
 msgid "Input Devices"
 msgstr "Giriş Aygıtları"
 
-#: ../ui/settings.glade:869
+#: ../ui/settings.glade:880
 msgid "Input System"
 msgstr "Giriş Sistemi"
 
@@ -2167,7 +2191,7 @@ msgstr "Geçerli sayfanın bir kopyasını aşağıya ekle"
 msgid "Layout"
 msgstr "Düzen"
 
-#: ../ui/settings.glade:2249
+#: ../ui/settings.glade:2456
 msgid "Left / Right-Handed"
 msgstr "Solak / Sağlak"
 
@@ -2175,7 +2199,7 @@ msgstr "Solak / Sağlak"
 msgid "License"
 msgstr "Lisans"
 
-#: ../ui/settings.glade:594
+#: ../ui/settings.glade:605
 msgid "Load / Save"
 msgstr "Yükle / Kaydet"
 
@@ -2187,25 +2211,25 @@ msgstr "Dosya yükle"
 msgid "Manage Toolbar"
 msgstr "Araç Çubuklarını Yönet"
 
-#: ../ui/settings.glade:3337
+#: ../ui/settings.glade:3544
 msgid "Max Length (mm)"
 msgstr "En fazla Uzunluk (mm)"
 
-#: ../ui/settings.glade:827
+#: ../ui/settings.glade:838
 msgid "Merge button events with stylus tip events\n"
 "<i>(Check this if</i> \"<tt>xsetwacom get *deviceId* TabletPCButton</tt>\" <i>returns</i> \"<tt>on</tt>\"<i>)</i>"
 msgstr "Düğme olaylarını stilus ipucu olaylarıyla birleştir\n"
 "<i>(Check this if</i> \"<tt>xsetwacom get *deviceId* TabletPCButton</tt>\" <i>returns</i> \"<tt>on</tt>\"<i>)</i>"
 
-#: ../ui/settings.glade:961
+#: ../ui/settings.glade:972
 msgid "Middle Mouse Button"
 msgstr "Orta Fare Düğmesi"
 
-#: ../ui/settings.glade:1048 ../ui/settingsDeviceClassConfig.glade:42
+#: ../ui/settings.glade:1059 ../ui/settingsDeviceClassConfig.glade:42
 msgid "Mouse"
 msgstr "Fare"
 
-#: ../ui/settings.glade:1017
+#: ../ui/settings.glade:1028
 msgid "Mouse Buttons"
 msgstr "Fare Düğmeleri"
 
@@ -2241,15 +2265,15 @@ msgstr "Sonun_da Yeni Sayfa"
 msgid "New _Layer"
 msgstr "Yeni _Katman"
 
-#: ../ui/settings.glade:3025
+#: ../ui/settings.glade:3232
 msgid "Offset first page this many pages when <b>Pair Pages</b> enabled"
 msgstr "<b>Sayfaları Eşleştir</b> etkin olduğunda ilk sayfayı bu kadar sayfa kaydır"
 
-#: ../ui/settings.glade:849
+#: ../ui/settings.glade:860
 msgid "Options"
 msgstr "Seçenekler"
 
-#: ../ui/settings.glade:3796
+#: ../ui/settings.glade:4003
 msgid "Output Device"
 msgstr "Çıktı Aygıtı"
 
@@ -2265,7 +2289,7 @@ msgstr "Sayfa Şablonu"
 msgid "Pages:"
 msgstr "Sayfalar:"
 
-#: ../ui/settings.glade:3058
+#: ../ui/settings.glade:3265
 msgid "Paired Pages"
 msgstr "Eşlenmiş Sayfalar"
 
@@ -2299,7 +2323,7 @@ msgstr "Duraklat"
 msgid "Pen _Options"
 msgstr "Kalem _Seçenekleri"
 
-#: ../ui/settings.glade:3988
+#: ../ui/settings.glade:4195
 msgid "Playback Settings"
 msgstr "Oynatma Ayarları"
 
@@ -2319,17 +2343,21 @@ msgstr "Eklenti değişiklikleri yalnızca Xournal++ yeniden başlatıldıktan s
 msgid "Preferences"
 msgstr "Tercihler"
 
-#: ../ui/settings.glade:2496
+#: ../ui/settings.glade:2703
 msgid "Presentation Mode"
 msgstr "Sunum Modu"
 
-#: ../ui/settings.glade:1136
+#: ../ui/settings.glade:1147
 msgid "Pressure Sensitivity"
 msgstr "Basınç hassasiyeti"
 
 #: ../ui/about.glade:167
 msgid "RELEASE_IDENTIFIER"
 msgstr "BÜLTEN_TANIMLAMA"
+
+#: ../ui/settings.glade:2249
+msgid "Radius"
+msgstr ""
 
 #: ../ui/exportSettings.glade:127
 msgid "Range"
@@ -2343,7 +2371,7 @@ msgstr "Son Çalışılan _Belgeler"
 msgid "Record / Stop"
 msgstr "Kayıt / Dur"
 
-#: ../ui/settings.glade:3923
+#: ../ui/settings.glade:4130
 msgid "Recording Quality"
 msgstr "Kayıt Kalitesi"
 
@@ -2351,23 +2379,23 @@ msgstr "Kayıt Kalitesi"
 msgid "Resolution"
 msgstr "Çözünürlük"
 
-#: ../ui/settings.glade:999
+#: ../ui/settings.glade:1010
 msgid "Right Mouse Button"
 msgstr "Sağ Fare Düğmesi"
 
-#: ../ui/settings.glade:3091
+#: ../ui/settings.glade:3298
 msgid "Rotation snapping tolerance"
 msgstr "Dönme yakalama toleransı"
 
-#: ../ui/settings.glade:3862
+#: ../ui/settings.glade:4069
 msgid "Sample Rate"
 msgstr "Örnek Oranı"
 
-#: ../ui/settings.glade:2328
+#: ../ui/settings.glade:2535
 msgid "Scrollbars"
 msgstr "Kaydırma çubukları"
 
-#: ../ui/settings.glade:2993
+#: ../ui/settings.glade:3200
 msgid "Scrolling outside the page"
 msgstr "Sayfanın dışına kaydırma"
 
@@ -2375,7 +2403,7 @@ msgstr "Sayfanın dışına kaydırma"
 msgid "Select Background Color"
 msgstr "Arka Plan Rengini Seç"
 
-#: ../ui/settings.glade:3696
+#: ../ui/settings.glade:3903
 msgid "Select Folder"
 msgstr "Klasör Seç"
 
@@ -2387,11 +2415,11 @@ msgstr "Resim Seç"
 msgid "Select PDF Page"
 msgstr "PDF Sayfası Seç"
 
-#: ../ui/settings.glade:2461
+#: ../ui/settings.glade:2668
 msgid "Select toolbar:"
 msgstr "Araç çubuğu seç:"
 
-#: ../ui/settings.glade:2051
+#: ../ui/settings.glade:2062
 msgid "Selection Color (Text, Stroke Selection etc.)"
 msgstr "Seçim Rengi (Metin, Kontur Seçimi vb.)"
 
@@ -2403,15 +2431,15 @@ msgstr "Sütunları Ayarla"
 msgid "Set Rows"
 msgstr "Satırları Ayarla"
 
-#: ../ui/settings.glade:3398
+#: ../ui/settings.glade:3605
 msgid "Settings:"
 msgstr "Ayarlar:"
 
-#: ../ui/settings.glade:3407
+#: ../ui/settings.glade:3614
 msgid "Show Floating Toolbox"
 msgstr "Kayan Araç Kutusunu Göster"
 
-#: ../ui/settings.glade:1943
+#: ../ui/settings.glade:1954
 msgid "Show Menubar on Startup"
 msgstr "Menü Çubuğunu Başlangıçta Göster"
 
@@ -2419,23 +2447,23 @@ msgstr "Menü Çubuğunu Başlangıçta Göster"
 msgid "Show sidebar"
 msgstr "Kenar çubuğu göster"
 
-#: ../ui/settings.glade:2211
+#: ../ui/settings.glade:2418
 msgid "Show sidebar on the right side"
 msgstr "Kenar çubuğunu sağ tarafta göster"
 
-#: ../ui/settings.glade:2227
+#: ../ui/settings.glade:2434
 msgid "Show vertical scrollbar on the left side"
 msgstr "Sol tarafta dikey kaydırma çubuğunu göster"
 
-#: ../ui/settings.glade:3150
+#: ../ui/settings.glade:3357
 msgid "Snapping"
 msgstr "Yakalama"
 
-#: ../ui/settings.glade:2579
+#: ../ui/settings.glade:2786
 msgid "Speed for Ctrl + Scroll"
 msgstr "Ctrl + Kaydırma Hızı"
 
-#: ../ui/settings.glade:2607
+#: ../ui/settings.glade:2814
 msgid "Speed for a Zoomstep"
 msgstr "Bir Yakınlaştırma Adımı İçin Hız"
 
@@ -2443,19 +2471,19 @@ msgstr "Bir Yakınlaştırma Adımı İçin Hız"
 msgid "Standard"
 msgstr "Standart"
 
-#: ../ui/settings.glade:3681 ../ui/settings.glade:3718
+#: ../ui/settings.glade:3888 ../ui/settings.glade:3925
 msgid "Storage Folder"
 msgstr "Depolama Klasörü"
 
-#: ../ui/settings.glade:1333
+#: ../ui/settings.glade:1344
 msgid "Stylus"
 msgstr "Stilus"
 
-#: ../ui/settings.glade:1302
+#: ../ui/settings.glade:1313
 msgid "Stylus Buttons"
 msgstr "Stilus Düğmeleri"
 
-#: ../ui/settings.glade:3348
+#: ../ui/settings.glade:3555
 msgid "Successive (ms)"
 msgstr "Ardışık (ms)"
 
@@ -2475,7 +2503,7 @@ msgstr "Araç Ç_ubukları"
 msgid "Template:"
 msgstr "Şablon:"
 
-#: ../ui/settings.glade:1660 ../ui/settings.glade:1673
+#: ../ui/settings.glade:1671 ../ui/settings.glade:1684
 msgid "Test"
 msgstr "Test"
 
@@ -2483,23 +2511,23 @@ msgstr "Test"
 msgid "Text Font..."
 msgstr "Metin Yazı Tipi..."
 
-#: ../ui/settings.glade:2763
+#: ../ui/settings.glade:2970
 msgid "The unit of the ruler is cm"
 msgstr "Cetvel birimi cm'dir"
 
-#: ../ui/settings.glade:775
+#: ../ui/settings.glade:786
 msgid "These settings take only effect if the experimental input system is activated"
 msgstr "Bu ayarlar yalnızca deneysel giriş sistemi etkinleştirildiyse etkili olur"
 
-#: ../ui/settings.glade:628
+#: ../ui/settings.glade:639
 msgid "This is an experimental feature! Use it with care."
 msgstr "Bu deneysel bir özellik! Dikkatle kullanın."
 
-#: ../ui/settings.glade:1507
+#: ../ui/settings.glade:1518
 msgid "Timeout"
 msgstr "Zaman aşımı"
 
-#: ../ui/settings.glade:1420 ../ui/settings.glade:1889
+#: ../ui/settings.glade:1431 ../ui/settings.glade:1900
 #: ../ui/settingsDeviceClassConfig.glade:46
 msgid "Touchscreen"
 msgstr "Dokunmatik ekran"
@@ -2508,15 +2536,15 @@ msgstr "Dokunmatik ekran"
 msgid "Transparency settings"
 msgstr "Saydamlık ayarları"
 
-#: ../ui/settings.glade:3377
+#: ../ui/settings.glade:3584
 msgid "Try to select object first."
 msgstr "Önce nesneyi seçmeyi deneyin."
 
-#: ../ui/settings.glade:3382 ../ui/settings.glade:3412
+#: ../ui/settings.glade:3589 ../ui/settings.glade:3619
 msgid "Try to select object first; if nothing selected then show floating toolbox if enabled."
 msgstr "Önce nesneyi seçmeyi deneyin; seçili bir şey yoksa, etkinse kayan araç kutusunu gösterir."
 
-#: ../ui/settings.glade:3038
+#: ../ui/settings.glade:3245
 msgid "Usually 0 or 1"
 msgstr "Genellikle 0 veya 1"
 
@@ -2528,7 +2556,7 @@ msgstr "Sürüm"
 msgid "Version: "
 msgstr "Sürüm: "
 
-#: ../ui/settings.glade:2527
+#: ../ui/settings.glade:2734
 msgid "View"
 msgstr "Görüntüle"
 
@@ -2544,23 +2572,23 @@ msgstr "Genişlik:"
 msgid "With help from the community"
 msgstr "Topluluk yardımı ile"
 
-#: ../ui/settings.glade:1858
+#: ../ui/settings.glade:1869
 msgid "Workaround"
 msgstr "Geçici çözüm"
 
-#: ../ui/settings.glade:112
+#: ../ui/settings.glade:123
 msgid "Xournal++ Preferences"
 msgstr "Xournal++ Tercihleri"
 
-#: ../ui/settings.glade:2817
+#: ../ui/settings.glade:3024
 msgid "Zoom"
 msgstr "Yakınlaştırma"
 
-#: ../ui/settings.glade:1789
+#: ../ui/settings.glade:1800
 msgid "Zoom Gestures"
 msgstr "Yakınlaştırma Hareketleri"
 
-#: ../ui/settings.glade:2661
+#: ../ui/settings.glade:2868
 msgid "Zoom Speed"
 msgstr "Yakınlaştırma Hızı"
 
@@ -2820,7 +2848,7 @@ msgstr "dpi"
 msgid "enabled,"
 msgstr "etkin,"
 
-#: ../ui/settings.glade:266
+#: ../ui/settings.glade:277
 msgid "every"
 msgstr "her"
 
@@ -2828,16 +2856,17 @@ msgstr "her"
 msgid "load from file"
 msgstr "dosyadan yükle"
 
-#: ../ui/settings.glade:293
+#: ../ui/settings.glade:304
 msgid "minutes"
 msgstr "dakika"
 
-#: ../ui/settings.glade:2960 ../ui/settings.glade:2971
-#: ../ui/settings.glade:3219
+#: ../ui/settings.glade:2221 ../ui/settings.glade:2272
+#: ../ui/settings.glade:3167 ../ui/settings.glade:3178
+#: ../ui/settings.glade:3426
 msgid "pixels"
 msgstr "pikseller"
 
-#: ../ui/settings.glade:1551
+#: ../ui/settings.glade:1562
 msgid "s <i>(after which the touchscreen will be reactivated again)</i>"
 msgstr "s <i>(bundan sonra dokunmatik ekran tekrar etkinleştirilecek)</i>"
 
