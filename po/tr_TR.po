@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-29 17:18+0000\n"
-"PO-Revision-Date: 2020-04-29 17:26\n"
+"POT-Creation-Date: 2020-04-30 23:51+0000\n"
+"PO-Revision-Date: 2020-04-30 23:55\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -15,13 +15,13 @@ msgstr ""
 "X-Crowdin-Language: tr\n"
 "X-Crowdin-File: /master/po/xournalpp.pot\n"
 
-#: ../src/control/XournalMain.cpp:509
+#: ../src/control/XournalMain.cpp:510
 msgid "\n\n"
 "Will now attempt to run without this file."
 msgstr "\n\n"
 "Şimdi bu dosya olmadan çalıştırma denenecek."
 
-#: ../src/control/XournalMain.cpp:489
+#: ../src/control/XournalMain.cpp:490
 msgid "\n"
 "Will now attempt to run without this file."
 msgstr "\n"
@@ -40,7 +40,7 @@ msgstr "%F-Note-%H-%M"
 msgid "<b>No devices were found. This seems wrong - maybe file a bug report?</b>"
 msgstr "<b>Hiçbir aygıt bulunamadı. Bu yanlış görünüyor - bir hata raporu dosyalansın mı?</b>"
 
-#: ../src/control/XournalMain.cpp:504
+#: ../src/control/XournalMain.cpp:505
 msgid "<span foreground='red' size='x-large'>Missing the needed UI file:\n"
 "<b>{1}</b></span>\n"
 "Could not find them at any location.\n"
@@ -54,7 +54,7 @@ msgstr "<span foreground='red' size='x-large'>Gerekli kullanıcı arayüzü dosy
 "  Çalışma Yolunda Değil\n"
 "  {2} içinde değil"
 
-#: ../src/control/XournalMain.cpp:274
+#: ../src/control/XournalMain.cpp:275
 msgid "Absolute path for the audio files playback"
 msgstr "Ses dosyalarının oynatılması için mutlak yol"
 
@@ -616,7 +616,7 @@ msgstr "Resim"
 msgid "Image file successfully created"
 msgstr "Resim dosyası başarıyla oluşturuldu"
 
-#: ../src/control/XournalMain.cpp:272
+#: ../src/control/XournalMain.cpp:273
 msgid "Image output filename (.png / .svg)"
 msgstr "Resim çıktısı dosya adı (.png / .svg)"
 
@@ -644,7 +644,7 @@ msgstr "Katman ekle"
 msgid "Insert page"
 msgstr "Sayfa ekle"
 
-#: ../src/control/XournalMain.cpp:273
+#: ../src/control/XournalMain.cpp:274
 msgid "Jump to Page (first Page: 1)"
 msgstr "Sayfaya Git (ilk Sayfa: 1)"
 
@@ -696,7 +696,7 @@ msgstr "Araç Çubuklarını Yönet"
 msgid "Medium"
 msgstr "Orta"
 
-#: ../src/control/XournalMain.cpp:486
+#: ../src/control/XournalMain.cpp:487
 msgid "Missing the needed UI file:\n"
 "{1}\n"
 " .app corrupted?\n"
@@ -810,7 +810,7 @@ msgstr "PDF dosyası başarıyla oluşturuldu"
 msgid "PDF files"
 msgstr "PDF dosyaları"
 
-#: ../src/control/XournalMain.cpp:271
+#: ../src/control/XournalMain.cpp:272
 msgid "PDF output filename"
 msgstr "PDF çıktısı dosya adı"
 
@@ -1059,13 +1059,13 @@ msgstr "Yalnızca kullanılmayan sayfaları göster (kullanılmayan bir sayfa)"
 msgid "Show only not used pages ({1} unused pages)"
 msgstr "Yalnızca kullanılmayan sayfaları göster ({1} kullanılmayan sayfa)"
 
-#: ../src/control/XournalMain.cpp:339
+#: ../src/control/XournalMain.cpp:340
 msgid "Sorry, Xournal++ can only open one file at once.\n"
 "Others are ignored."
 msgstr "Üzgünüz, Xournal++ bir kerede yalnızca bir dosyayı açabilir.\n"
 "Diğerleri yok sayılır."
 
-#: ../src/control/XournalMain.cpp:351
+#: ../src/control/XournalMain.cpp:352
 msgid "Sorry, Xournal++ cannot open remote files at the moment.\n"
 "You have to copy the file to a local directory."
 msgstr "Üzgünüz, Xournal++ şu anda uzak dosyaları açamıyor.\n"
