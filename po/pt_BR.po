@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-29 17:18+0000\n"
-"PO-Revision-Date: 2020-04-29 17:26\n"
+"POT-Creation-Date: 2020-04-30 23:51+0000\n"
+"PO-Revision-Date: 2020-04-30 23:55\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
@@ -15,13 +15,13 @@ msgstr ""
 "X-Crowdin-Language: pt-BR\n"
 "X-Crowdin-File: /master/po/xournalpp.pot\n"
 
-#: ../src/control/XournalMain.cpp:509
+#: ../src/control/XournalMain.cpp:510
 msgid "\n\n"
 "Will now attempt to run without this file."
 msgstr "\n\n"
 "Agora tentará executar sem esse arquivo."
 
-#: ../src/control/XournalMain.cpp:489
+#: ../src/control/XournalMain.cpp:490
 msgid "\n"
 "Will now attempt to run without this file."
 msgstr "\n"
@@ -40,7 +40,7 @@ msgstr "%F-Note-%H-%M"
 msgid "<b>No devices were found. This seems wrong - maybe file a bug report?</b>"
 msgstr "<b>Nenhum dispositivo encontrado. Isto parece errado - talvez arquive um relatório de bug?</b>"
 
-#: ../src/control/XournalMain.cpp:504
+#: ../src/control/XournalMain.cpp:505
 msgid "<span foreground='red' size='x-large'>Missing the needed UI file:\n"
 "<b>{1}</b></span>\n"
 "Could not find them at any location.\n"
@@ -54,7 +54,7 @@ msgstr "<span foreground='red' size='x-large'>Faltando o arquivo de UI necessár
 "  Nem no diretório de trabalho\n"
 "  Nem em {2}"
 
-#: ../src/control/XournalMain.cpp:274
+#: ../src/control/XournalMain.cpp:275
 msgid "Absolute path for the audio files playback"
 msgstr "Caminho absoluto para a reprodução de arquivos de áudio"
 
@@ -606,7 +606,7 @@ msgstr "Imagem"
 msgid "Image file successfully created"
 msgstr ""
 
-#: ../src/control/XournalMain.cpp:272
+#: ../src/control/XournalMain.cpp:273
 msgid "Image output filename (.png / .svg)"
 msgstr ""
 
@@ -634,7 +634,7 @@ msgstr "Inserir camada"
 msgid "Insert page"
 msgstr "Inserir página"
 
-#: ../src/control/XournalMain.cpp:273
+#: ../src/control/XournalMain.cpp:274
 msgid "Jump to Page (first Page: 1)"
 msgstr ""
 
@@ -686,7 +686,7 @@ msgstr ""
 msgid "Medium"
 msgstr "Médio"
 
-#: ../src/control/XournalMain.cpp:486
+#: ../src/control/XournalMain.cpp:487
 msgid "Missing the needed UI file:\n"
 "{1}\n"
 " .app corrupted?\n"
@@ -796,7 +796,7 @@ msgstr ""
 msgid "PDF files"
 msgstr "Arquivos PDF"
 
-#: ../src/control/XournalMain.cpp:271
+#: ../src/control/XournalMain.cpp:272
 msgid "PDF output filename"
 msgstr ""
 
@@ -1045,12 +1045,12 @@ msgstr ""
 msgid "Show only not used pages ({1} unused pages)"
 msgstr ""
 
-#: ../src/control/XournalMain.cpp:339
+#: ../src/control/XournalMain.cpp:340
 msgid "Sorry, Xournal++ can only open one file at once.\n"
 "Others are ignored."
 msgstr ""
 
-#: ../src/control/XournalMain.cpp:351
+#: ../src/control/XournalMain.cpp:352
 msgid "Sorry, Xournal++ cannot open remote files at the moment.\n"
 "You have to copy the file to a local directory."
 msgstr ""
