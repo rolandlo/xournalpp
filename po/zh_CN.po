@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-29 17:18+0000\n"
-"PO-Revision-Date: 2020-04-29 17:26\n"
+"POT-Creation-Date: 2020-04-30 23:51+0000\n"
+"PO-Revision-Date: 2020-04-30 23:55\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -15,13 +15,13 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /master/po/xournalpp.pot\n"
 
-#: ../src/control/XournalMain.cpp:509
+#: ../src/control/XournalMain.cpp:510
 msgid "\n\n"
 "Will now attempt to run without this file."
 msgstr "\n\n"
 "将尝试在不使用此文件的情况下运行。"
 
-#: ../src/control/XournalMain.cpp:489
+#: ../src/control/XournalMain.cpp:490
 msgid "\n"
 "Will now attempt to run without this file."
 msgstr "\n"
@@ -40,7 +40,7 @@ msgstr "%F-Note-%H-%M"
 msgid "<b>No devices were found. This seems wrong - maybe file a bug report?</b>"
 msgstr "<b>没有找到设备。可能出错了，要提交 bug 报告吗？</b>"
 
-#: ../src/control/XournalMain.cpp:504
+#: ../src/control/XournalMain.cpp:505
 msgid "<span foreground='red' size='x-large'>Missing the needed UI file:\n"
 "<b>{1}</b></span>\n"
 "Could not find them at any location.\n"
@@ -54,7 +54,7 @@ msgstr "<span foreground='red' size='x-large'>缺失必要的用户界面文件�
 "  不在工作目录下\n"
 "  不在 {2}"
 
-#: ../src/control/XournalMain.cpp:274
+#: ../src/control/XournalMain.cpp:275
 msgid "Absolute path for the audio files playback"
 msgstr "音频文件的绝对路径"
 
@@ -616,7 +616,7 @@ msgstr "图片"
 msgid "Image file successfully created"
 msgstr "图片文件创建成功"
 
-#: ../src/control/XournalMain.cpp:272
+#: ../src/control/XournalMain.cpp:273
 msgid "Image output filename (.png / .svg)"
 msgstr "图像输出文件名 (.png/ .svg)"
 
@@ -644,7 +644,7 @@ msgstr "插入层"
 msgid "Insert page"
 msgstr "插入页面"
 
-#: ../src/control/XournalMain.cpp:273
+#: ../src/control/XournalMain.cpp:274
 msgid "Jump to Page (first Page: 1)"
 msgstr "跳到页面(第一页:1)"
 
@@ -696,7 +696,7 @@ msgstr "管理工具栏"
 msgid "Medium"
 msgstr "中"
 
-#: ../src/control/XournalMain.cpp:486
+#: ../src/control/XournalMain.cpp:487
 msgid "Missing the needed UI file:\n"
 "{1}\n"
 " .app corrupted?\n"
@@ -810,7 +810,7 @@ msgstr "PDF文件成功建立"
 msgid "PDF files"
 msgstr "PDF文件"
 
-#: ../src/control/XournalMain.cpp:271
+#: ../src/control/XournalMain.cpp:272
 msgid "PDF output filename"
 msgstr "PDF输出文件名"
 
@@ -1059,13 +1059,13 @@ msgstr "只显示未使用页面(一个未使用页面)"
 msgid "Show only not used pages ({1} unused pages)"
 msgstr "只显示未使用页面({1}个未使用页面)"
 
-#: ../src/control/XournalMain.cpp:339
+#: ../src/control/XournalMain.cpp:340
 msgid "Sorry, Xournal++ can only open one file at once.\n"
 "Others are ignored."
 msgstr "对不起，Xournal++ 只能一次打开一个文件。\n"
 "其他文件已被忽略。"
 
-#: ../src/control/XournalMain.cpp:351
+#: ../src/control/XournalMain.cpp:352
 msgid "Sorry, Xournal++ cannot open remote files at the moment.\n"
 "You have to copy the file to a local directory."
 msgstr "对不起，Xournal++ 目前无法打开远程目录里的文件。\n"
