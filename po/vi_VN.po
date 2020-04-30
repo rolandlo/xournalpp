@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-29 17:18+0000\n"
-"PO-Revision-Date: 2020-04-29 17:26\n"
+"POT-Creation-Date: 2020-04-30 23:51+0000\n"
+"PO-Revision-Date: 2020-04-30 23:55\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
@@ -15,12 +15,12 @@ msgstr ""
 "X-Crowdin-Language: vi\n"
 "X-Crowdin-File: /master/po/xournalpp.pot\n"
 
-#: ../src/control/XournalMain.cpp:509
+#: ../src/control/XournalMain.cpp:510
 msgid "\n\n"
 "Will now attempt to run without this file."
 msgstr ""
 
-#: ../src/control/XournalMain.cpp:489
+#: ../src/control/XournalMain.cpp:490
 msgid "\n"
 "Will now attempt to run without this file."
 msgstr ""
@@ -38,7 +38,7 @@ msgstr ""
 msgid "<b>No devices were found. This seems wrong - maybe file a bug report?</b>"
 msgstr ""
 
-#: ../src/control/XournalMain.cpp:504
+#: ../src/control/XournalMain.cpp:505
 msgid "<span foreground='red' size='x-large'>Missing the needed UI file:\n"
 "<b>{1}</b></span>\n"
 "Could not find them at any location.\n"
@@ -47,7 +47,7 @@ msgid "<span foreground='red' size='x-large'>Missing the needed UI file:\n"
 "  Not in {2}"
 msgstr ""
 
-#: ../src/control/XournalMain.cpp:274
+#: ../src/control/XournalMain.cpp:275
 msgid "Absolute path for the audio files playback"
 msgstr ""
 
@@ -57,15 +57,15 @@ msgstr ""
 
 #: ../src/control/stockdlg/XojOpenDlg.cpp:35
 msgid "All files"
-msgstr ""
+msgstr "Tất cả các tập tin"
 
 #: ../src/control/pagetype/PageTypeMenu.cpp:197
 msgid "Apply to all pages"
-msgstr ""
+msgstr "Áp dụng cho mọi trang"
 
 #: ../src/control/pagetype/PageTypeMenu.cpp:188
 msgid "Apply to current page"
-msgstr ""
+msgstr "Áp dụng cho trang hiện tại"
 
 #: ../src/control/stockdlg/ImageOpenDlg.cpp:27
 #: ../src/control/stockdlg/XojOpenDlg.cpp:112
@@ -122,36 +122,36 @@ msgstr ""
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:365
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:436
 msgid "Back"
-msgstr ""
+msgstr "Quay lại"
 
 #: ../src/gui/sidebar/previews/layer/SidebarPreviewLayerEntry.cpp:19
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:191
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:231
 msgid "Background"
-msgstr ""
+msgstr "Hình nền"
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:10
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:103
 msgid "Black"
-msgstr ""
+msgstr "Đen"
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:14
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:107
 msgid "Blue"
-msgstr ""
+msgstr "Xanh dương"
 
 #: ../src/control/Control.cpp:1997 ../src/control/Control.cpp:2449
 #: ../src/control/XournalMain.cpp:119
 msgid "Cancel"
-msgstr ""
+msgstr "Huỷ"
 
 #: ../src/undo/ColorUndoAction.cpp:90
 msgid "Change color"
-msgstr ""
+msgstr "Đổi màu"
 
 #: ../src/undo/FontUndoAction.cpp:105
 msgid "Change font"
-msgstr ""
+msgstr "Đổi kiểu chữ"
 
 #: ../src/undo/FillUndoAction.cpp:79
 msgid "Change stroke fill"
@@ -167,13 +167,13 @@ msgstr ""
 
 #: ../src/gui/sidebar/indextree/SidebarIndexPage.cpp:226
 msgid "Contents"
-msgstr ""
+msgstr "Nội dung"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:331
 #: ../src/gui/toolbarMenubar/model/ToolbarModel.cpp:75
 #: ../src/gui/toolbarMenubar/model/ToolbarModel.cpp:81
 msgid "Copy"
-msgstr ""
+msgstr "Sao chép"
 
 #: ../src/control/pagetype/PageTypeHandler.cpp:28
 msgid "Copy current"
@@ -181,7 +181,7 @@ msgstr ""
 
 #: ../src/undo/CopyUndoAction.cpp:60
 msgid "Copy page"
-msgstr ""
+msgstr "Sao chép trang"
 
 #: ../src/control/jobs/SaveJob.cpp:99
 msgid "Could not create backup! (The file was created from an older Xournal version)"
@@ -189,7 +189,7 @@ msgstr ""
 
 #: ../src/util/Util.cpp:107
 msgid "Could not create folder: {1}"
-msgstr ""
+msgstr "Không thể tạo thư mục: {1}"
 
 #: ../src/control/LatexController.cpp:69
 msgid "Could not find pdflatex in PATH.\n"
@@ -297,7 +297,7 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:74
 msgid "Create new layer"
-msgstr ""
+msgstr "Tạo lớp mới"
 
 #: ../src/gui/dialog/FormatDialog.cpp:67
 msgid "Custom"
@@ -309,24 +309,24 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:354
 msgid "Customize Toolbars"
-msgstr ""
+msgstr "Thanh công cụ tùy chỉnh"
 
 #: ../src/gui/dialog/ToolbarManageDialog.cpp:29
 msgid "Customized"
-msgstr ""
+msgstr "Tùy chỉnh"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:330
 msgid "Cut"
-msgstr ""
+msgstr "Cắt"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:401
 msgid "Default Tool"
-msgstr ""
+msgstr "Công cụ mặc định"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:336
 #: ../src/undo/DeleteUndoAction.cpp:74
 msgid "Delete"
-msgstr ""
+msgstr "Xóa"
 
 #: ../src/control/XournalMain.cpp:118
 msgid "Delete Logfile"
@@ -334,19 +334,19 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:385
 msgid "Delete current page"
-msgstr ""
+msgstr "Xóa trang hiện tại"
 
 #: ../src/control/XournalMain.cpp:162
 msgid "Delete file"
-msgstr ""
+msgstr "Xóa tập tin"
 
 #: ../src/undo/RemoveLayerUndoAction.cpp:28
 msgid "Delete layer"
-msgstr ""
+msgstr "Xóa lớp"
 
 #: ../src/control/Control.cpp:2446
 msgid "Discard"
-msgstr ""
+msgstr "Bỏ"
 
 #: ../src/control/Control.cpp:1938
 msgid "Do not open Autosave files. They may will be overwritten!\n"
@@ -382,18 +382,18 @@ msgstr ""
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:30
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:406
 msgid "Draw Arrow"
-msgstr ""
+msgstr "Vẽ mũi tên"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:99
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:29
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:405
 msgid "Draw Circle"
-msgstr ""
+msgstr "Vẽ hình tròn"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:95
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:31
 msgid "Draw Line"
-msgstr ""
+msgstr "Vẽ đường thẳng"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:97
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:24
@@ -402,7 +402,7 @@ msgstr ""
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:94
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:404
 msgid "Draw Rectangle"
-msgstr ""
+msgstr "Vẽ tam giác"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:107
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:34
@@ -414,7 +414,7 @@ msgstr ""
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:32
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:408
 msgid "Draw coordinate system"
-msgstr ""
+msgstr "Vẽ trục tọa độ"
 
 #: ../src/undo/InsertUndoAction.cpp:30
 msgid "Draw stroke"
@@ -426,21 +426,21 @@ msgstr ""
 
 #: ../src/undo/TextBoxUndoAction.cpp:36
 msgid "Edit text"
-msgstr ""
+msgstr "Chỉnh sửa văn bản"
 
 #: ../src/undo/EmergencySaveRestore.cpp:19
 msgid "Emergency saved document"
-msgstr ""
+msgstr "Tập tin được lưu khẩn cấp"
 
 #: ../src/undo/AddUndoAction.cpp:75 ../src/undo/DeleteUndoAction.cpp:71
 #: ../src/undo/EraseUndoAction.cpp:90
 msgid "Erase stroke"
-msgstr ""
+msgstr "Xóa nét"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:58
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:247
 msgid "Eraser"
-msgstr ""
+msgstr "Tẩy"
 
 #: ../src/control/Control.cpp:2187
 msgid "Error annotate PDF file \"{1}\"\n"
@@ -453,16 +453,16 @@ msgstr ""
 
 #: ../src/control/Control.cpp:2019
 msgid "Error opening file \"{1}\""
-msgstr ""
+msgstr "Lỗi khi mở tập tin \"{1}\""
 
 #: ../src/util/OutputStream.cpp:25
 msgid "Error opening file: \"{1}\""
-msgstr ""
+msgstr "Lỗi khi mở tập tin: \"{1}\""
 
 #: ../src/control/xojfile/LoadHandler.cpp:439
 #: ../src/control/xojfile/LoadHandler.cpp:460
 msgid "Error reading PDF: {1}"
-msgstr ""
+msgstr "Lỗi khi đọc PDF: {1}"
 
 #: ../src/control/xojfile/LoadHandler.cpp:506
 msgid "Error reading width of a stroke: {1}"
@@ -470,15 +470,15 @@ msgstr ""
 
 #: ../src/control/jobs/ImageExport.cpp:104
 msgid "Error save image #1"
-msgstr ""
+msgstr "Lỗi khi lưu ảnh #1"
 
 #: ../src/control/jobs/ImageExport.cpp:119
 msgid "Error save image #2"
-msgstr ""
+msgstr "Lỗi khi lưu ảnh #2"
 
 #: ../src/control/jobs/AutosaveJob.cpp:15
 msgid "Error while autosaving: {1}"
-msgstr ""
+msgstr "Lỗi khi tự động lưu: {1}"
 
 #: ../src/util/Util.cpp:170
 msgid "Error {1} executing system command: {2}"
@@ -486,7 +486,7 @@ msgstr ""
 
 #: ../src/util/CrashHandler.cpp:39
 msgid "Error: {1}"
-msgstr ""
+msgstr "Lỗi: {1}"
 
 #: ../src/control/LatexController.cpp:84
 msgid "Error: {1}\n"
@@ -513,11 +513,11 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:458
 msgid "Fill"
-msgstr ""
+msgstr "Lấp đầy"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:472
 msgid "Fine"
-msgstr ""
+msgstr "Mịn"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:66
 msgid "Floating Toolbox (experimental)"
@@ -525,19 +525,19 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/FontButton.cpp:54
 msgid "Font"
-msgstr ""
+msgstr "Kiểu chữ"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:433
 msgid "Forward"
-msgstr ""
+msgstr "Tới trước"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:364
 msgid "Go to first page"
-msgstr ""
+msgstr "Đến trang đầu tiên"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:368
 msgid "Go to last page"
-msgstr ""
+msgstr "Đến trang cuối"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:371
 msgid "Go to next layer"
@@ -545,7 +545,7 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:366
 msgid "Go to page"
-msgstr ""
+msgstr "Đi đến trang"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:370
 msgid "Go to previous layer"
@@ -557,17 +557,17 @@ msgstr ""
 
 #: ../src/control/pagetype/PageTypeHandler.cpp:23
 msgid "Graph"
-msgstr ""
+msgstr "Đồ thị"
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:15
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:108
 msgid "Gray"
-msgstr ""
+msgstr "Xám"
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:11
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:104
 msgid "Green"
-msgstr ""
+msgstr "Xanh lục"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:342
 msgid "Grid Snapping"
@@ -580,7 +580,7 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:68
 msgid "Hide all"
-msgstr ""
+msgstr "Ẩn tất cả"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:59
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:396
@@ -590,19 +590,19 @@ msgstr ""
 #: ../src/control/pagetype/PageTypeHandler.cpp:30
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:400
 msgid "Image"
-msgstr ""
+msgstr "Ảnh"
 
 #: ../src/control/XournalMain.cpp:225
 msgid "Image file successfully created"
-msgstr ""
+msgstr "Ảnh được tạo thành công"
 
-#: ../src/control/XournalMain.cpp:272
+#: ../src/control/XournalMain.cpp:273
 msgid "Image output filename (.png / .svg)"
 msgstr ""
 
 #: ../src/control/stockdlg/ImageOpenDlg.cpp:17
 msgid "Images"
-msgstr ""
+msgstr "Ảnh"
 
 #: ../src/undo/InsertUndoAction.cpp:79
 msgid "Insert elements"
@@ -610,21 +610,21 @@ msgstr ""
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:61 ../src/undo/InsertUndoAction.cpp:34
 msgid "Insert image"
-msgstr ""
+msgstr "Chèn ảnh"
 
 #: ../src/undo/InsertUndoAction.cpp:36
 msgid "Insert latex"
-msgstr ""
+msgstr "Chèn latex"
 
 #: ../src/undo/InsertLayerUndoAction.cpp:26
 msgid "Insert layer"
-msgstr ""
+msgstr "Chèn lớp"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:381
 msgid "Insert page"
-msgstr ""
+msgstr "Chèn trang"
 
-#: ../src/control/XournalMain.cpp:273
+#: ../src/control/XournalMain.cpp:274
 msgid "Jump to Page (first Page: 1)"
 msgstr ""
 
@@ -649,18 +649,18 @@ msgstr ""
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:12
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:105
 msgid "Light Blue"
-msgstr ""
+msgstr "Xanh dương nhạt"
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:13
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:106
 msgid "Light Green"
-msgstr ""
+msgstr "Xanh lục nhạt"
 
 #: ../src/gui/PageView.cpp:687
 #: ../src/gui/sidebar/previews/base/SidebarPreviewBaseEntry.cpp:76
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:15
 msgid "Loading..."
-msgstr ""
+msgstr "Đang tải..."
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:17
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:110
@@ -676,7 +676,7 @@ msgstr ""
 msgid "Medium"
 msgstr ""
 
-#: ../src/control/XournalMain.cpp:486
+#: ../src/control/XournalMain.cpp:487
 msgid "Missing the needed UI file:\n"
 "{1}\n"
 " .app corrupted?\n"
@@ -685,31 +685,31 @@ msgstr ""
 
 #: ../src/undo/MoveUndoAction.cpp:17
 msgid "Move"
-msgstr ""
+msgstr "Di chuyển"
 
 #: ../src/undo/MoveLayerUndoAction.cpp:27
 msgid "Move layer"
-msgstr ""
+msgstr "Di chuyển lớp"
 
 #: ../src/undo/SwapUndoAction.cpp:63
 msgid "Move page downwards"
-msgstr ""
+msgstr "Chuyển trang xuống dưới"
 
 #: ../src/undo/SwapUndoAction.cpp:63
 msgid "Move page upwards"
-msgstr ""
+msgstr "Chuyển trang lên trên"
 
 #: ../src/gui/dialog/ToolbarManageDialog.cpp:70
 msgid "New"
-msgstr ""
+msgstr "Mới"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:317
 msgid "New Xournal"
-msgstr ""
+msgstr "Tạo Xournal mới"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:367
 msgid "Next"
-msgstr ""
+msgstr "Tiếp"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:375
 msgid "Next annotated page"
@@ -730,7 +730,7 @@ msgstr ""
 
 #: ../src/plugin/Plugin.cpp:308 ../src/plugin/Plugin.cpp:327
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../src/control/jobs/BaseExportJob.cpp:86
 msgid "Only local files are supported\n"
@@ -739,7 +739,7 @@ msgstr ""
 
 #: ../src/control/stockdlg/ImageOpenDlg.cpp:11
 msgid "Open Image"
-msgstr ""
+msgstr "Mở ảnh"
 
 #: ../src/control/XournalMain.cpp:116
 msgid "Open Logfile"
@@ -752,17 +752,17 @@ msgstr ""
 #: ../src/control/stockdlg/XojOpenDlg.cpp:11
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:318
 msgid "Open file"
-msgstr ""
+msgstr "Mở tập tin"
 
 #: ../src/control/RecentManager.cpp:181
 msgctxt "{1} is a URI"
 msgid "Open {1}"
-msgstr ""
+msgstr "Mở {1}"
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:18
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:111
 msgid "Orange"
-msgstr ""
+msgstr "Cam"
 
 #: ../src/control/jobs/PdfExportJob.cpp:9
 msgid "PDF Export"
@@ -784,9 +784,9 @@ msgstr ""
 #: ../src/control/jobs/PdfExportJob.cpp:13
 #: ../src/control/stockdlg/XojOpenDlg.cpp:42
 msgid "PDF files"
-msgstr ""
+msgstr "Tập tin PDF"
 
-#: ../src/control/XournalMain.cpp:271
+#: ../src/control/XournalMain.cpp:272
 msgid "PDF output filename"
 msgstr ""
 
@@ -804,11 +804,11 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolPageSpinner.cpp:42
 msgid "Page"
-msgstr ""
+msgstr "Trang"
 
 #: ../src/gui/sidebar/previews/page/SidebarPreviewPages.cpp:62
 msgid "Page Preview"
-msgstr ""
+msgstr "Xem trước trang"
 
 #: ../src/undo/PageBackgroundChangedUndoAction.cpp:81
 msgid "Page background changed"
@@ -816,7 +816,7 @@ msgstr ""
 
 #: ../src/undo/InsertDeletePageUndoAction.cpp:98
 msgid "Page deleted"
-msgstr ""
+msgstr "Đã xóa Trang"
 
 #: ../src/undo/InsertDeletePageUndoAction.cpp:94
 msgid "Page inserted"
@@ -824,7 +824,7 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolPageSpinner.cpp:31
 msgid "Page number"
-msgstr ""
+msgstr "Số trang"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:348
 msgid "Paired pages"
@@ -833,16 +833,16 @@ msgstr ""
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:332
 #: ../src/undo/AddUndoAction.cpp:77
 msgid "Paste"
-msgstr ""
+msgstr "Dán"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:427
 msgid "Pause / Play"
-msgstr ""
+msgstr "Tạm dừng / Chạy"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:57
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:228
 msgid "Pen"
-msgstr ""
+msgstr "Bút"
 
 #: ../src/control/pagetype/PageTypeHandler.cpp:19
 msgid "Plain"
@@ -856,37 +856,37 @@ msgstr ""
 
 #: ../src/gui/dialog/ToolbarManageDialog.cpp:17
 msgid "Predefined"
-msgstr ""
+msgstr "Xác định trước"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:350
 msgid "Presentation mode"
-msgstr ""
+msgstr "Chế độ trình chiếu"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:425
 msgid "Record Audio / Stop Recording"
-msgstr ""
+msgstr "Thu âm / Ngừng"
 
 #: ../src/control/Control.cpp:898
 msgid "Recorder could not be started."
-msgstr ""
+msgstr "Không thể mở được máy ghi âm."
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:16
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:109
 msgid "Red"
-msgstr ""
+msgstr "Đỏ"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:326
 #: ../src/undo/UndoRedoHandler.cpp:215
 msgid "Redo"
-msgstr ""
+msgstr "Làm lại"
 
 #: ../src/undo/UndoRedoHandler.cpp:210
 msgid "Redo: "
-msgstr ""
+msgstr "Làm lại: "
 
 #: ../src/control/Control.cpp:1996
 msgid "Remove PDF Background"
-msgstr ""
+msgstr "Xóa nền PDF"
 
 #: ../src/gui/dialog/toolbarCustomize/ToolbarAdapter.cpp:160
 msgid "Removed tool item from Toolbar {1} ID {2}"
@@ -898,7 +898,7 @@ msgstr ""
 
 #: ../src/util/XojMsgBox.cpp:71
 msgid "Replace"
-msgstr ""
+msgstr "Thay thế"
 
 #: ../src/control/xojfile/LoadHandler.cpp:1041
 msgid "Requested temporary file was not found for attachment {1}"
@@ -906,11 +906,11 @@ msgstr ""
 
 #: ../src/control/XournalMain.cpp:163
 msgid "Restore file"
-msgstr ""
+msgstr "Khôi phục tập tin"
 
 #: ../src/undo/RotateUndoAction.cpp:53
 msgid "Rotation"
-msgstr ""
+msgstr "Xoay"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:340
 msgid "Rotation Snapping"
@@ -926,7 +926,7 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:409
 msgid "Ruler"
-msgstr ""
+msgstr "Thước kẻ"
 
 #: ../src/control/jobs/CustomExportJob.cpp:24
 msgid "SVG graphics"
@@ -939,38 +939,38 @@ msgstr ""
 #: ../src/control/Control.cpp:2441 ../src/control/jobs/SaveJob.cpp:13
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:319
 msgid "Save"
-msgstr ""
+msgstr "Lưu"
 
 #: ../src/control/Control.cpp:2441
 msgid "Save As..."
-msgstr ""
+msgstr "Lưu dưới dạng..."
 
 #: ../src/control/Control.cpp:2277 ../src/gui/dialog/PageTemplateDialog.cpp:83
 msgid "Save File"
-msgstr ""
+msgstr "Lưu tập tin"
 
 #: ../src/control/jobs/CustomExportJob.cpp:128
 #: ../src/control/jobs/SaveJob.cpp:112
 msgid "Save file error: {1}"
-msgstr ""
+msgstr "Lỗi khi lưu tập tin: {1}"
 
 #: ../src/undo/ScaleUndoAction.cpp:52
 msgid "Scale"
-msgstr ""
+msgstr "Tỷ lệ"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:334
 msgid "Search"
-msgstr ""
+msgstr "Tìm kiếm"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:421
 msgid "Select Font"
-msgstr ""
+msgstr "Chọn kiểu chữ"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:416
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:19
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:66
 msgid "Select Object"
-msgstr ""
+msgstr "Chọn đối tượng"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:414
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:14
@@ -978,42 +978,42 @@ msgstr ""
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:56
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:86
 msgid "Select Rectangle"
-msgstr ""
+msgstr "Chọn tam giác"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:412
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:18
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:61
 msgid "Select Region"
-msgstr ""
+msgstr "Chọn vùng"
 
 #: ../src/control/Control.cpp:1995
 msgid "Select another PDF"
-msgstr ""
+msgstr "Chọn tập tin PDF khác"
 
 #: ../src/util/XojMsgBox.cpp:70
 msgid "Select another name"
-msgstr ""
+msgstr "Chọn tên khác"
 
 #: ../src/gui/dialog/SelectBackgroundColorDialog.cpp:114
 msgid "Select background color"
-msgstr ""
+msgstr "Chọn màu nền"
 
 #: ../src/gui/toolbarMenubar/ColorToolItem.cpp:39
 #: ../src/gui/toolbarMenubar/ColorToolItem.cpp:91
 msgid "Select color"
-msgstr ""
+msgstr "Chọn màu"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:64
 msgid "Select rectangle"
-msgstr ""
+msgstr "Chọn tam giác"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:63
 msgid "Select region"
-msgstr ""
+msgstr "Chọn vùng"
 
 #: ../src/control/XournalMain.cpp:115
 msgid "Send Bugreport"
-msgstr ""
+msgstr "Gửi báo cáo lỗi"
 
 #: ../src/gui/dialog/toolbarCustomize/ToolbarCustomizeDialog.cpp:50
 msgid "Separator"
@@ -1025,7 +1025,7 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:63
 msgid "Show all"
-msgstr ""
+msgstr "Hiển thị tất cả"
 
 #: ../src/gui/dialog/backgroundSelect/PdfPagesDialog.cpp:88
 msgid "Show only not used pages (one unused page)"
@@ -1035,12 +1035,13 @@ msgstr ""
 msgid "Show only not used pages ({1} unused pages)"
 msgstr ""
 
-#: ../src/control/XournalMain.cpp:339
+#: ../src/control/XournalMain.cpp:340
 msgid "Sorry, Xournal++ can only open one file at once.\n"
 "Others are ignored."
-msgstr ""
+msgstr "Xin lỗi, Xournal++ chỉ có thể mở một tập tin một lúc.\n"
+"Các tập tin khác sẽ bị loại bỏ."
 
-#: ../src/control/XournalMain.cpp:351
+#: ../src/control/XournalMain.cpp:352
 msgid "Sorry, Xournal++ cannot open remote files at the moment.\n"
 "You have to copy the file to a local directory."
 msgstr ""
@@ -1051,7 +1052,7 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:430
 msgid "Stop"
-msgstr ""
+msgstr "Dừng"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:105
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:35
@@ -1070,7 +1071,7 @@ msgstr ""
 #: ../src/gui/dialog/ButtonConfigGui.cpp:60
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:398
 msgid "Text"
-msgstr ""
+msgstr "Văn bản"
 
 #: ../src/gui/SearchBar.cpp:67
 #, c-format
@@ -1152,19 +1153,19 @@ msgstr ""
 #: ../src/gui/dialog/ButtonConfigGui.cpp:84
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:474
 msgid "Thick"
-msgstr ""
+msgstr "Dày"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:81
 msgid "Thickness - don't change"
-msgstr ""
+msgstr "Độ dày - đừng thay đổi"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:82
 msgid "Thin"
-msgstr ""
+msgstr "Mỏng"
 
 #: ../src/control/Control.cpp:2440
 msgid "This document is not saved yet."
-msgstr ""
+msgstr "Tài liệu này chưa được lưu."
 
 #: ../src/control/PageBackgroundChangeController.cpp:151
 #: ../src/control/tools/ImageHandler.cpp:44
@@ -1185,11 +1186,11 @@ msgstr ""
 
 #: ../src/gui/dialog/ToolbarManageDialog.cpp:45
 msgid "Toolbars"
-msgstr ""
+msgstr "Thanh công cụ"
 
 #: ../src/util/CrashHandler.cpp:30
 msgid "Trying to emergency save the current open document…"
-msgstr ""
+msgstr "Thử lưu khẩn cấp tập tin đang mở…"
 
 #: ../src/gui/PageView.cpp:346
 msgid "Unable to play audio recording {1}"
@@ -1198,11 +1199,11 @@ msgstr ""
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:325
 #: ../src/undo/UndoRedoHandler.cpp:203
 msgid "Undo"
-msgstr ""
+msgstr "Hoàn tác"
 
 #: ../src/undo/UndoRedoHandler.cpp:198
 msgid "Undo: "
-msgstr ""
+msgstr "Hoàn tác: "
 
 #: ../src/control/xojfile/LoadHandler.cpp:278
 msgid "Unexpected root tag: {1}"
@@ -1254,12 +1255,12 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:476
 msgid "Very Thick"
-msgstr ""
+msgstr "Rất dày"
 
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:20
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:113
 msgid "White"
-msgstr ""
+msgstr "Trắng"
 
 #: ../src/control/pagetype/PageTypeHandler.cpp:29
 msgid "With PDF background"
@@ -1305,7 +1306,7 @@ msgstr ""
 #: ../src/gui/dialog/toolbarCustomize/CustomizeableColorList.cpp:19
 #: ../src/gui/toolbarMenubar/model/ToolbarColorNames.cpp:112
 msgid "Yellow"
-msgstr ""
+msgstr "Vàng"
 
 #: ../src/control/PageBackgroundChangeController.cpp:186
 msgid "You don't have any PDF pages to select from. Cancel operation.\n"
@@ -1324,15 +1325,15 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:358
 msgid "Zoom fit to screen"
-msgstr ""
+msgstr "Phóng vừa màn hình"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:357
 msgid "Zoom in"
-msgstr ""
+msgstr "Phóng to"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:356
 msgid "Zoom out"
-msgstr ""
+msgstr "Thu nhỏ"
 
 #: ../src/gui/toolbarMenubar/ToolZoomSlider.cpp:72
 msgid "Zoom slider"
@@ -1340,7 +1341,7 @@ msgstr ""
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:359
 msgid "Zoom to 100%"
-msgstr ""
+msgstr "Hiện 100%"
 
 #: ../src/control/Control.cpp:2277 ../src/control/jobs/BaseExportJob.cpp:17
 #: ../src/control/stockdlg/ImageOpenDlg.cpp:11
@@ -1361,7 +1362,7 @@ msgstr ""
 
 #: ../src/util/DeviceListHelper.cpp:96
 msgid "cursor"
-msgstr ""
+msgstr "con trỏ"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:236
 msgid "dash-/ dotted"
@@ -1393,23 +1394,23 @@ msgstr ""
 
 #: ../src/util/DeviceListHelper.cpp:94
 msgid "eraser"
-msgstr ""
+msgstr "tẩy"
 
 #: ../src/undo/AddUndoAction.cpp:97 ../src/undo/DeleteUndoAction.cpp:94
 msgid "image"
-msgstr ""
+msgstr "ảnh"
 
 #: ../src/util/DeviceListHelper.cpp:99
 msgid "keyboard"
-msgstr ""
+msgstr "bàn phím"
 
 #: ../src/undo/AddUndoAction.cpp:100 ../src/undo/DeleteUndoAction.cpp:97
 msgid "latex"
-msgstr ""
+msgstr "latex"
 
 #: ../src/util/DeviceListHelper.cpp:90
 msgid "mouse"
-msgstr ""
+msgstr "chuột"
 
 #: ../src/control/LatexController.cpp:265
 msgid "pdflatex encountered an error: {1} (exit code: {2})"
@@ -1417,11 +1418,11 @@ msgstr ""
 
 #: ../src/util/DeviceListHelper.cpp:92
 msgid "pen"
-msgstr ""
+msgstr "bút"
 
 #: ../src/gui/toolbarMenubar/ToolPageLayer.cpp:153
 msgid "show"
-msgstr ""
+msgstr "hiện"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:230
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:249
@@ -1438,7 +1439,7 @@ msgstr ""
 
 #: ../src/undo/AddUndoAction.cpp:103 ../src/undo/DeleteUndoAction.cpp:100
 msgid "text"
-msgstr ""
+msgstr "văn bản"
 
 #: ../src/util/DeviceListHelper.cpp:103
 msgid "touchpad"
@@ -1446,7 +1447,7 @@ msgstr ""
 
 #: ../src/util/DeviceListHelper.cpp:101
 msgid "touchscreen"
-msgstr ""
+msgstr "màn hình cảm ứng"
 
 #: ../src/util/DeviceListHelper.cpp:106
 msgid "trackpoint"
@@ -1537,11 +1538,11 @@ msgstr ""
 
 #: ../ui/settings.glade:4175
 msgid "1,00"
-msgstr ""
+msgstr "1,00"
 
 #: ../ui/settings.glade:2285
 msgid "30"
-msgstr ""
+msgstr "30"
 
 #: ../ui/images.glade:88
 msgid "<b>... or select already used Image:</b>"
@@ -1699,7 +1700,7 @@ msgstr ""
 
 #: ../ui/about.glade:9
 msgid "About Xournal++"
-msgstr ""
+msgstr "Thông tin về Xournal++"
 
 #: ../ui/settings.glade:3637
 msgid "Action on Tool Tap"
@@ -1715,7 +1716,7 @@ msgstr ""
 
 #: ../ui/exportSettings.glade:142
 msgid "All pages"
-msgstr ""
+msgstr "Tất cả các trang"
 
 #: ../ui/settings.glade:3603
 msgid "All three conditions must be met before stroke is ignored.\n"
@@ -1740,7 +1741,7 @@ msgstr ""
 
 #: ../ui/settings.glade:1533
 msgid "Autodetect"
-msgstr ""
+msgstr "Tự động phát hiện"
 
 #: ../ui/settings.glade:577
 msgid "Autoloading Journals"
@@ -1748,7 +1749,7 @@ msgstr ""
 
 #: ../ui/settings.glade:334
 msgid "Autosaving"
-msgstr ""
+msgstr "Tự động lưu"
 
 #: ../ui/settings.glade:483
 msgid "Available Placeholders"
@@ -1764,15 +1765,15 @@ msgstr ""
 
 #: ../ui/settings.glade:2340
 msgid "Border Color"
-msgstr ""
+msgstr "Màu viền"
 
 #: ../ui/settings.glade:2301
 msgid "Border Width"
-msgstr ""
+msgstr "Độ rộng viền"
 
 #: ../ui/settings.glade:2026
 msgid "Border color"
-msgstr ""
+msgstr "Màu viền"
 
 #: ../ui/settings.glade:2011
 msgid "Border color for current page and other selections"
@@ -1784,7 +1785,7 @@ msgstr ""
 
 #: ../ui/settings.glade:1219
 msgid "Button 1"
-msgstr ""
+msgstr "Nút 1"
 
 #: ../ui/settings.glade:1257
 msgid "Button 2"
@@ -1800,7 +1801,7 @@ msgstr ""
 
 #: ../ui/settings.glade:2107
 msgid "Colors"
-msgstr ""
+msgstr "Màu"
 
 #: ../ui/main.glade:1134
 msgid "Configure Page Template"
@@ -1816,11 +1817,11 @@ msgstr ""
 
 #: ../ui/exportSettings.glade:158
 msgid "Current page"
-msgstr ""
+msgstr "Trang hiện tại"
 
 #: ../ui/settings.glade:2389
 msgid "Cursor"
-msgstr ""
+msgstr "Con trỏ"
 
 #: ../ui/settings.glade:1710
 msgid "Custom Commands (for Method \"Custom\")"
@@ -1848,23 +1849,23 @@ msgstr ""
 
 #: ../ui/main.glade:1172
 msgid "Delete Layer"
-msgstr ""
+msgstr "Xóa lớp"
 
 #: ../ui/settingsButtonConfig.glade:132
 msgid "Delete stroke"
-msgstr ""
+msgstr "Xóa nét"
 
 #: ../ui/main.glade:2136
 msgid "Delete this page"
-msgstr ""
+msgstr "Xóa trang này"
 
 #: ../ui/settingsButtonConfig.glade:25
 msgid "Device"
-msgstr ""
+msgstr "Thiết bị"
 
 #: ../ui/settings.glade:1638
 msgid "Disable"
-msgstr ""
+msgstr "Tắt"
 
 #: ../ui/settingsButtonConfig.glade:50
 msgid "Disable drawing for this device"
@@ -1876,7 +1877,7 @@ msgstr ""
 
 #: ../ui/settingsDeviceClassConfig.glade:41
 msgid "Disabled"
-msgstr ""
+msgstr "Đã tắt"
 
 #: ../ui/settings.glade:1507
 msgid "Disabling Method"
@@ -1927,7 +1928,7 @@ msgstr ""
 
 #: ../ui/settings.glade:1626
 msgid "Enable"
-msgstr ""
+msgstr "Bật"
 
 #: ../ui/settings.glade:3386
 msgid "Enable  with determination radius of "
@@ -2035,7 +2036,7 @@ msgstr ""
 
 #: ../ui/goto.glade:14
 msgid "Go to Page"
-msgstr ""
+msgstr "Đi đến Trang"
 
 #: ../ui/settings.glade:3311
 msgid "Grid snapping tolerance"
@@ -2051,7 +2052,7 @@ msgstr ""
 
 #: ../ui/pagesize.glade:212
 msgid "Height:"
-msgstr ""
+msgstr "Chiều cao:"
 
 #: ../ui/main.glade:888 ../ui/settings.glade:2564 ../ui/settings.glade:2631
 msgid "Hide Menubar"
@@ -2093,11 +2094,11 @@ msgstr ""
 
 #: ../ui/settings.glade:3980
 msgid "Input Device"
-msgstr ""
+msgstr "Thiết bị đầu vào"
 
 #: ../ui/settings.glade:755
 msgid "Input Devices"
-msgstr ""
+msgstr "Thiết bị đầu vào"
 
 #: ../ui/settings.glade:880
 msgid "Input System"
@@ -2105,7 +2106,7 @@ msgstr ""
 
 #: ../ui/texdialog.glade:9
 msgid "Insert Latex"
-msgstr ""
+msgstr "Chèn Latex"
 
 #: ../ui/main.glade:2532
 msgid "Insert Page After"
@@ -2129,15 +2130,15 @@ msgstr ""
 
 #: ../ui/about.glade:265
 msgid "License"
-msgstr ""
+msgstr "Bản quyền"
 
 #: ../ui/settings.glade:605
 msgid "Load / Save"
-msgstr ""
+msgstr "Nạp / Lưu"
 
 #: ../ui/images.glade:73
 msgid "Load file"
-msgstr ""
+msgstr "Nạp tập tin"
 
 #: ../ui/toolbarManageDialog.glade:9
 msgid "Manage Toolbar"
@@ -2145,7 +2146,7 @@ msgstr ""
 
 #: ../ui/settings.glade:3544
 msgid "Max Length (mm)"
-msgstr ""
+msgstr "Độ dài tối đa (mm)"
 
 #: ../ui/settings.glade:838
 msgid "Merge button events with stylus tip events\n"
@@ -2154,15 +2155,15 @@ msgstr ""
 
 #: ../ui/settings.glade:972
 msgid "Middle Mouse Button"
-msgstr ""
+msgstr "Nút chuột giữa"
 
 #: ../ui/settings.glade:1059 ../ui/settingsDeviceClassConfig.glade:42
 msgid "Mouse"
-msgstr ""
+msgstr "Chuột"
 
 #: ../ui/settings.glade:1028
 msgid "Mouse Buttons"
-msgstr ""
+msgstr "Nút chuột"
 
 #: ../ui/settingsDeviceClassConfig.glade:43
 msgid "Mouse+Keyboard Combo"
@@ -2202,11 +2203,11 @@ msgstr ""
 
 #: ../ui/settings.glade:860
 msgid "Options"
-msgstr ""
+msgstr "Tùy chỉnh"
 
 #: ../ui/settings.glade:4003
 msgid "Output Device"
-msgstr ""
+msgstr "Thiết bị đầu ra"
 
 #: ../ui/main.glade:1077
 msgid "P_revious annotated Page"
@@ -2218,7 +2219,7 @@ msgstr ""
 
 #: ../ui/exportSettings.glade:175
 msgid "Pages:"
-msgstr ""
+msgstr "Trang:"
 
 #: ../ui/settings.glade:3265
 msgid "Paired Pages"
@@ -2287,7 +2288,7 @@ msgstr ""
 
 #: ../ui/settings.glade:2249
 msgid "Radius"
-msgstr ""
+msgstr "Bán kính"
 
 #: ../ui/exportSettings.glade:127
 msgid "Range"
@@ -2307,11 +2308,11 @@ msgstr ""
 
 #: ../ui/exportSettings.glade:112
 msgid "Resolution"
-msgstr ""
+msgstr "Độ phân giải"
 
 #: ../ui/settings.glade:1010
 msgid "Right Mouse Button"
-msgstr ""
+msgstr "Chuột phải"
 
 #: ../ui/settings.glade:3298
 msgid "Rotation snapping tolerance"
@@ -2335,19 +2336,19 @@ msgstr ""
 
 #: ../ui/settings.glade:3903
 msgid "Select Folder"
-msgstr ""
+msgstr "Chọn thư mục"
 
 #: ../ui/images.glade:8
 msgid "Select Image"
-msgstr ""
+msgstr "Chọn ảnh"
 
 #: ../ui/pdfpages.glade:8
 msgid "Select PDF Page"
-msgstr ""
+msgstr "Chọn Trang PDF"
 
 #: ../ui/settings.glade:2668
 msgid "Select toolbar:"
-msgstr ""
+msgstr "Chọn thanh công cụ:"
 
 #: ../ui/settings.glade:2062
 msgid "Selection Color (Text, Stroke Selection etc.)"
@@ -2363,7 +2364,7 @@ msgstr ""
 
 #: ../ui/settings.glade:3605
 msgid "Settings:"
-msgstr ""
+msgstr "Cài đặt:"
 
 #: ../ui/settings.glade:3614
 msgid "Show Floating Toolbox"
@@ -2407,7 +2408,7 @@ msgstr ""
 
 #: ../ui/settings.glade:1344
 msgid "Stylus"
-msgstr ""
+msgstr "Bút viết"
 
 #: ../ui/settings.glade:1313
 msgid "Stylus Buttons"
@@ -2435,15 +2436,15 @@ msgstr ""
 
 #: ../ui/settings.glade:1671 ../ui/settings.glade:1684
 msgid "Test"
-msgstr ""
+msgstr "Kiểm tra"
 
 #: ../ui/main.glade:1820
 msgid "Text Font..."
-msgstr ""
+msgstr "Kiểu chữ..."
 
 #: ../ui/settings.glade:2970
 msgid "The unit of the ruler is cm"
-msgstr ""
+msgstr "Đơn vị của thước là cm"
 
 #: ../ui/settings.glade:786
 msgid "These settings take only effect if the experimental input system is activated"
@@ -2455,12 +2456,12 @@ msgstr ""
 
 #: ../ui/settings.glade:1518
 msgid "Timeout"
-msgstr ""
+msgstr "Hết giờ"
 
 #: ../ui/settings.glade:1431 ../ui/settings.glade:1900
 #: ../ui/settingsDeviceClassConfig.glade:46
 msgid "Touchscreen"
-msgstr ""
+msgstr "Màn hình cảm ứng"
 
 #: ../ui/fillTransparency.glade:14
 msgid "Transparency settings"
@@ -2468,27 +2469,27 @@ msgstr ""
 
 #: ../ui/settings.glade:3584
 msgid "Try to select object first."
-msgstr ""
+msgstr "Thử chọn đối tướng trước."
 
 #: ../ui/settings.glade:3589 ../ui/settings.glade:3619
 msgid "Try to select object first; if nothing selected then show floating toolbox if enabled."
-msgstr ""
+msgstr "Thử chọn đối tượng trước; nếu không có gì được chọn sẽ hiển thị hộp công cụ nổi nếu được kích hoạt."
 
 #: ../ui/settings.glade:3245
 msgid "Usually 0 or 1"
-msgstr ""
+msgstr "Thường là 0 hoặc 1"
 
 #: ../ui/about.glade:101
 msgid "Version"
-msgstr ""
+msgstr "Phiên bản"
 
 #: ../ui/pluginEntry.glade:94
 msgid "Version: "
-msgstr ""
+msgstr "Phiên bản: "
 
 #: ../ui/settings.glade:2734
 msgid "View"
-msgstr ""
+msgstr "Xem"
 
 #: ../ui/settingsButtonConfig.glade:131
 msgid "Whiteout"
@@ -2496,11 +2497,11 @@ msgstr ""
 
 #: ../ui/pagesize.glade:189
 msgid "Width:"
-msgstr ""
+msgstr "Độ rộng:"
 
 #: ../ui/about.glade:232
 msgid "With help from the community"
-msgstr ""
+msgstr "Với sự trợ giúp từ cộng đồng"
 
 #: ../ui/settings.glade:1869
 msgid "Workaround"
@@ -2512,7 +2513,7 @@ msgstr ""
 
 #: ../ui/settings.glade:3024
 msgid "Zoom"
-msgstr ""
+msgstr "Thu phóng"
 
 #: ../ui/settings.glade:1800
 msgid "Zoom Gestures"
@@ -2520,7 +2521,7 @@ msgstr ""
 
 #: ../ui/settings.glade:2868
 msgid "Zoom Speed"
-msgstr ""
+msgstr "Tốc độ thu phóng"
 
 #: ../ui/main.glade:633
 msgid "_1 Column"
@@ -2768,11 +2769,11 @@ msgstr ""
 
 #: ../ui/pageTemplate.glade:158
 msgid "change"
-msgstr ""
+msgstr "thay đổi"
 
 #: ../ui/exportSettings.glade:223
 msgid "dpi"
-msgstr ""
+msgstr "dpi"
 
 #: ../ui/pluginEntry.glade:130
 msgid "enabled,"
@@ -2798,7 +2799,7 @@ msgstr ""
 
 #: ../ui/settings.glade:1562
 msgid "s <i>(after which the touchscreen will be reactivated again)</i>"
-msgstr ""
+msgstr "s <i>(sau đó màn hình cảm ứng sẽ được kích hoạt trở lại)</i>"
 
 #: ../ui/pageTemplate.glade:37
 msgid "save to file"
