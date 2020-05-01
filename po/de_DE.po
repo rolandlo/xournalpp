@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-30 23:51+0000\n"
-"PO-Revision-Date: 2020-04-30 23:55\n"
+"POT-Creation-Date: 2020-05-01 17:23+0000\n"
+"PO-Revision-Date: 2020-05-01 17:25\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -15,13 +15,13 @@ msgstr ""
 "X-Crowdin-Language: de\n"
 "X-Crowdin-File: /master/po/xournalpp.pot\n"
 
-#: ../src/control/XournalMain.cpp:510
+#: ../src/control/XournalMain.cpp:518
 msgid "\n\n"
 "Will now attempt to run without this file."
 msgstr "\n\n"
 "Versuche nun, ohne die Datei zu starten."
 
-#: ../src/control/XournalMain.cpp:490
+#: ../src/control/XournalMain.cpp:498
 msgid "\n"
 "Will now attempt to run without this file."
 msgstr "\n"
@@ -40,7 +40,7 @@ msgstr "%F-Notiz-%H-%M"
 msgid "<b>No devices were found. This seems wrong - maybe file a bug report?</b>"
 msgstr "<b>Es wurden keine Geräte gefunden. Dies scheint ein Fehler zu sein - vielleicht könnten Sie einen Fehlerbericht erstellen?</b>"
 
-#: ../src/control/XournalMain.cpp:505
+#: ../src/control/XournalMain.cpp:513
 msgid "<span foreground='red' size='x-large'>Missing the needed UI file:\n"
 "<b>{1}</b></span>\n"
 "Could not find them at any location.\n"
@@ -54,7 +54,7 @@ msgstr "<span foreground='red' size='x-large'>Benötigte UI-Datei fehlt:\n"
 "Nicht im Arbeitsverzeichnis\n"
 "Nicht in {2}"
 
-#: ../src/control/XournalMain.cpp:275
+#: ../src/control/XournalMain.cpp:276
 msgid "Absolute path for the audio files playback"
 msgstr "Absoluter Pfad für die Audiodateien"
 
@@ -551,6 +551,10 @@ msgstr "Schriftart"
 msgid "Forward"
 msgstr "Weiter"
 
+#: ../src/control/XournalMain.cpp:277
+msgid "Get version of xournalpp"
+msgstr ""
+
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:364
 msgid "Go to first page"
 msgstr "Gehe zur ersten Seite"
@@ -616,7 +620,7 @@ msgstr "Bild"
 msgid "Image file successfully created"
 msgstr "Bild erfolgreich erstellt"
 
-#: ../src/control/XournalMain.cpp:273
+#: ../src/control/XournalMain.cpp:274
 msgid "Image output filename (.png / .svg)"
 msgstr "Dateiname der Bild-Ausgabe (.png / .svg)"
 
@@ -644,7 +648,7 @@ msgstr "Ebene einfügen"
 msgid "Insert page"
 msgstr "Seite einfügen"
 
-#: ../src/control/XournalMain.cpp:274
+#: ../src/control/XournalMain.cpp:275
 msgid "Jump to Page (first Page: 1)"
 msgstr "Springe zur Seite (erste Seite: 1)"
 
@@ -696,7 +700,7 @@ msgstr "Werkzeugleisten verwalten"
 msgid "Medium"
 msgstr "Mittel"
 
-#: ../src/control/XournalMain.cpp:487
+#: ../src/control/XournalMain.cpp:495
 msgid "Missing the needed UI file:\n"
 "{1}\n"
 " .app corrupted?\n"
@@ -810,7 +814,7 @@ msgstr "PDF-Datei erfolgreich erstellt"
 msgid "PDF files"
 msgstr "PDF Dateien"
 
-#: ../src/control/XournalMain.cpp:272
+#: ../src/control/XournalMain.cpp:273
 msgid "PDF output filename"
 msgstr "Dateiname der PDF-Ausgabe"
 
@@ -1059,13 +1063,13 @@ msgstr "Nur nicht benutzte Seiten anzeigen (eine nicht benutzte Seite)"
 msgid "Show only not used pages ({1} unused pages)"
 msgstr "Nur nicht benutzte Seiten anzeigen ({1} nicht benutzte Seiten)"
 
-#: ../src/control/XournalMain.cpp:340
+#: ../src/control/XournalMain.cpp:348
 msgid "Sorry, Xournal++ can only open one file at once.\n"
 "Others are ignored."
 msgstr "Entschuldigung, Xournal++ kann nur eine Datei auf einmal öffnen.\n"
 "Alle weiteren werden ignoriert."
 
-#: ../src/control/XournalMain.cpp:352
+#: ../src/control/XournalMain.cpp:360
 msgid "Sorry, Xournal++ cannot open remote files at the moment.\n"
 "You have to copy the file to a local directory."
 msgstr "Entschuldigung, Xournal++ kann derzeit keine entfernten Dateien öffnen.\n"
