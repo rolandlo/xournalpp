@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-30 23:51+0000\n"
-"PO-Revision-Date: 2020-04-30 23:55\n"
+"POT-Creation-Date: 2020-05-01 17:23+0000\n"
+"PO-Revision-Date: 2020-05-01 17:25\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Romanian\n"
 "Language: ro_RO\n"
@@ -15,13 +15,13 @@ msgstr ""
 "X-Crowdin-Language: ro\n"
 "X-Crowdin-File: /master/po/xournalpp.pot\n"
 
-#: ../src/control/XournalMain.cpp:510
+#: ../src/control/XournalMain.cpp:518
 msgid "\n\n"
 "Will now attempt to run without this file."
 msgstr "\n\n"
 "Va încerca acum să ruleze fără acest fișier."
 
-#: ../src/control/XournalMain.cpp:490
+#: ../src/control/XournalMain.cpp:498
 msgid "\n"
 "Will now attempt to run without this file."
 msgstr "\n"
@@ -40,7 +40,7 @@ msgstr "%F-Notă-%H-%M"
 msgid "<b>No devices were found. This seems wrong - maybe file a bug report?</b>"
 msgstr "<b>Niciun dispozitiv nu a fost găsit. Poți să încarci un raport de eroare?</b>"
 
-#: ../src/control/XournalMain.cpp:505
+#: ../src/control/XournalMain.cpp:513
 msgid "<span foreground='red' size='x-large'>Missing the needed UI file:\n"
 "<b>{1}</b></span>\n"
 "Could not find them at any location.\n"
@@ -54,7 +54,7 @@ msgstr "<span foreground='red' size='x-large'>Lipsește fișierul necesar UI:\n"
 "  Nu se afla in calea de lucru\n"
 "  Nu in {2}"
 
-#: ../src/control/XournalMain.cpp:275
+#: ../src/control/XournalMain.cpp:276
 msgid "Absolute path for the audio files playback"
 msgstr "Calea absolută pentru redarea fişierelor audio"
 
@@ -546,6 +546,10 @@ msgstr "Fontul"
 msgid "Forward"
 msgstr "Mergi înainte"
 
+#: ../src/control/XournalMain.cpp:277
+msgid "Get version of xournalpp"
+msgstr ""
+
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:364
 msgid "Go to first page"
 msgstr "Mergi la prima pagină"
@@ -611,7 +615,7 @@ msgstr "Imagine"
 msgid "Image file successfully created"
 msgstr "Fișier imagine creat cu succes"
 
-#: ../src/control/XournalMain.cpp:273
+#: ../src/control/XournalMain.cpp:274
 msgid "Image output filename (.png / .svg)"
 msgstr "Numele fişierului de ieşire imagine (.png / .svg)"
 
@@ -639,7 +643,7 @@ msgstr "Inserează un strat"
 msgid "Insert page"
 msgstr "Inserează pagină"
 
-#: ../src/control/XournalMain.cpp:274
+#: ../src/control/XournalMain.cpp:275
 msgid "Jump to Page (first Page: 1)"
 msgstr "Salt la pagina (prima pagină: 1)"
 
@@ -691,7 +695,7 @@ msgstr "Gestionare bară cu instrumente"
 msgid "Medium"
 msgstr "Mediu"
 
-#: ../src/control/XournalMain.cpp:487
+#: ../src/control/XournalMain.cpp:495
 msgid "Missing the needed UI file:\n"
 "{1}\n"
 " .app corrupted?\n"
@@ -805,7 +809,7 @@ msgstr ""
 msgid "PDF files"
 msgstr ""
 
-#: ../src/control/XournalMain.cpp:272
+#: ../src/control/XournalMain.cpp:273
 msgid "PDF output filename"
 msgstr ""
 
@@ -1054,13 +1058,13 @@ msgstr "Arată doar paginile neutilizate (o pagină nefolosită)"
 msgid "Show only not used pages ({1} unused pages)"
 msgstr "Arată numai paginile nefolosite ({1} pagini nefolosite)"
 
-#: ../src/control/XournalMain.cpp:340
+#: ../src/control/XournalMain.cpp:348
 msgid "Sorry, Xournal++ can only open one file at once.\n"
 "Others are ignored."
 msgstr "Ne pare rău, Xournal++ poate deschide doar un singur fișier simultan.\n"
 "Altele sunt ignorate."
 
-#: ../src/control/XournalMain.cpp:352
+#: ../src/control/XournalMain.cpp:360
 msgid "Sorry, Xournal++ cannot open remote files at the moment.\n"
 "You have to copy the file to a local directory."
 msgstr "Ne pare rău, Xournal++ nu poate deschide fișiere la distanță momentan.\n"
