@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-30 23:51+0000\n"
-"PO-Revision-Date: 2020-04-30 23:55\n"
+"PO-Revision-Date: 2020-05-01 14:24\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
@@ -1593,7 +1593,7 @@ msgstr "1,00"
 
 #: ../ui/settings.glade:2285
 msgid "30"
-msgstr ""
+msgstr "30"
 
 #: ../ui/images.glade:88
 msgid "<b>... or select already used Image:</b>"
@@ -1827,11 +1827,11 @@ msgstr "Grand curseur pour stylet"
 
 #: ../ui/settings.glade:2340
 msgid "Border Color"
-msgstr ""
+msgstr "Couleur de la bordure"
 
 #: ../ui/settings.glade:2301
 msgid "Border Width"
-msgstr ""
+msgstr "Epaisseur de bordure"
 
 #: ../ui/settings.glade:2026
 msgid "Border color"
@@ -1855,11 +1855,11 @@ msgstr "Bouton 2"
 
 #: ../ui/settings.glade:2183 ../ui/settings.glade:2326
 msgid "Choose the color to use for \"Highlight cursor position\""
-msgstr ""
+msgstr "Choisissez la couleur à utiliser pour \"Surligner la position du curseur\""
 
 #: ../ui/settings.glade:2197
 msgid "Circle Color"
-msgstr ""
+msgstr "Couleur du cercle"
 
 #: ../ui/settings.glade:2107
 msgid "Colors"
@@ -1973,7 +1973,7 @@ msgstr "Tracer une _ligne"
 
 #: ../ui/settings.glade:2165
 msgid "Draw a transparent circle around the cursor"
-msgstr ""
+msgstr "Dessiner un cercle transparent autour du curseur"
 
 #: ../ui/settings.glade:3669
 msgid "Drawing Area"
@@ -2357,7 +2357,7 @@ msgstr "RELEASE_IDENTIFIER"
 
 #: ../ui/settings.glade:2249
 msgid "Radius"
-msgstr ""
+msgstr "Rayon"
 
 #: ../ui/exportSettings.glade:127
 msgid "Range"
