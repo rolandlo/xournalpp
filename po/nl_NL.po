@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-30 23:51+0000\n"
-"PO-Revision-Date: 2020-04-30 23:54\n"
+"PO-Revision-Date: 2020-05-01 14:25\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
@@ -103,7 +103,7 @@ msgstr "Het attribuut '{1}' kan niet worden verwerkt als size_t; de waarde is '{
 
 #: ../src/control/xojfile/LoadHandlerHelper.cpp:152
 msgid "Attribute \"{1}\" could not be parsed as size_t, the value is nullptr"
-msgstr ""
+msgstr "Het attribuut \"{1}\" kan niet als size_t worden verwerkt, de waarde is nullptr"
 
 #: ../src/control/xojfile/LoadHandlerHelper.cpp:46
 msgid "Attribute color not set!"
@@ -208,7 +208,8 @@ msgstr "Kan pdflatex niet vinden in PATH.\n"
 #: ../src/control/LatexController.cpp:90
 msgid "Could not find the LaTeX package 'standalone'.\n"
 "Please install standalone (found in texlive-latex-extra) and make sure it's accessible by your LaTeX installation."
-msgstr ""
+msgstr "Kan het LaTeX-pakket 'standalone' niet vinden.\n"
+"Installeer dit pakket (te vinden in texlive-latex-extra) en zorg ervoor dat het toegankelijk is voor uw LaTeX-installatie."
 
 #: ../src/control/LatexController.cpp:387
 msgid "Could not load LaTeX PDF file"
@@ -423,7 +424,7 @@ msgstr "Rechthoek tekenen"
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:34
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:410
 msgid "Draw Spline"
-msgstr ""
+msgstr "Spline tekenen"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:103
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:32
@@ -498,7 +499,7 @@ msgstr "Fout tijdens automatisch opslaan: {1}"
 
 #: ../src/util/Util.cpp:170
 msgid "Error {1} executing system command: {2}"
-msgstr ""
+msgstr "Fout {1} die volgende systeemcommando uitvoert: {2}"
 
 #: ../src/util/CrashHandler.cpp:39
 msgid "Error: {1}"
@@ -507,7 +508,8 @@ msgstr "Fout: {1}"
 #: ../src/control/LatexController.cpp:84
 msgid "Error: {1}\n"
 "Could not find kpsewhich in PATH; please install kpsewhich and put it on path."
-msgstr ""
+msgstr "Fout: {1}\n"
+"kon kpsewhich niet vinden in PATH; installeer kpsewhich en plaats het in PATH."
 
 #: ../src/control/XournalMain.cpp:138
 msgid "Errorlog cannot be deleted. You have to do it manually.\n"
@@ -1461,7 +1463,7 @@ msgstr "penseelstreek"
 
 #: ../src/util/DeviceListHelper.cpp:108
 msgid "tablet pad"
-msgstr ""
+msgstr "tablet pad"
 
 #: ../src/undo/AddUndoAction.cpp:103 ../src/undo/DeleteUndoAction.cpp:100
 msgid "text"
@@ -1493,7 +1495,7 @@ msgstr "xoj-preview-extractor: roep aan met INVOER.xoj UITVOER.xoj"
 
 #: ../src/xoj-preview-extractor/xournalpp-thumbnailer.cpp:143
 msgid "xoj-preview-extractor: could not find icon \"{1}\""
-msgstr ""
+msgstr "xoj-preview-extractor: kon icon \"{1}\" niet vinden"
 
 #: ../src/xoj-preview-extractor/xournalpp-thumbnailer.cpp:92
 msgid "xoj-preview-extractor: file \"{1}\" contains no preview"
@@ -1587,11 +1589,11 @@ msgstr "... EN hoeveel tijd er verstreken moet zijn sinds de laatste streek.\n\n
 
 #: ../ui/settings.glade:4175
 msgid "1,00"
-msgstr ""
+msgstr "1,00"
 
 #: ../ui/settings.glade:2285
 msgid "30"
-msgstr ""
+msgstr "30"
 
 #: ../ui/images.glade:88
 msgid "<b>... or select already used Image:</b>"
@@ -1817,7 +1819,7 @@ msgstr "Beschikbare plaatshouders"
 
 #: ../ui/settings.glade:2037
 msgid "Background color between pages"
-msgstr ""
+msgstr "Achtergrondkleur tussen pagina's"
 
 #: ../ui/settings.glade:2368
 msgid "Big cursor for pen"
@@ -1825,11 +1827,11 @@ msgstr "Grote pencursor"
 
 #: ../ui/settings.glade:2340
 msgid "Border Color"
-msgstr ""
+msgstr "Randkleur"
 
 #: ../ui/settings.glade:2301
 msgid "Border Width"
-msgstr ""
+msgstr "Randdikte"
 
 #: ../ui/settings.glade:2026
 msgid "Border color"
@@ -1841,7 +1843,7 @@ msgstr "Randkleur van huidige pagina en overige selecties"
 
 #: ../ui/about.glade:127
 msgid "Built on"
-msgstr ""
+msgstr "Gebouwd op"
 
 #: ../ui/settings.glade:1219
 msgid "Button 1"
@@ -1853,11 +1855,11 @@ msgstr "Knop 2"
 
 #: ../ui/settings.glade:2183 ../ui/settings.glade:2326
 msgid "Choose the color to use for \"Highlight cursor position\""
-msgstr ""
+msgstr "Kies de kleur om te gebruiken voor \"Markeer cursorpositie\""
 
 #: ../ui/settings.glade:2197
 msgid "Circle Color"
-msgstr ""
+msgstr "Cirkelkleur"
 
 #: ../ui/settings.glade:2107
 msgid "Colors"
@@ -1897,7 +1899,7 @@ msgstr "Standaardnaam bij opslaan"
 
 #: ../ui/settings.glade:4162
 msgid "Default Seek Time (in seconds)"
-msgstr ""
+msgstr "Standaard zoektijd (in seconden)"
 
 #: ../ui/settings.glade:397
 msgid "Default name: "
@@ -1933,7 +1935,7 @@ msgstr "Tekenen met dit apparaat uitschakelen"
 
 #: ../ui/settings.glade:2515
 msgid "Disable scrollbar fade out"
-msgstr ""
+msgstr "Schuifbalk vervagen uitschakelen"
 
 #: ../ui/settingsDeviceClassConfig.glade:41
 msgid "Disabled"
@@ -1971,7 +1973,7 @@ msgstr "_Lijn tekenen"
 
 #: ../ui/settings.glade:2165
 msgid "Draw a transparent circle around the cursor"
-msgstr ""
+msgstr "Teken een transparante cirkel rond de cursor"
 
 #: ../ui/settings.glade:3669
 msgid "Drawing Area"
@@ -2323,7 +2325,7 @@ msgstr "Stylusopties"
 
 #: ../ui/settings.glade:4195
 msgid "Playback Settings"
-msgstr ""
+msgstr "Playback settings"
 
 #: ../ui/plugin.glade:14
 msgid "Plugin Manager"
@@ -2351,11 +2353,11 @@ msgstr "Drukgevoeligheid"
 
 #: ../ui/about.glade:167
 msgid "RELEASE_IDENTIFIER"
-msgstr ""
+msgstr "RELEASE_IDENTIFIER"
 
 #: ../ui/settings.glade:2249
 msgid "Radius"
-msgstr ""
+msgstr "Straal"
 
 #: ../ui/exportSettings.glade:127
 msgid "Range"
