@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-30 23:51+0000\n"
-"PO-Revision-Date: 2020-04-30 23:55\n"
+"POT-Creation-Date: 2020-05-01 17:23+0000\n"
+"PO-Revision-Date: 2020-05-01 17:25\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
@@ -15,13 +15,13 @@ msgstr ""
 "X-Crowdin-Language: cs\n"
 "X-Crowdin-File: /master/po/xournalpp.pot\n"
 
-#: ../src/control/XournalMain.cpp:510
+#: ../src/control/XournalMain.cpp:518
 msgid "\n\n"
 "Will now attempt to run without this file."
 msgstr "\n\n"
 "Teď se pokusí spustit bez tohoto souboru."
 
-#: ../src/control/XournalMain.cpp:490
+#: ../src/control/XournalMain.cpp:498
 msgid "\n"
 "Will now attempt to run without this file."
 msgstr "\n"
@@ -40,7 +40,7 @@ msgstr "%F-Poznámka-%H-%M"
 msgid "<b>No devices were found. This seems wrong - maybe file a bug report?</b>"
 msgstr "<b>Žádná zařízení nebyla nalezena. Zdá se to být špatně - možná můžeš nahlásit chybu?</b>"
 
-#: ../src/control/XournalMain.cpp:505
+#: ../src/control/XournalMain.cpp:513
 msgid "<span foreground='red' size='x-large'>Missing the needed UI file:\n"
 "<b>{1}</b></span>\n"
 "Could not find them at any location.\n"
@@ -54,7 +54,7 @@ msgstr "<span foreground='red' size='x-large'>Chybí požadovaný soubor uživat
 "  Nebyl nalezen v Pracovní Cestě\n"
 "  Nebyl nalezen v {2}"
 
-#: ../src/control/XournalMain.cpp:275
+#: ../src/control/XournalMain.cpp:276
 msgid "Absolute path for the audio files playback"
 msgstr "Absolutní cesta pro přehrávání zvukových souborů"
 
@@ -550,6 +550,10 @@ msgstr "Písmo"
 msgid "Forward"
 msgstr "Vpřed"
 
+#: ../src/control/XournalMain.cpp:277
+msgid "Get version of xournalpp"
+msgstr ""
+
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:364
 msgid "Go to first page"
 msgstr "Přejít na první stránku"
@@ -615,7 +619,7 @@ msgstr "Obrázek"
 msgid "Image file successfully created"
 msgstr "Obrázek úspěšně vytvořen"
 
-#: ../src/control/XournalMain.cpp:273
+#: ../src/control/XournalMain.cpp:274
 msgid "Image output filename (.png / .svg)"
 msgstr "Název výstupního souboru obrázku (.png / .svg)"
 
@@ -643,7 +647,7 @@ msgstr "Vložit vrstvu"
 msgid "Insert page"
 msgstr "Vložit stránku"
 
-#: ../src/control/XournalMain.cpp:274
+#: ../src/control/XournalMain.cpp:275
 msgid "Jump to Page (first Page: 1)"
 msgstr "Přejít na stránku (první stránka: 1)"
 
@@ -695,7 +699,7 @@ msgstr "Spravovat lištu nástrojů"
 msgid "Medium"
 msgstr "Střední"
 
-#: ../src/control/XournalMain.cpp:487
+#: ../src/control/XournalMain.cpp:495
 msgid "Missing the needed UI file:\n"
 "{1}\n"
 " .app corrupted?\n"
@@ -809,7 +813,7 @@ msgstr "PDF soubor úspěšně vytvořen"
 msgid "PDF files"
 msgstr "PDF soubory"
 
-#: ../src/control/XournalMain.cpp:272
+#: ../src/control/XournalMain.cpp:273
 msgid "PDF output filename"
 msgstr "Název výstupního PDF"
 
@@ -1058,13 +1062,13 @@ msgstr "Zobrazit pouze nevyužité stránky (jedna nevyužitá stránka)"
 msgid "Show only not used pages ({1} unused pages)"
 msgstr "Zobrazit pouze nevyužité stránky ({1} nevyužitých stránek)"
 
-#: ../src/control/XournalMain.cpp:340
+#: ../src/control/XournalMain.cpp:348
 msgid "Sorry, Xournal++ can only open one file at once.\n"
 "Others are ignored."
 msgstr "Promiň, Xournal++ může otevřít pouze jeden soubor najednou.\n"
 "Ostatní jsou ignorovány."
 
-#: ../src/control/XournalMain.cpp:352
+#: ../src/control/XournalMain.cpp:360
 msgid "Sorry, Xournal++ cannot open remote files at the moment.\n"
 "You have to copy the file to a local directory."
 msgstr "Promiň, Xournal++ momentálně nemůže otevřít vzdálené soubory.\n"
