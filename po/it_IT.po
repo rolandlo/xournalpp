@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-01 17:23+0000\n"
-"PO-Revision-Date: 2020-05-01 17:25\n"
+"PO-Revision-Date: 2020-05-02 14:23\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -508,7 +508,8 @@ msgstr "Errore: {1}"
 #: ../src/control/LatexController.cpp:84
 msgid "Error: {1}\n"
 "Could not find kpsewhich in PATH; please install kpsewhich and put it on path."
-msgstr ""
+msgstr "Errore:{1}\n"
+"Impossibile trovare kpsewhich in PATH; si prega di installare kpsewhich e aggiungerlo al path."
 
 #: ../src/control/XournalMain.cpp:138
 msgid "Errorlog cannot be deleted. You have to do it manually.\n"
@@ -552,7 +553,7 @@ msgstr "Avanti"
 
 #: ../src/control/XournalMain.cpp:277
 msgid "Get version of xournalpp"
-msgstr ""
+msgstr "Ottieni la versione di xournalpp"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:364
 msgid "Go to first page"
@@ -1595,7 +1596,7 @@ msgstr "1,00"
 
 #: ../ui/settings.glade:2285
 msgid "30"
-msgstr ""
+msgstr "30"
 
 #: ../ui/images.glade:88
 msgid "<b>... or select already used Image:</b>"
@@ -1839,11 +1840,11 @@ msgstr "Cursore Grande per Penna"
 
 #: ../ui/settings.glade:2340
 msgid "Border Color"
-msgstr ""
+msgstr "Colore del bordo"
 
 #: ../ui/settings.glade:2301
 msgid "Border Width"
-msgstr ""
+msgstr "Spessore del bordo"
 
 #: ../ui/settings.glade:2026
 msgid "Border color"
@@ -1867,11 +1868,11 @@ msgstr "Pulsante 2"
 
 #: ../ui/settings.glade:2183 ../ui/settings.glade:2326
 msgid "Choose the color to use for \"Highlight cursor position\""
-msgstr ""
+msgstr "Scegli il colore da usare per \"Evidenzia la posizione del cursore\""
 
 #: ../ui/settings.glade:2197
 msgid "Circle Color"
-msgstr ""
+msgstr "Colore del cerchio"
 
 #: ../ui/settings.glade:2107
 msgid "Colors"
@@ -1985,7 +1986,7 @@ msgstr "Disegna _Linea"
 
 #: ../ui/settings.glade:2165
 msgid "Draw a transparent circle around the cursor"
-msgstr ""
+msgstr "Disegna un cerchio trasparente attorno al cursore"
 
 #: ../ui/settings.glade:3669
 msgid "Drawing Area"
@@ -2369,7 +2370,7 @@ msgstr "RICEDERE_IDENTIFIER"
 
 #: ../ui/settings.glade:2249
 msgid "Radius"
-msgstr ""
+msgstr "Raggio"
 
 #: ../ui/exportSettings.glade:127
 msgid "Range"
