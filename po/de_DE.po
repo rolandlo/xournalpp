@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-01 17:23+0000\n"
-"PO-Revision-Date: 2020-05-01 17:25\n"
+"PO-Revision-Date: 2020-05-02 14:23\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -553,7 +553,7 @@ msgstr "Weiter"
 
 #: ../src/control/XournalMain.cpp:277
 msgid "Get version of xournalpp"
-msgstr ""
+msgstr "Version von xournalpp herunterladen"
 
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:364
 msgid "Go to first page"
@@ -1597,7 +1597,7 @@ msgstr "1,00"
 
 #: ../ui/settings.glade:2285
 msgid "30"
-msgstr ""
+msgstr "30"
 
 #: ../ui/images.glade:88
 msgid "<b>... or select already used Image:</b>"
@@ -1832,11 +1832,11 @@ msgstr "Großer Mauszeiger für den Stift"
 
 #: ../ui/settings.glade:2340
 msgid "Border Color"
-msgstr ""
+msgstr "Rahmenfarbe"
 
 #: ../ui/settings.glade:2301
 msgid "Border Width"
-msgstr ""
+msgstr "Rahmenbreite"
 
 #: ../ui/settings.glade:2026
 msgid "Border color"
@@ -1860,11 +1860,11 @@ msgstr "Taste 2"
 
 #: ../ui/settings.glade:2183 ../ui/settings.glade:2326
 msgid "Choose the color to use for \"Highlight cursor position\""
-msgstr ""
+msgstr "Wähle die zu verwendende Farbe für \"Position des Mauszeigers hervorheben\""
 
 #: ../ui/settings.glade:2197
 msgid "Circle Color"
-msgstr ""
+msgstr "Farbe des Kreises"
 
 #: ../ui/settings.glade:2107
 msgid "Colors"
@@ -1978,7 +1978,7 @@ msgstr "Strecke _zeichnen"
 
 #: ../ui/settings.glade:2165
 msgid "Draw a transparent circle around the cursor"
-msgstr ""
+msgstr "Einen durchsichtigen Kreis um den Zeiger herum anzeigen"
 
 #: ../ui/settings.glade:3669
 msgid "Drawing Area"
@@ -2362,7 +2362,7 @@ msgstr "RELEASE_IDENTIFIER"
 
 #: ../ui/settings.glade:2249
 msgid "Radius"
-msgstr ""
+msgstr "Radius"
 
 #: ../ui/exportSettings.glade:127
 msgid "Range"
