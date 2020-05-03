@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-02 15:16+0000\n"
-"PO-Revision-Date: 2020-05-02 15:25\n"
+"POT-Creation-Date: 2020-05-03 14:32+0000\n"
+"PO-Revision-Date: 2020-05-03 14:45\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Romanian\n"
 "Language: ro_RO\n"
@@ -58,7 +58,7 @@ msgstr "<span foreground='red' size='x-large'>Lipsește fișierul necesar UI:\n"
 msgid "Absolute path for the audio files playback"
 msgstr "Calea absolută pentru redarea fişierelor audio"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:399
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:400
 msgid "Add/Edit Tex"
 msgstr "Adăugare/Editare Tab"
 
@@ -127,8 +127,8 @@ msgstr "Salvare automată redenumită de la {1} la {2}"
 msgid "Autosaving to {1}"
 msgstr "Salvare automată la {1}"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:365
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:436
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:366
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:437
 msgid "Back"
 msgstr "Înapoi"
 
@@ -177,7 +177,7 @@ msgstr "Culoare \"{1}\" necunoscută (nu este definită în lista de culori impl
 msgid "Contents"
 msgstr "Conţinut"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:331
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:332
 #: ../src/gui/toolbarMenubar/model/ToolbarModel.cpp:75
 #: ../src/gui/toolbarMenubar/model/ToolbarModel.cpp:81
 msgid "Copy"
@@ -317,7 +317,7 @@ msgstr "Personalizat"
 msgid "Custom Export"
 msgstr "Export personalizat"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:354
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:355
 msgid "Customize Toolbars"
 msgstr "Personalizează Barele de Unelte"
 
@@ -325,15 +325,15 @@ msgstr "Personalizează Barele de Unelte"
 msgid "Customized"
 msgstr "Personalizat"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:330
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:331
 msgid "Cut"
 msgstr "Taie"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:401
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:402
 msgid "Default Tool"
 msgstr "Unealta Implicită"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:336
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:337
 #: ../src/undo/DeleteUndoAction.cpp:74
 msgid "Delete"
 msgstr "Ștergere"
@@ -342,7 +342,7 @@ msgstr "Ștergere"
 msgid "Delete Logfile"
 msgstr "Ștergere jurnal"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:385
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:386
 msgid "Delete current page"
 msgstr "Ştergeți pagina curentă"
 
@@ -392,13 +392,13 @@ msgstr "Punctată"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:101
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:30
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:406
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:407
 msgid "Draw Arrow"
 msgstr "Desenează săgeată"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:99
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:29
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:405
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:406
 msgid "Draw Circle"
 msgstr "Deseneaza cerc"
 
@@ -412,19 +412,19 @@ msgstr "Deseneaza linie"
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:28
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:91
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:94
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:404
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:405
 msgid "Draw Rectangle"
 msgstr "Desenează dreptunghi"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:107
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:34
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:410
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:411
 msgid "Draw Spline"
 msgstr "Draw Splines"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:103
 #: ../src/gui/toolbarMenubar/ToolDrawCombocontrol.cpp:32
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:408
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:409
 msgid "Draw coordinate system"
 msgstr "Desenează sistemul de coordonate"
 
@@ -526,11 +526,11 @@ msgstr "Fișierul nu a putut fi deschis. Trebuie să îl faceți manual:\n"
 msgid "Filename: {1}"
 msgstr "Nume fișier: {1}"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:458
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:459
 msgid "Fill"
 msgstr "Umplere"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:472
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:473
 msgid "Fine"
 msgstr "Fin"
 
@@ -542,7 +542,7 @@ msgstr "Instrumente plutitoare (experimental)"
 msgid "Font"
 msgstr "Fontul"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:433
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:434
 msgid "Forward"
 msgstr "Mergi înainte"
 
@@ -550,27 +550,27 @@ msgstr "Mergi înainte"
 msgid "Get version of xournalpp"
 msgstr ""
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:364
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:365
 msgid "Go to first page"
 msgstr "Mergi la prima pagină"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:368
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:369
 msgid "Go to last page"
 msgstr "Du-te la ultima pagină"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:371
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:372
 msgid "Go to next layer"
 msgstr "Mergi la următorul nivel"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:366
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:367
 msgid "Go to page"
 msgstr "Du-te la pagina"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:370
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:371
 msgid "Go to previous layer"
 msgstr "Du-te la stratul anterior"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:372
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:373
 msgid "Go to top layer"
 msgstr "Mergi la stratul de sus"
 
@@ -588,12 +588,12 @@ msgstr "Gri"
 msgid "Green"
 msgstr "Verde"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:342
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:343
 msgid "Grid Snapping"
 msgstr "Ancorare la grilă"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:65
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:419
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:420
 msgid "Hand"
 msgstr "Mână"
 
@@ -602,12 +602,12 @@ msgid "Hide all"
 msgstr "Ascundeți toate"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:59
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:396
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:397
 msgid "Highlighter"
 msgstr "Evidenţiat"
 
 #: ../src/control/pagetype/PageTypeHandler.cpp:30
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:400
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:401
 msgid "Image"
 msgstr "Imagine"
 
@@ -639,7 +639,7 @@ msgstr "Inserează latex"
 msgid "Insert layer"
 msgstr "Inserează un strat"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:381
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:382
 msgid "Insert page"
 msgstr "Inserează pagină"
 
@@ -686,12 +686,12 @@ msgstr "Încărcare..."
 msgid "Magenta"
 msgstr "Magenta"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:353
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:354
 msgid "Manage Toolbars"
 msgstr "Gestionare bară cu instrumente"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:83
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:473
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:474
 msgid "Medium"
 msgstr "Mediu"
 
@@ -729,11 +729,11 @@ msgstr "Nou"
 msgid "New Xournal"
 msgstr "Nou Xournal"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:367
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:368
 msgid "Next"
 msgstr "Următoarea"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:375
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:376
 msgid "Next annotated page"
 msgstr "Pagina următoare adnotată"
 
@@ -849,16 +849,16 @@ msgstr "Pagină inserată"
 msgid "Page number"
 msgstr "Numărul paginii"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:348
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:349
 msgid "Paired pages"
 msgstr "Pagini asociate"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:332
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:333
 #: ../src/undo/AddUndoAction.cpp:77
 msgid "Paste"
 msgstr "Inserează"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:427
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:428
 msgid "Pause / Play"
 msgstr "Pauză / Rulează"
 
@@ -871,7 +871,7 @@ msgstr "Stilou"
 msgid "Plain"
 msgstr "Câmp"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:418
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:419
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:20
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:71
 msgid "Play Object"
@@ -881,11 +881,15 @@ msgstr "Redă obiectul"
 msgid "Predefined"
 msgstr "Predefinit"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:350
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:351
 msgid "Presentation mode"
 msgstr "Mod de prezentare"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:425
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:320
+msgid "Print"
+msgstr ""
+
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:426
 msgid "Record Audio / Stop Recording"
 msgstr "Înregistrare audio / Oprire înregistrare"
 
@@ -898,7 +902,7 @@ msgstr "Înregistratorul nu a putut fi pornit."
 msgid "Red"
 msgstr "Roșu"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:326
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:327
 #: ../src/undo/UndoRedoHandler.cpp:215
 msgid "Redo"
 msgstr "Refacere"
@@ -935,7 +939,7 @@ msgstr "Restaurează din fișier"
 msgid "Rotation"
 msgstr "Rotaţie"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:340
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:341
 msgid "Rotation Snapping"
 msgstr "Rotire Snapping"
 
@@ -947,7 +951,7 @@ msgstr "Liniat"
 msgid "Ruled with vertical line"
 msgstr "Liniat cu linie verticală"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:409
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:410
 msgid "Ruler"
 msgstr "Riglă"
 
@@ -981,21 +985,21 @@ msgstr "Eroare la salvarea fişierului: {1}"
 msgid "Scale"
 msgstr "Scală"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:334
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:335
 msgid "Search"
 msgstr "Căutare"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:421
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:422
 msgid "Select Font"
 msgstr "Selectează Fontul"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:416
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:417
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:19
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:66
 msgid "Select Object"
 msgstr "Selectează un obiect"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:414
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:415
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:14
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:17
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:56
@@ -1003,7 +1007,7 @@ msgstr "Selectează un obiect"
 msgid "Select Rectangle"
 msgstr "Selectaţi dreptunghiul"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:412
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:413
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:18
 #: ../src/gui/toolbarMenubar/ToolSelectCombocontrol.cpp:61
 msgid "Select Region"
@@ -1042,7 +1046,7 @@ msgstr "Trimite eroarea"
 msgid "Separator"
 msgstr "Separator"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:403
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:404
 msgid "Shape Recognizer"
 msgstr "Recunoaștere Formă"
 
@@ -1074,7 +1078,7 @@ msgstr "Ne pare rău, Xournal++ nu poate deschide fișiere la distanță momenta
 msgid "Staves"
 msgstr "Portative"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:430
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:431
 msgid "Stop"
 msgstr "Stop"
 
@@ -1093,7 +1097,7 @@ msgid "Supported files"
 msgstr "Toate tipurile de fișiere suportate"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:60
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:398
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:399
 msgid "Text"
 msgstr "Text"
 
@@ -1175,7 +1179,7 @@ msgid "There was an error displaying help: {1}"
 msgstr "A apărut o eroare la afișarea ajutorului: {1}"
 
 #: ../src/gui/dialog/ButtonConfigGui.cpp:84
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:474
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:475
 msgid "Thick"
 msgstr "Gros"
 
@@ -1196,7 +1200,7 @@ msgstr "Acest document nu este salvat încă."
 msgid "This image could not be loaded. Error message: {1}"
 msgstr "Această imagine nu a putut fi încărcată. Mesaj de eroare: {1}"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:351
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:352
 msgid "Toggle fullscreen"
 msgstr "Comutare ecran complet"
 
@@ -1220,7 +1224,7 @@ msgstr "Se încearcă salvarea de urgență a documentului deschis actual…"
 msgid "Unable to play audio recording {1}"
 msgstr "Imposibil de redat înregistrarea audio {1}"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:325
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:326
 #: ../src/undo/UndoRedoHandler.cpp:203
 msgid "Undo"
 msgstr "Revenire"
@@ -1265,7 +1269,7 @@ msgstr "Tip de AVC necunoscut: \"{1}\", presupunând un stilou"
 msgid "Unsaved Document"
 msgstr "Document nesalvat"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:417
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:418
 msgid "Vertical Space"
 msgstr "Viteza verticală"
 
@@ -1273,11 +1277,11 @@ msgstr "Viteza verticală"
 msgid "Vertical space"
 msgstr "Spaţiu vertical"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:471
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:472
 msgid "Very Fine"
 msgstr "Foarte fin"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:476
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:477
 msgid "Very Thick"
 msgstr "Foarte gros"
 
@@ -1347,15 +1351,15 @@ msgid "Your current document does not contain PDF Page no {1}\n"
 "Tip: You can select Journal → Paper Background → PDF Background to insert a PDF page."
 msgstr ""
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:358
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:359
 msgid "Zoom fit to screen"
 msgstr "Zoom potrivit pe ecran"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:357
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:358
 msgid "Zoom in"
 msgstr "Mărește"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:356
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:357
 msgid "Zoom out"
 msgstr "Micșorează"
 
@@ -1363,7 +1367,7 @@ msgstr "Micșorează"
 msgid "Zoom slider"
 msgstr "Glisor zoom"
 
-#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:359
+#: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:360
 msgid "Zoom to 100%"
 msgstr "Zoom până la 100%"
 
