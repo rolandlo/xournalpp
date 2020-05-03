@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-03 18:44+0000\n"
-"PO-Revision-Date: 2020-05-03 18:58\n"
+"POT-Creation-Date: 2020-05-03 23:34+0000\n"
+"PO-Revision-Date: 2020-05-03 23:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -15,13 +15,13 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /master/po/xournalpp.pot\n"
 
-#: ../src/control/XournalMain.cpp:518
+#: ../src/control/XournalMain.cpp:555
 msgid "\n\n"
 "Will now attempt to run without this file."
 msgstr "\n\n"
 "将尝试在不使用此文件的情况下运行。"
 
-#: ../src/control/XournalMain.cpp:498
+#: ../src/control/XournalMain.cpp:535
 msgid "\n"
 "Will now attempt to run without this file."
 msgstr "\n"
@@ -40,7 +40,7 @@ msgstr "%F-Note-%H-%M"
 msgid "<b>No devices were found. This seems wrong - maybe file a bug report?</b>"
 msgstr "<b>没有找到设备。可能出错了，要提交 bug 报告吗？</b>"
 
-#: ../src/control/XournalMain.cpp:513
+#: ../src/control/XournalMain.cpp:550
 msgid "<span foreground='red' size='x-large'>Missing the needed UI file:\n"
 "<b>{1}</b></span>\n"
 "Could not find them at any location.\n"
@@ -54,7 +54,7 @@ msgstr "<span foreground='red' size='x-large'>缺失必要的用户界面文件�
 "  不在工作目录下\n"
 "  不在 {2}"
 
-#: ../src/control/XournalMain.cpp:276
+#: ../src/control/XournalMain.cpp:309
 msgid "Absolute path for the audio files playback"
 msgstr "音频文件的绝对路径"
 
@@ -115,11 +115,11 @@ msgid "Audio folder not set! Recording won't work!\n"
 msgstr "未设置音频文件夹！录音功能将无法使用！\n"
 "请在“偏好设置 > 音频录制”选项中设置音频文件夹路径。"
 
-#: ../src/control/Control.cpp:239
+#: ../src/control/Control.cpp:237
 msgid "Autosave failed with an error: {1}"
 msgstr "自动保存失败，错误信息为：{1}"
 
-#: ../src/control/Control.cpp:205
+#: ../src/control/Control.cpp:203
 msgid "Autosave renamed from {1} to {2}"
 msgstr "自动保存时已由 {1} 重命名为 {2}"
 
@@ -148,8 +148,8 @@ msgstr "黑色"
 msgid "Blue"
 msgstr "蓝色"
 
-#: ../src/control/Control.cpp:1997 ../src/control/Control.cpp:2449
-#: ../src/control/XournalMain.cpp:119
+#: ../src/control/Control.cpp:1995 ../src/control/Control.cpp:2447
+#: ../src/control/XournalMain.cpp:151
 msgid "Cancel"
 msgstr "取消"
 
@@ -195,7 +195,7 @@ msgstr "拷贝一页"
 msgid "Could not create backup! (The file was created from an older Xournal version)"
 msgstr "未能产生备份文件！(此文件应为老版本Xournal所建)"
 
-#: ../src/util/Util.cpp:107
+#: ../src/util/Util.cpp:134
 msgid "Could not create folder: {1}"
 msgstr "无法创建文件夹：{1}"
 
@@ -283,7 +283,7 @@ msgstr "无法从工具栏 {1} 位置 {2} 移除工具项"
 msgid "Could not remove tool item {1} from Toolbar {2} on position {3}"
 msgstr "无法移除工具栏 {2} 位置 {3} 上的工具项 {1}"
 
-#: ../src/control/Control.cpp:230
+#: ../src/control/Control.cpp:228
 msgid "Could not rename autosave file from \"{1}\" to \"{2}\": {3}"
 msgstr "无法将自动保存的文件 \"{1}\" 重新命名为 \"{2}\": {3}"
 
@@ -342,7 +342,7 @@ msgstr "缺省工具"
 msgid "Delete"
 msgstr "删除"
 
-#: ../src/control/XournalMain.cpp:118
+#: ../src/control/XournalMain.cpp:150
 msgid "Delete Logfile"
 msgstr "删除日志文件"
 
@@ -350,7 +350,7 @@ msgstr "删除日志文件"
 msgid "Delete current page"
 msgstr "删除当前页"
 
-#: ../src/control/XournalMain.cpp:162
+#: ../src/control/XournalMain.cpp:194
 msgid "Delete file"
 msgstr "删除文件"
 
@@ -358,11 +358,11 @@ msgstr "删除文件"
 msgid "Delete layer"
 msgstr "删除层"
 
-#: ../src/control/Control.cpp:2446
+#: ../src/control/Control.cpp:2444
 msgid "Discard"
 msgstr "丢弃"
 
-#: ../src/control/Control.cpp:1938
+#: ../src/control/Control.cpp:1936
 msgid "Do not open Autosave files. They may will be overwritten!\n"
 "Copy the files to another folder.\n"
 "Files from Folder {1} cannot be opened."
@@ -374,7 +374,7 @@ msgstr "请勿打开自动保存文件。它们可能会被覆盖！\n"
 msgid "Do not overwrite the background PDF! This will cause errors!"
 msgstr "请勿覆盖背景 PDF！这将造成故障！"
 
-#: ../src/control/Control.cpp:2440
+#: ../src/control/Control.cpp:2438
 msgid "Document file was removed."
 msgstr "文档已删除。"
 
@@ -458,7 +458,7 @@ msgstr "擦除笔划"
 msgid "Eraser"
 msgstr "橡皮"
 
-#: ../src/control/Control.cpp:2187
+#: ../src/control/Control.cpp:2185
 msgid "Error annotate PDF file \"{1}\"\n"
 "{2}"
 msgstr "PDF文件\"{1}\"标注出错\n"
@@ -468,7 +468,7 @@ msgstr "PDF文件\"{1}\"标注出错\n"
 msgid "Error loading glade file \"{1}\" (try to load \"{2}\")"
 msgstr "加载glade文件\"{1}\"出错(尝试加载\"{2}\")"
 
-#: ../src/control/Control.cpp:2019
+#: ../src/control/Control.cpp:2017
 msgid "Error opening file \"{1}\""
 msgstr "打开文件\"{1}\"出错"
 
@@ -497,7 +497,7 @@ msgstr "保存图像 #2 时出错"
 msgid "Error while autosaving: {1}"
 msgstr "自动保存时出错: {1}"
 
-#: ../src/util/Util.cpp:170
+#: ../src/util/Util.cpp:197
 msgid "Error {1} executing system command: {2}"
 msgstr "错误 {1} 执行系统命令: {2}"
 
@@ -511,7 +511,7 @@ msgid "Error: {1}\n"
 msgstr "错误：{1}\n"
 "无法在PATH路径下找到 kpsewhich; 请安装 kpsewhich 并将其加入到 PATH路径中。"
 
-#: ../src/control/XournalMain.cpp:138
+#: ../src/control/XournalMain.cpp:170
 msgid "Errorlog cannot be deleted. You have to do it manually.\n"
 "Logfile: {1}"
 msgstr "错误日志未能删除，请手工处理。\n"
@@ -521,13 +521,13 @@ msgstr "错误日志未能删除，请手工处理。\n"
 msgid "Export PDF"
 msgstr "输出为PDF"
 
-#: ../src/util/Util.cpp:126 ../src/util/Util.cpp:143
+#: ../src/util/Util.cpp:153 ../src/util/Util.cpp:170
 msgid "File couldn't be opened. You have to do it manually:\n"
 "URL: {1}"
 msgstr "未能打开文件，请手动操作：\n"
 "URL: {1}"
 
-#: ../src/control/Control.cpp:1963
+#: ../src/control/Control.cpp:1961
 msgid "Filename: {1}"
 msgstr "文件名：{1}"
 
@@ -551,7 +551,7 @@ msgstr "字体"
 msgid "Forward"
 msgstr "下一步"
 
-#: ../src/control/XournalMain.cpp:277
+#: ../src/control/XournalMain.cpp:310
 msgid "Get version of xournalpp"
 msgstr ""
 
@@ -616,11 +616,11 @@ msgstr "高亮"
 msgid "Image"
 msgstr "图片"
 
-#: ../src/control/XournalMain.cpp:225
+#: ../src/control/XournalMain.cpp:257
 msgid "Image file successfully created"
 msgstr "图片文件创建成功"
 
-#: ../src/control/XournalMain.cpp:274
+#: ../src/control/XournalMain.cpp:307
 msgid "Image output filename (.png / .svg)"
 msgstr "图像输出文件名 (.png/ .svg)"
 
@@ -648,7 +648,7 @@ msgstr "插入层"
 msgid "Insert page"
 msgstr "插入页面"
 
-#: ../src/control/XournalMain.cpp:275
+#: ../src/control/XournalMain.cpp:308
 msgid "Jump to Page (first Page: 1)"
 msgstr "跳到页面(第一页:1)"
 
@@ -700,7 +700,7 @@ msgstr "管理工具栏"
 msgid "Medium"
 msgstr "中"
 
-#: ../src/control/XournalMain.cpp:495
+#: ../src/control/XournalMain.cpp:532
 msgid "Missing the needed UI file:\n"
 "{1}\n"
 " .app corrupted?\n"
@@ -769,11 +769,11 @@ msgstr "仅支持本地文件\n"
 msgid "Open Image"
 msgstr "打开图片"
 
-#: ../src/control/XournalMain.cpp:116
+#: ../src/control/XournalMain.cpp:148
 msgid "Open Logfile"
 msgstr "打开日志文件"
 
-#: ../src/control/XournalMain.cpp:117
+#: ../src/control/XournalMain.cpp:149
 msgid "Open Logfile directory"
 msgstr "打开日志文件目录"
 
@@ -804,7 +804,7 @@ msgstr "PDF页码{1}"
 msgid "PDF background missing"
 msgstr "PDF背景丢失"
 
-#: ../src/control/XournalMain.cpp:255
+#: ../src/control/XournalMain.cpp:287
 msgid "PDF file successfully created"
 msgstr "PDF文件成功建立"
 
@@ -814,7 +814,7 @@ msgstr "PDF文件成功建立"
 msgid "PDF files"
 msgstr "PDF文件"
 
-#: ../src/control/XournalMain.cpp:273
+#: ../src/control/XournalMain.cpp:306
 msgid "PDF output filename"
 msgstr "PDF输出文件名"
 
@@ -898,7 +898,7 @@ msgstr ""
 msgid "Record Audio / Stop Recording"
 msgstr "录制音频/停止录制"
 
-#: ../src/control/Control.cpp:898
+#: ../src/control/Control.cpp:896
 msgid "Recorder could not be started."
 msgstr "无法启动录音器。"
 
@@ -916,7 +916,7 @@ msgstr "重复"
 msgid "Redo: "
 msgstr "重复："
 
-#: ../src/control/Control.cpp:1996
+#: ../src/control/Control.cpp:1994
 msgid "Remove PDF Background"
 msgstr "去掉PDF背景"
 
@@ -936,7 +936,7 @@ msgstr "替换"
 msgid "Requested temporary file was not found for attachment {1}"
 msgstr "未找到附件 {1} 所要求的临时文件"
 
-#: ../src/control/XournalMain.cpp:163
+#: ../src/control/XournalMain.cpp:195
 msgid "Restore file"
 msgstr "还原文件"
 
@@ -968,16 +968,16 @@ msgstr "SVG图形"
 msgid "SVG with transparent background"
 msgstr "具有透明背景的SVG"
 
-#: ../src/control/Control.cpp:2441 ../src/control/jobs/SaveJob.cpp:13
+#: ../src/control/Control.cpp:2439 ../src/control/jobs/SaveJob.cpp:13
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:319
 msgid "Save"
 msgstr "保存"
 
-#: ../src/control/Control.cpp:2441
+#: ../src/control/Control.cpp:2439
 msgid "Save As..."
 msgstr "另存为..."
 
-#: ../src/control/Control.cpp:2277 ../src/gui/dialog/PageTemplateDialog.cpp:83
+#: ../src/control/Control.cpp:2275 ../src/gui/dialog/PageTemplateDialog.cpp:83
 msgid "Save File"
 msgstr "保存文件"
 
@@ -1018,7 +1018,7 @@ msgstr "选择矩形"
 msgid "Select Region"
 msgstr "选择区域"
 
-#: ../src/control/Control.cpp:1995
+#: ../src/control/Control.cpp:1993
 msgid "Select another PDF"
 msgstr "选择其他PDF"
 
@@ -1043,7 +1043,7 @@ msgstr "选择矩形"
 msgid "Select region"
 msgstr "选择区域"
 
-#: ../src/control/XournalMain.cpp:115
+#: ../src/control/XournalMain.cpp:147
 msgid "Send Bugreport"
 msgstr "选择错误报告"
 
@@ -1067,13 +1067,13 @@ msgstr "只显示未使用页面(一个未使用页面)"
 msgid "Show only not used pages ({1} unused pages)"
 msgstr "只显示未使用页面({1}个未使用页面)"
 
-#: ../src/control/XournalMain.cpp:348
+#: ../src/control/XournalMain.cpp:381
 msgid "Sorry, Xournal++ can only open one file at once.\n"
 "Others are ignored."
 msgstr "对不起，Xournal++ 只能一次打开一个文件。\n"
 "其他文件已被忽略。"
 
-#: ../src/control/XournalMain.cpp:360
+#: ../src/control/XournalMain.cpp:393
 msgid "Sorry, Xournal++ cannot open remote files at the moment.\n"
 "You have to copy the file to a local directory."
 msgstr "对不起，Xournal++ 目前无法打开远程目录里的文件。\n"
@@ -1135,15 +1135,15 @@ msgstr "文本未找到"
 msgid "Text not found, searched on all pages"
 msgstr "找遍所有页面未找到文本"
 
-#: ../src/control/Control.cpp:1057
+#: ../src/control/Control.cpp:1055
 msgid "The Toolbarconfiguration \"{1}\" is predefined, would you create a copy to edit?"
 msgstr "工具条配置\"{1}\"是预置的，要产生一个拷贝到编辑?"
 
-#: ../src/control/Control.cpp:1992
+#: ../src/control/Control.cpp:1990
 msgid "The attached background PDF could not be found."
 msgstr "附加的背景PDF未找到。"
 
-#: ../src/control/Control.cpp:1993
+#: ../src/control/Control.cpp:1991
 msgid "The background PDF could not be found."
 msgstr "背景PDF未找到。"
 
@@ -1167,15 +1167,15 @@ msgstr "文件不是有效的 .xopp 文件 (版本字符串损坏): \"{1}\""
 msgid "The formula is empty when rendered or invalid."
 msgstr "公式渲染后为空或无效"
 
-#: ../src/control/XournalMain.cpp:110
+#: ../src/control/XournalMain.cpp:142
 msgid "The most recent log file name: {1}"
 msgstr "最近的日志文件名：{1}"
 
-#: ../src/control/XournalMain.cpp:103
+#: ../src/control/XournalMain.cpp:135
 msgid "There are errorlogfiles from Xournal++. Please send a Bugreport, so the bug may be fixed."
 msgstr "发现Xournal++的错误日志文件，请发送一个错误报告，将会被修正。"
 
-#: ../src/control/XournalMain.cpp:102
+#: ../src/control/XournalMain.cpp:134
 msgid "There is an errorlogfile from Xournal++. Please send a Bugreport, so the bug may be fixed."
 msgstr "发现Xournal++的错误日志文件，请发送一个错误报告，将会被修正。"
 
@@ -1196,7 +1196,7 @@ msgstr "厚度 - 不改变"
 msgid "Thin"
 msgstr "细"
 
-#: ../src/control/Control.cpp:2440
+#: ../src/control/Control.cpp:2438
 msgid "This document is not saved yet."
 msgstr "此文档尚未保存。"
 
@@ -1270,7 +1270,7 @@ msgstr "未知的 pixmap::domain 类型: {1}"
 msgid "Unknown stroke type: \"{1}\", assuming pen"
 msgstr "未知笔划类型: \"{1}\"，将假设为笔"
 
-#: ../src/control/Control.cpp:2341
+#: ../src/control/Control.cpp:2339
 msgid "Unsaved Document"
 msgstr "未保存文档"
 
@@ -1323,11 +1323,11 @@ msgstr "Xournal (兼容)"
 msgid "Xournal files"
 msgstr "Xournal文件"
 
-#: ../src/control/XournalMain.cpp:157
+#: ../src/control/XournalMain.cpp:189
 msgid "Xournal++ crashed last time. Would you like to restore the last edited file?"
 msgstr "Xournal++ 上次崩溃了。您想恢复最后一个编辑的文件？"
 
-#: ../src/control/Control.cpp:2283 ../src/control/stockdlg/XojOpenDlg.cpp:57
+#: ../src/control/Control.cpp:2281 ../src/control/stockdlg/XojOpenDlg.cpp:57
 msgid "Xournal++ files"
 msgstr "Xournal++ 文件"
 
@@ -1347,7 +1347,7 @@ msgid "You don't have any PDF pages to select from. Cancel operation.\n"
 msgstr "您没有任何可以选择的 PDF 页面。操作取消。\n"
 "请选择另一个背景类型：点击“日记”菜单 → “配置页面模板”。"
 
-#: ../src/control/XournalMain.cpp:106
+#: ../src/control/XournalMain.cpp:138
 msgid "You're using {1}/{2} branch. Send Bugreport will direct you to this repo's issue tracker."
 msgstr "您正在使用 {1}/{2} 分支。发送错误报告将直接将您转向Git仓库的问题跟踪器。"
 
@@ -1379,7 +1379,7 @@ msgstr "缩放游标"
 msgid "Zoom to 100%"
 msgstr "原始尺寸"
 
-#: ../src/control/Control.cpp:2277 ../src/control/jobs/BaseExportJob.cpp:17
+#: ../src/control/Control.cpp:2275 ../src/control/jobs/BaseExportJob.cpp:17
 #: ../src/control/stockdlg/ImageOpenDlg.cpp:11
 #: ../src/control/stockdlg/XojOpenDlg.cpp:11
 #: ../src/gui/dialog/PageTemplateDialog.cpp:84
@@ -1391,7 +1391,7 @@ msgstr "取消 (_C)"
 msgid "_Open"
 msgstr "打开(_O)"
 
-#: ../src/control/Control.cpp:2278 ../src/control/jobs/BaseExportJob.cpp:17
+#: ../src/control/Control.cpp:2276 ../src/control/jobs/BaseExportJob.cpp:17
 #: ../src/gui/dialog/PageTemplateDialog.cpp:84
 msgid "_Save"
 msgstr "保存(_S)"
@@ -1529,7 +1529,7 @@ msgstr "xoj-preview-extractor: 打开导出文件 \"{1}\" 失败"
 msgid "xoj-preview-extractor: successfully extracted"
 msgstr "xoj-preview-extractor: 成功提取"
 
-#: ../src/util/Util.cpp:99
+#: ../src/util/Util.cpp:126
 msgid "xournalpp-{1}"
 msgstr "xournalpp-{1}"
 
