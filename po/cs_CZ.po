@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-03 18:44+0000\n"
-"PO-Revision-Date: 2020-05-03 18:58\n"
+"POT-Creation-Date: 2020-05-03 23:34+0000\n"
+"PO-Revision-Date: 2020-05-03 23:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
@@ -15,13 +15,13 @@ msgstr ""
 "X-Crowdin-Language: cs\n"
 "X-Crowdin-File: /master/po/xournalpp.pot\n"
 
-#: ../src/control/XournalMain.cpp:518
+#: ../src/control/XournalMain.cpp:555
 msgid "\n\n"
 "Will now attempt to run without this file."
 msgstr "\n\n"
 "Teď se pokusí spustit bez tohoto souboru."
 
-#: ../src/control/XournalMain.cpp:498
+#: ../src/control/XournalMain.cpp:535
 msgid "\n"
 "Will now attempt to run without this file."
 msgstr "\n"
@@ -40,7 +40,7 @@ msgstr "%F-Poznámka-%H-%M"
 msgid "<b>No devices were found. This seems wrong - maybe file a bug report?</b>"
 msgstr "<b>Žádná zařízení nebyla nalezena. Zdá se to být špatně - možná můžeš nahlásit chybu?</b>"
 
-#: ../src/control/XournalMain.cpp:513
+#: ../src/control/XournalMain.cpp:550
 msgid "<span foreground='red' size='x-large'>Missing the needed UI file:\n"
 "<b>{1}</b></span>\n"
 "Could not find them at any location.\n"
@@ -54,7 +54,7 @@ msgstr "<span foreground='red' size='x-large'>Chybí požadovaný soubor uživat
 "  Nebyl nalezen v Pracovní Cestě\n"
 "  Nebyl nalezen v {2}"
 
-#: ../src/control/XournalMain.cpp:276
+#: ../src/control/XournalMain.cpp:309
 msgid "Absolute path for the audio files playback"
 msgstr "Absolutní cesta pro přehrávání zvukových souborů"
 
@@ -115,11 +115,11 @@ msgid "Audio folder not set! Recording won't work!\n"
 msgstr "Zvukový adresář nenastaven! Nahrávání nebude fungovat!\n"
 "Prosím nastavte nahrávací adresář v \"Nastavení > Nahrávání zvuku\""
 
-#: ../src/control/Control.cpp:239
+#: ../src/control/Control.cpp:237
 msgid "Autosave failed with an error: {1}"
 msgstr "Automatické uložení selhalo s chybou: {1}"
 
-#: ../src/control/Control.cpp:205
+#: ../src/control/Control.cpp:203
 msgid "Autosave renamed from {1} to {2}"
 msgstr "Automatické uložení přejmenováno z {1} na {2}"
 
@@ -148,8 +148,8 @@ msgstr "Černá"
 msgid "Blue"
 msgstr "Modrá"
 
-#: ../src/control/Control.cpp:1997 ../src/control/Control.cpp:2449
-#: ../src/control/XournalMain.cpp:119
+#: ../src/control/Control.cpp:1995 ../src/control/Control.cpp:2447
+#: ../src/control/XournalMain.cpp:151
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -195,7 +195,7 @@ msgstr "Kopírovat stránku"
 msgid "Could not create backup! (The file was created from an older Xournal version)"
 msgstr "Nelze vytvořit zálohu! (Soubor byl vytvořen ve starší verzi Xournalu)"
 
-#: ../src/util/Util.cpp:107
+#: ../src/util/Util.cpp:134
 msgid "Could not create folder: {1}"
 msgstr "Nelze vytvořit složku: {1}"
 
@@ -283,7 +283,7 @@ msgstr "Nástroj z panelu nástrojů {1} nelze odstranit z pozice {2}"
 msgid "Could not remove tool item {1} from Toolbar {2} on position {3}"
 msgstr "Nástroj {1} z panelu nástrojů {2} nelze odstranit z pozice {3}"
 
-#: ../src/control/Control.cpp:230
+#: ../src/control/Control.cpp:228
 msgid "Could not rename autosave file from \"{1}\" to \"{2}\": {3}"
 msgstr "Nelze přejmenovat soubor automatického ukládání z \"{1}\" na \"{2}\": {3}"
 
@@ -342,7 +342,7 @@ msgstr "Výchozí nástroj"
 msgid "Delete"
 msgstr "Smazat"
 
-#: ../src/control/XournalMain.cpp:118
+#: ../src/control/XournalMain.cpp:150
 msgid "Delete Logfile"
 msgstr "Smazat soubor protokolu"
 
@@ -350,7 +350,7 @@ msgstr "Smazat soubor protokolu"
 msgid "Delete current page"
 msgstr "Smazat aktuální stránku"
 
-#: ../src/control/XournalMain.cpp:162
+#: ../src/control/XournalMain.cpp:194
 msgid "Delete file"
 msgstr "Smazat soubor"
 
@@ -358,11 +358,11 @@ msgstr "Smazat soubor"
 msgid "Delete layer"
 msgstr "Smazat vrstvu"
 
-#: ../src/control/Control.cpp:2446
+#: ../src/control/Control.cpp:2444
 msgid "Discard"
 msgstr "Zahodit"
 
-#: ../src/control/Control.cpp:1938
+#: ../src/control/Control.cpp:1936
 msgid "Do not open Autosave files. They may will be overwritten!\n"
 "Copy the files to another folder.\n"
 "Files from Folder {1} cannot be opened."
@@ -374,7 +374,7 @@ msgstr "Neotevírej soubory automatického ukládání. Mohou být přepsány!\n
 msgid "Do not overwrite the background PDF! This will cause errors!"
 msgstr "Nepřepisuj PDF na pozadí! Toto způsobí chyby!"
 
-#: ../src/control/Control.cpp:2440
+#: ../src/control/Control.cpp:2438
 msgid "Document file was removed."
 msgstr "Soubor s dokumentem byl odstraněn."
 
@@ -458,7 +458,7 @@ msgstr "Vymazat čáru"
 msgid "Eraser"
 msgstr "Guma"
 
-#: ../src/control/Control.cpp:2187
+#: ../src/control/Control.cpp:2185
 msgid "Error annotate PDF file \"{1}\"\n"
 "{2}"
 msgstr "Chyba anotování PDF souboru „{1}“\n"
@@ -468,7 +468,7 @@ msgstr "Chyba anotování PDF souboru „{1}“\n"
 msgid "Error loading glade file \"{1}\" (try to load \"{2}\")"
 msgstr "Chyba načítání glade souboru „{1}“ (zkuste načíst „{2}“)"
 
-#: ../src/control/Control.cpp:2019
+#: ../src/control/Control.cpp:2017
 msgid "Error opening file \"{1}\""
 msgstr "Chyba otevírání souboru „{1}“"
 
@@ -497,7 +497,7 @@ msgstr "Chyba při ukládání obrázku #2"
 msgid "Error while autosaving: {1}"
 msgstr "Chyba při automatickém ukládání: {1}"
 
-#: ../src/util/Util.cpp:170
+#: ../src/util/Util.cpp:197
 msgid "Error {1} executing system command: {2}"
 msgstr "Chyba {1} při provádění systémového příkazu: {2}"
 
@@ -510,7 +510,7 @@ msgid "Error: {1}\n"
 "Could not find kpsewhich in PATH; please install kpsewhich and put it on path."
 msgstr ""
 
-#: ../src/control/XournalMain.cpp:138
+#: ../src/control/XournalMain.cpp:170
 msgid "Errorlog cannot be deleted. You have to do it manually.\n"
 "Logfile: {1}"
 msgstr "Nelze smazat chybový protokol. Udělejte to prosím ručně.\n"
@@ -520,13 +520,13 @@ msgstr "Nelze smazat chybový protokol. Udělejte to prosím ručně.\n"
 msgid "Export PDF"
 msgstr "Export do PDF"
 
-#: ../src/util/Util.cpp:126 ../src/util/Util.cpp:143
+#: ../src/util/Util.cpp:153 ../src/util/Util.cpp:170
 msgid "File couldn't be opened. You have to do it manually:\n"
 "URL: {1}"
 msgstr "Soubor se nepodařilo otevřít. Udělejte to prosím ručně:\n"
 "URL: {1}"
 
-#: ../src/control/Control.cpp:1963
+#: ../src/control/Control.cpp:1961
 msgid "Filename: {1}"
 msgstr "Název souboru: {1}"
 
@@ -550,7 +550,7 @@ msgstr "Písmo"
 msgid "Forward"
 msgstr "Vpřed"
 
-#: ../src/control/XournalMain.cpp:277
+#: ../src/control/XournalMain.cpp:310
 msgid "Get version of xournalpp"
 msgstr ""
 
@@ -615,11 +615,11 @@ msgstr "Zvýrazňovač"
 msgid "Image"
 msgstr "Obrázek"
 
-#: ../src/control/XournalMain.cpp:225
+#: ../src/control/XournalMain.cpp:257
 msgid "Image file successfully created"
 msgstr "Obrázek úspěšně vytvořen"
 
-#: ../src/control/XournalMain.cpp:274
+#: ../src/control/XournalMain.cpp:307
 msgid "Image output filename (.png / .svg)"
 msgstr "Název výstupního souboru obrázku (.png / .svg)"
 
@@ -647,7 +647,7 @@ msgstr "Vložit vrstvu"
 msgid "Insert page"
 msgstr "Vložit stránku"
 
-#: ../src/control/XournalMain.cpp:275
+#: ../src/control/XournalMain.cpp:308
 msgid "Jump to Page (first Page: 1)"
 msgstr "Přejít na stránku (první stránka: 1)"
 
@@ -699,7 +699,7 @@ msgstr "Spravovat lištu nástrojů"
 msgid "Medium"
 msgstr "Střední"
 
-#: ../src/control/XournalMain.cpp:495
+#: ../src/control/XournalMain.cpp:532
 msgid "Missing the needed UI file:\n"
 "{1}\n"
 " .app corrupted?\n"
@@ -768,11 +768,11 @@ msgstr "Pouze místní soubory jsou podporovány\n"
 msgid "Open Image"
 msgstr "Otevřít obrázek"
 
-#: ../src/control/XournalMain.cpp:116
+#: ../src/control/XournalMain.cpp:148
 msgid "Open Logfile"
 msgstr "Otevřít soubor protokolu"
 
-#: ../src/control/XournalMain.cpp:117
+#: ../src/control/XournalMain.cpp:149
 msgid "Open Logfile directory"
 msgstr "Otevřít složku s protokoly"
 
@@ -803,7 +803,7 @@ msgstr "PDF stránka {1}"
 msgid "PDF background missing"
 msgstr "PDF pozadí chybí"
 
-#: ../src/control/XournalMain.cpp:255
+#: ../src/control/XournalMain.cpp:287
 msgid "PDF file successfully created"
 msgstr "PDF soubor úspěšně vytvořen"
 
@@ -813,7 +813,7 @@ msgstr "PDF soubor úspěšně vytvořen"
 msgid "PDF files"
 msgstr "PDF soubory"
 
-#: ../src/control/XournalMain.cpp:273
+#: ../src/control/XournalMain.cpp:306
 msgid "PDF output filename"
 msgstr "Název výstupního PDF"
 
@@ -897,7 +897,7 @@ msgstr ""
 msgid "Record Audio / Stop Recording"
 msgstr "Nahrát zvuk / Zastavit nahrávání"
 
-#: ../src/control/Control.cpp:898
+#: ../src/control/Control.cpp:896
 msgid "Recorder could not be started."
 msgstr "Nelze spustit nahrávání."
 
@@ -915,7 +915,7 @@ msgstr "Znovu"
 msgid "Redo: "
 msgstr "Znovu: "
 
-#: ../src/control/Control.cpp:1996
+#: ../src/control/Control.cpp:1994
 msgid "Remove PDF Background"
 msgstr "Odstranit PDF pozadí"
 
@@ -935,7 +935,7 @@ msgstr "Nahradit"
 msgid "Requested temporary file was not found for attachment {1}"
 msgstr "Požadovaný dočasný soubor nebyl nalezen pro přílohu {1}"
 
-#: ../src/control/XournalMain.cpp:163
+#: ../src/control/XournalMain.cpp:195
 msgid "Restore file"
 msgstr "Obnovit soubor"
 
@@ -967,16 +967,16 @@ msgstr "SVG grafika"
 msgid "SVG with transparent background"
 msgstr "SVG s průhledným pozadím"
 
-#: ../src/control/Control.cpp:2441 ../src/control/jobs/SaveJob.cpp:13
+#: ../src/control/Control.cpp:2439 ../src/control/jobs/SaveJob.cpp:13
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:319
 msgid "Save"
 msgstr "Uložit"
 
-#: ../src/control/Control.cpp:2441
+#: ../src/control/Control.cpp:2439
 msgid "Save As..."
 msgstr "Uložit jako..."
 
-#: ../src/control/Control.cpp:2277 ../src/gui/dialog/PageTemplateDialog.cpp:83
+#: ../src/control/Control.cpp:2275 ../src/gui/dialog/PageTemplateDialog.cpp:83
 msgid "Save File"
 msgstr "Uložit soubor"
 
@@ -1017,7 +1017,7 @@ msgstr "Obdélníkový výběr"
 msgid "Select Region"
 msgstr "Výběr oblasti"
 
-#: ../src/control/Control.cpp:1995
+#: ../src/control/Control.cpp:1993
 msgid "Select another PDF"
 msgstr "Vybrat jiné PDF"
 
@@ -1042,7 +1042,7 @@ msgstr "Obdélníkový výběr"
 msgid "Select region"
 msgstr "Výběr oblasti"
 
-#: ../src/control/XournalMain.cpp:115
+#: ../src/control/XournalMain.cpp:147
 msgid "Send Bugreport"
 msgstr "Zaslat hlášení o chybě"
 
@@ -1066,13 +1066,13 @@ msgstr "Zobrazit pouze nevyužité stránky (jedna nevyužitá stránka)"
 msgid "Show only not used pages ({1} unused pages)"
 msgstr "Zobrazit pouze nevyužité stránky ({1} nevyužitých stránek)"
 
-#: ../src/control/XournalMain.cpp:348
+#: ../src/control/XournalMain.cpp:381
 msgid "Sorry, Xournal++ can only open one file at once.\n"
 "Others are ignored."
 msgstr "Promiň, Xournal++ může otevřít pouze jeden soubor najednou.\n"
 "Ostatní jsou ignorovány."
 
-#: ../src/control/XournalMain.cpp:360
+#: ../src/control/XournalMain.cpp:393
 msgid "Sorry, Xournal++ cannot open remote files at the moment.\n"
 "You have to copy the file to a local directory."
 msgstr "Promiň, Xournal++ momentálně nemůže otevřít vzdálené soubory.\n"
@@ -1134,15 +1134,15 @@ msgstr "Text nenalezen"
 msgid "Text not found, searched on all pages"
 msgstr "Text nenalezen, prohledány byly všechny stránky"
 
-#: ../src/control/Control.cpp:1057
+#: ../src/control/Control.cpp:1055
 msgid "The Toolbarconfiguration \"{1}\" is predefined, would you create a copy to edit?"
 msgstr "Konfigurace nástrojové lišty „{1}“ je předdefinována. Přejete si vytvořit kopii pro úpravy?"
 
-#: ../src/control/Control.cpp:1992
+#: ../src/control/Control.cpp:1990
 msgid "The attached background PDF could not be found."
 msgstr "Přiložené PDF pozadí nebylo nalezeno."
 
-#: ../src/control/Control.cpp:1993
+#: ../src/control/Control.cpp:1991
 msgid "The background PDF could not be found."
 msgstr "PDF pozadí nebylo nalezeno."
 
@@ -1166,15 +1166,15 @@ msgstr "Soubor není platný .xopp soubor (Version string je poškozený): \"{1}
 msgid "The formula is empty when rendered or invalid."
 msgstr "Vzorec je prázdný, když je vykreslený, nebo neplatný."
 
-#: ../src/control/XournalMain.cpp:110
+#: ../src/control/XournalMain.cpp:142
 msgid "The most recent log file name: {1}"
 msgstr "Název nejnovějšího souboru protokolu: {1}"
 
-#: ../src/control/XournalMain.cpp:103
+#: ../src/control/XournalMain.cpp:135
 msgid "There are errorlogfiles from Xournal++. Please send a Bugreport, so the bug may be fixed."
 msgstr "Xournal++ vytvořil soubory se záznamy o chybách. Zašlete prosím hlášení o chybě, abychom ji mohli opravit."
 
-#: ../src/control/XournalMain.cpp:102
+#: ../src/control/XournalMain.cpp:134
 msgid "There is an errorlogfile from Xournal++. Please send a Bugreport, so the bug may be fixed."
 msgstr "Xournal++ vytvořil soubor se záznamy o chybách. Zašlete prosím hlášení o chybě, abychom ji mohli opravit."
 
@@ -1195,7 +1195,7 @@ msgstr "Neměň tloušťku"
 msgid "Thin"
 msgstr "Tenká"
 
-#: ../src/control/Control.cpp:2440
+#: ../src/control/Control.cpp:2438
 msgid "This document is not saved yet."
 msgstr "Tento dokument ještě nebyl uložen."
 
@@ -1269,7 +1269,7 @@ msgstr "Neznámý typ pixmap::domain: {1}"
 msgid "Unknown stroke type: \"{1}\", assuming pen"
 msgstr "Neznámý typ čáry: „{1}“, bereme jej jako pero"
 
-#: ../src/control/Control.cpp:2341
+#: ../src/control/Control.cpp:2339
 msgid "Unsaved Document"
 msgstr "Neuložený dokument"
 
@@ -1322,11 +1322,11 @@ msgstr "Xournal (kompatibilita)"
 msgid "Xournal files"
 msgstr "Soubory Xournalu"
 
-#: ../src/control/XournalMain.cpp:157
+#: ../src/control/XournalMain.cpp:189
 msgid "Xournal++ crashed last time. Would you like to restore the last edited file?"
 msgstr "Xournal++ naposledy spadnul. Chcete obnovit poslední upravený soubor?"
 
-#: ../src/control/Control.cpp:2283 ../src/control/stockdlg/XojOpenDlg.cpp:57
+#: ../src/control/Control.cpp:2281 ../src/control/stockdlg/XojOpenDlg.cpp:57
 msgid "Xournal++ files"
 msgstr "Soubory Xournalu++"
 
@@ -1346,7 +1346,7 @@ msgid "You don't have any PDF pages to select from. Cancel operation.\n"
 msgstr "Nemáte žádné PDF stránky k výběru. Zrušit operaci.\n"
 "Prosím vyberte jiný typ pozadí: Menu \"Journal\" → \"Konfigurovat šablonu stránky\"."
 
-#: ../src/control/XournalMain.cpp:106
+#: ../src/control/XournalMain.cpp:138
 msgid "You're using {1}/{2} branch. Send Bugreport will direct you to this repo's issue tracker."
 msgstr "Používáte větev {1}/{2}. Send Bugreport will direct you to this repo's issue tracker."
 
@@ -1378,7 +1378,7 @@ msgstr "Nastavení přiblížení"
 msgid "Zoom to 100%"
 msgstr "Přiblížit na 100%"
 
-#: ../src/control/Control.cpp:2277 ../src/control/jobs/BaseExportJob.cpp:17
+#: ../src/control/Control.cpp:2275 ../src/control/jobs/BaseExportJob.cpp:17
 #: ../src/control/stockdlg/ImageOpenDlg.cpp:11
 #: ../src/control/stockdlg/XojOpenDlg.cpp:11
 #: ../src/gui/dialog/PageTemplateDialog.cpp:84
@@ -1390,7 +1390,7 @@ msgstr "_Zrušit"
 msgid "_Open"
 msgstr "_Otevřít"
 
-#: ../src/control/Control.cpp:2278 ../src/control/jobs/BaseExportJob.cpp:17
+#: ../src/control/Control.cpp:2276 ../src/control/jobs/BaseExportJob.cpp:17
 #: ../src/gui/dialog/PageTemplateDialog.cpp:84
 msgid "_Save"
 msgstr "_Uložit"
@@ -1528,7 +1528,7 @@ msgstr "xoj-preview-extractor: otevírání výstupního souboru „{1}“ selha
 msgid "xoj-preview-extractor: successfully extracted"
 msgstr "xoj-preview-extractor: úspěšně extrahováno"
 
-#: ../src/util/Util.cpp:99
+#: ../src/util/Util.cpp:126
 msgid "xournalpp-{1}"
 msgstr "xournalpp-{1}"
 
