@@ -208,11 +208,39 @@ static int applib_uiAction(lua_State* L) {
 static int applib_uiActionSelected(lua_State* L) {
     Plugin* plugin = Plugin::getPluginFromLua(L);
 
-    ActionGroup group = group = ActionGroup_fromString(luaL_checkstring(L, 1));
+    ActionGroup group = ActionGroup_fromString(luaL_checkstring(L, 1));
     ActionType action = ActionType_fromString(luaL_checkstring(L, 2));
 
     Control* ctrl = plugin->getControl();
     ctrl->fireActionSelected(group, action);
+
+    return 1;
+}
+
+/**
+ * Execute action from sidebar menu
+ */
+static int applib_sidebarAction(lua_State* L) {
+    // Connect the context menu actions
+    const std::map<std::string, SidebarActions> actionMap = {
+            {"COPY", SIDEBAR_ACTION_COPY},
+            {"DELETE", SIDEBAR_ACTION_DELETE},
+            {"MOVE_UP", SIDEBAR_ACTION_MOVE_UP},
+            {"MOVE_DOWN", SIDEBAR_ACTION_MOVE_DOWN},
+            {"NEW_BEFORE", SIDEBAR_ACTION_NEW_BEFORE},
+            {"NEW_AFTER", SIDEBAR_ACTION_NEW_AFTER},
+    };
+    const char* actionStr = luaL_checkstring(L, 1);
+    if (actionStr == nullptr) {
+        luaL_error(L, "Missing action!");
+    }
+    auto pos = actionMap.find(actionStr);
+    if (pos == actionMap.end()) {
+        luaL_error(L, "Action unknown!");
+    }
+    Plugin* plugin = Plugin::getPluginFromLua(L);
+    SidebarToolbar* toolbar = plugin->getControl()->getSidebar()->getToolbar();
+    toolbar->runAction(pos->second);
 
     return 1;
 }
@@ -233,13 +261,59 @@ static int applib_changeCurrentPageBackground(lua_State* L) {
     return 1;
 }
 
+/**
+ * Select Background Pdf Page for Current Page
+ * First argument is an integer (page number) and the second argument is a boolean (isRelative)
+ * specifying whether the page number is relative to the current pdf page or absolute
+ *
+ * Example 1: app.changeBackgroundPdfPageNr(1, true)
+ * changes the pdf page to the next one (relative mode)
+ *
+ * Example 2: app.changeBackgroundPdfPageNr(7, false)
+ * changes the page background to the 7th pdf page (absolute mode)
+ * */
+static int applib_changeBackgroundPdfPageNr(lua_State* L) {
+    Plugin* plugin = Plugin::getPluginFromLua(L);
+
+    size_t nr = luaL_checkinteger(L, 1);
+    bool relative = true;
+    if (lua_isboolean(L, 2)) {
+        relative = lua_toboolean(L, 2);
+    }
+
+    Control* control = plugin->getControl();
+    Document* doc = control->getDocument();
+    PageRef const& page = control->getCurrentPage();
+    size_t selected = nr - 1;
+    if (relative) {
+        bool isPdf = page->getBackgroundType().isPdfPage();
+        if (isPdf) {
+            selected = page->getPdfPageNr() + nr;
+        } else {
+            luaL_error(L, "Current page has no pdf background, cannot use relative mode!");
+        }
+    }
+    if (selected >= 0 && selected < static_cast<int>(doc->getPdfPageCount())) {
+        // no need to set a type, if we set the page number the type is also set
+        page->setBackgroundPdfPageNr(selected);
+
+        XojPdfPageSPtr p = doc->getPdfPage(selected);
+        page->setSize(p->getWidth(), p->getHeight());
+    } else {
+        luaL_error(L, "Pdf page number %d does not exist!", selected + 1);
+    }
+
+    return 1;
+}
 
 static const luaL_Reg applib[] = {{"msgbox", applib_msgbox},
                                   {"registerUi", applib_registerUi},
                                   {"uiAction", applib_uiAction},
                                   {"uiActionSelected", applib_uiActionSelected},
+                                  {"sidebarAction", applib_sidebarAction},
                                   {"changeCurrentPageBackground", applib_changeCurrentPageBackground},
                                   {"saveAs", applib_saveAs},
+                                  {"changeBackgroundPdfPageNr", applib_changeBackgroundPdfPageNr},
 
                                   // Placeholder
                                   //	{"MSG_BT_OK", nullptr},
