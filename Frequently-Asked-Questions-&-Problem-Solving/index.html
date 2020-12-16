@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Frequently Asked Questions & Problem Solving - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding-conventions/" class="nav-link">Coding conventions</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Frequently Asked Questions & Problem Solving</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git-Diff-Filter-for-Xournal/" class="nav-link">Git Diff Filter for Xournal</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How-to-provide-debug-info-for-input-related-bugs/" class="nav-link">How to provide debug info for input related bugs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Installing/" class="nav-link">Installing from source</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Pen-eraser-button-issues/" class="nav-link">Pen eraser button issues</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../User-Manual/" class="nav-link">User Manual</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../_Sidebar_Install_instructions/" class="nav-link">Build instructions</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Coding-conventions/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Git-Diff-Filter-for-Xournal/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#autosaves" class="nav-link">Autosaves</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#crashes" class="nav-link">Crashes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#files-and-icons" class="nav-link">Files and icons</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#common-problems-and-how-to-solve-them-workarounds" class="nav-link">Common Problems and how to solve them / workarounds</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#multi-monitor-systems" class="nav-link">Multi Monitor Systems</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="autosaves">Autosaves</h2>
+<h3 id="where-are-autosaves-located">Where are autosaves located?</h3>
+<p>There are two possible places. If you were working on an already-existing file, it should be in the same folder as the file, with the same name but <code>~</code> added to the end (example: <code>foo.xopp</code> is autosaved as <code>foo.xopp~</code>. Otherwise, the autosave will be located in <code>~/.xournalpp/autosave</code>.</p>
+<h2 id="crashes">Crashes</h2>
+<h3 id="why-is-xournal-crashing-on-kubuntu-when-i-open-a-file-dialog">Why is Xournal++ crashing on Kubuntu when I open a file dialog?</h3>
+<p>Try installing <code>gnome-icon-theme</code>. See <a href="https://github.com/xournalpp/xournalpp/issues/1347">this issue</a> for more information.</p>
+<h2 id="files-and-icons">Files and icons</h2>
+<h3 id="why-arent-thumbnails-appearing">Why aren't thumbnails appearing?</h3>
+<p>If you are using the Nautilus file manager, you may be a <a href="http://www.bernaerts-nicolas.fr/linux/74-ubuntu/360-ubuntu-nautilus-external-thumbnailer-failure">victim of a bug in Nautilus</a>.</p>
+<h1 id="common-problems-and-how-to-solve-them-workarounds">Common Problems and how to solve them / workarounds</h1>
+<h2 id="multi-monitor-systems">Multi Monitor Systems</h2>
+<h3 id="my-multi-monitor-system-on-xorg-does-not-map-my-touch-and-pen-pointer-to-the-correct-position-xournalpp-draws-with-an-offset-when-second-monitor-is-connected">My multi monitor system on Xorg does not map my Touch and Pen Pointer to the correct position.   Xournalpp draws with an offset when second monitor is connected.</h3>
+<p>Try to map your pointer devices to the Monitor xournalpp is working on:</p>
+<pre><code class="bash"># get the display name with:
+xrandr --query
+# get the pointer devices with:
+xinput list
+# map the pointer devices to the display with:
+xinput map-to-output &lt;device_id&gt; &lt;display_name&gt;
+</code></pre>
+
+<h3 id="on-my-windows-machine-connecting-to-an-wqhd-monitor-causes-xournalpp-to-draw-on-a-wrong-position">On my Windows machine connecting to an WQHD monitor causes Xournalpp to draw on a wrong position.</h3>
+<p>This is a known issue: <a href="../issues/1801">#1801</a>, <a href="../issues/1773">#1773</a>
+This seems to caused by a custom zoom factor set in the windows display settings.
+Try to set both monitors to the same scaling.
+We know, this is only a workaround and we work on a solution.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Installing from source - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding-conventions/" class="nav-link">Coding conventions</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Frequently-Asked-Questions-%26-Problem-Solving/" class="nav-link">Frequently Asked Questions & Problem Solving</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git-Diff-Filter-for-Xournal/" class="nav-link">Git Diff Filter for Xournal</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How-to-provide-debug-info-for-input-related-bugs/" class="nav-link">How to provide debug info for input related bugs</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Installing from source</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Pen-eraser-button-issues/" class="nav-link">Pen eraser button issues</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../User-Manual/" class="nav-link">User Manual</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../_Sidebar_Install_instructions/" class="nav-link">Build instructions</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../How-to-provide-debug-info-for-input-related-bugs/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Pen-eraser-button-issues/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#installing-from-source" class="nav-link">Installing from source</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#dependencies" class="nav-link">Dependencies</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cmake" class="nav-link">CMake</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#building-a-pull-request" class="nav-link">Building a pull request</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="installing-from-source">Installing from source</h1>
+<p>In general it's probably the most frequent way you'll install Xournal++, as there are pretty much no recent packages in repositories.</p>
+<p>First of all you should clone this repository:</p>
+<pre><code class="bash">git clone https://github.com/xournalpp/xournalpp.git
+cd xournalpp
+</code></pre>
+
+<h2 id="dependencies">Dependencies</h2>
+<p><code>readme/LinuxBuild.md</code> and other files try to document the dependencies: please update these files if you can.</p>
+<h2 id="cmake">CMake</h2>
+<p>Xournal++ is built using CMake.</p>
+<p>Here is the process of building with CMake:</p>
+<ol>
+<li>Create the build directory – this is where all of the build files will be placed.</li>
+</ol>
+<p><code>bash
+   mkdir build
+   cd build</code></p>
+<ol>
+<li>You can generate the basic configuration with</li>
+</ol>
+<p><code>bash
+   cmake ..</code></p>
+<p>If this is failing on Ubuntu/Debian, even with <code>libpoppler-private-dev</code> installed, try changing the <code>POPPLER_INCLUDE_DIR</code> cmake option from <code>"POPPLER_INCLUDE_DIR-NOTFOUND"</code> to <code>"/usr/include/poppler"</code>. This is easy to do with <code>cmake-gui</code> as below.</p>
+<p>This will cause install commands (see step 4) to install <code>/usr</code> folders by default (requires root). You can install to a local directory such as <code>~/.local</code> by setting <code>cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/.local</code></p>
+<ol>
+<li>If you'd like to customize Xournal++ configuration you can tinker with cmake <code>-D</code> parameter, but it's much more convenient to execute</li>
+</ol>
+<p><code>bash
+   cmake-gui ..</code></p>
+<p>Here you can configure all aspects of Xournal++ build.
+   <img alt="cmake-gui" src="http://i.imgur.com/EYwXMuL.png" /></p>
+<p>There are few configuration categories (grouping can be activated with <code>Grouped</code> checkbox):
+   - <strong>ENABLE</strong> – basic stable features support
+   - <strong>UNSTABLE</strong> – unstable, in development features
+   - <strong>DEV</strong> – development options, which in most cases should be leaved as they are
+   - <strong>TEST</strong> – optional features of CppUnit tests
+   - <strong>BUILD</strong> – build dependency libraries and link them statically
+   - <strong>EXT</strong> – add dependency basing on precompiled deb packages (UNIX only)
+   - <strong>PATH</strong> – here you can specify alternative location of these binaries</p>
+<p>Some of these categories, or some single settings can be unavailable from beginning – they may depend on some other config flags (i.e., to enable entire <code>TEST</code> group, first of all you have to enable <code>ENABLE_CPPUNIT</code>)</p>
+<p>It's worth mentioning that there are also some hidden options that are shown when <code>Advanced</code> is checked. However, don't modify them if you don't know what they can do, or else it will result in unexpected behavior (please don't report bugs if you've made such changes or you've been specifically asked to in a bug report).</p>
+<p>All custom options are listed in <code>README</code> file under <code>cmake</code> directory.</p>
+<p>After making all changes you should click <code>Generate</code> button to generate Makefiles. In the console you can see all configuration steps and at the ending some general info about used features.</p>
+<p>Now you can close cmake-gui.</p>
+<ol>
+<li>Now it's time for real building :)</li>
+</ol>
+<p>To do this you have just to execute <code>cmake --build .</code> in the build directory. You can also specify a specific target using <code>cmake --build . --target &lt;target&gt;</code>:
+   - <strong>xournalpp</strong> – main executable (found in <code>build/src</code> dir)
+   - <strong>xournal-thumbnailer</strong> – thumbnailer used to extract thumbnails from .xoj files (found in <code>build/src/xoj-preview-extractor</code>)
+   - <strong>xournalpp-test</strong> – CppUnit testing binary, which should be executed after any kind of source edit (found in <code>build/test</code>)</p>
+<p>Other binary targets are used for internal building support:
+   - <strong>xournalpp-core</strong> – used by <code>xournalpp</code> and <code>xournalpp-test</code> targets
+   - <strong>util</strong> – util static library (from path <code>src/util</code>) used by <code>xournalpp</code> and <code>xournalpp-test</code> targets</p>
+<p>If you have multicore processor you can build with <code>make -jN</code> where N is number of simultaneous jobs.</p>
+<ol>
+<li>To install entire package execute, you first need to compile it:</li>
+</ol>
+<p><code>bash
+   cmake --build .</code></p>
+<p>Then you can install it with (if you need sudo, be careful--it may create files with root permissions in the build directory)
+   <code>bash
+   cmake --build . --target install</code></p>
+<p>It'll install all needed files (of course without <code>xournalpp-test</code>) including desktop files and translations.</p>
+<h1 id="building-a-pull-request">Building a pull request</h1>
+<p>First, you need to find the URL of the repository of the PR. You can do this by going to the PR page and looking for <code>XXX wants to merge N commits into xournalpp:master from YYY</code>. The <code>YYY</code> part should have the format <code>Username:Branchname</code>.</p>
+<p>Then, you can checkout the PR with</p>
+<pre><code class="bash">git clone https://github.com/Username/xournalpp -b Branchname
+</code></pre>
+
+<p>where you will need to replace <code>Username</code> and <code>Branchname</code> with the ones you just found.</p>
+<p>Afterwards, you can compile and install Xournal++ like above.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

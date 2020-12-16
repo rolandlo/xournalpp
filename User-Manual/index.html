@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>User Manual - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding-conventions/" class="nav-link">Coding conventions</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Frequently-Asked-Questions-%26-Problem-Solving/" class="nav-link">Frequently Asked Questions & Problem Solving</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git-Diff-Filter-for-Xournal/" class="nav-link">Git Diff Filter for Xournal</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How-to-provide-debug-info-for-input-related-bugs/" class="nav-link">How to provide debug info for input related bugs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Installing/" class="nav-link">Installing from source</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Pen-eraser-button-issues/" class="nav-link">Pen eraser button issues</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">User Manual</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../_Sidebar_Install_instructions/" class="nav-link">Build instructions</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Pen-eraser-button-issues/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../_Sidebar_Install_instructions/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#getting-started" class="nav-link">Getting Started</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#general-usage" class="nav-link">General Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#customization" class="nav-link">Customization</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#tools" class="nav-link">Tools</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#handwriting-tools" class="nav-link">Handwriting Tools</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#object-tools" class="nav-link">Object Tools</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#selection-and-movement-tools" class="nav-link">Selection and Movement Tools</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#snapping" class="nav-link">Snapping</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#audio-recording-and-playback" class="nav-link">Audio Recording and Playback</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#usage" class="nav-link">Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#menu-entries" class="nav-link">Menu Entries</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#file" class="nav-link">File</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#edit" class="nav-link">Edit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#view" class="nav-link">View</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#navigation" class="nav-link">Navigation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#journal" class="nav-link">Journal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tools_1" class="nav-link">Tools</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#help" class="nav-link">Help</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>This manual is a draft and a work in progress. If you have the time you can help write some paragraphs ;-)</p>
+<h1 id="introduction">Introduction</h1>
+<p>Xournal++ is a notetaking and PDF annotation tool that is based on Xournal but written from scratch in C++, using GTK3 instead of GTK2. It supports pressure sensitive pens (e.g. Wacom), text input, image input, LaTeX formula entry as well as a number of other useful features such as shape recognition and layers.</p>
+<p>Feel free to report any bugs you encounter or make feature requestss on our <a href="https://github.com/xournalpp/xournalpp/issues">Issue Tracker</a>. You're also welcome to <a href="https://github.com/xournalpp/xournalpp/pulls">submit pull requests</a>.</p>
+<h1 id="getting-started">Getting Started</h1>
+<p>When you first open up Xournal++, you will see a new, blank document. You can immediately start adding to the document, or you can load an existing one with the <code>File &gt; Open</code> menu option.</p>
+<h2 id="general-usage">General Usage</h2>
+<p>A typical Xournal++ workflow looks like the following:
+1. Use the <code>File</code> menu to load an existing Xournal++ project, create a new document, or load a PDF file.
+2. Annotate or markup the document using one of the tools in the toolbar, such as the Stroke tool, the Text tool, or the Image tool.
+3. Save periodically.
+4. If needed, export the document as a PDF file by selecting <code>File &gt; Export as PDF</code> in the menu.</p>
+<p>Once you are ready to begin editing a document, you can draw strokes and add objects using some of the <a href="#tools">tools described below</a>.</p>
+<p>If you need more space, you can add more pages using one of the <code>Journal &gt; ...</code> options or by right clicking a page in the Page Panel (in the default layout, it is on the left side of the program).</p>
+<h2 id="customization">Customization</h2>
+<p>Xournal++ is highly customizable and has many configurable settings. You can edit the settings by selecting <code>Edit &gt; Preferences</code> from the menu.</p>
+<p>For example:
+* You can try enabling the optional "Experimental Input System" (in the <code>Input System</code> tab), which fixes many input-related issues and is a better experience overall.
+* You can customize mouse/stylus/touchscreen controls.
+* You can edit how Xournal++'s interface is organized in the <code>View</code> tab.
+* You can adjust zoom and layout settings.</p>
+<p>Additionally, you can also edit how Xournal++'s interace is organized (e.g. where buttons are, where the panels should be located) by selecting one of the options in <code>View &gt; Toolbars</code>.</p>
+<p>The configuration files are generally located at <code>$HOME/.xournalpp</code> on Linux:
+ * <code>toolbar.ini</code> - it's possible to create new toolbars layouts manually and precisely.
+ * <code>colornames.ini</code> - in case you've added custom colors in your toolbar, you can add a label to them following this format:</p>
+<p><code>[custom]
+   ff00ff=4bit Magenta
+   ff00bb=Hot pink
+   ff0000=4bit Red
+   ...</code>
+   Note that this <em>six-hex-digits</em> format does not include the <code>0x</code> prefix, which is actually mandatory for <code>toolbar.ini</code>.</p>
+<p>Example: <code>COLOR(0xff00bb)</code></p>
+<h1 id="tools">Tools</h1>
+<h2 id="handwriting-tools">Handwriting Tools</h2>
+<p>The handwriting tools allow you to write on the document using a mouse or a pressure-sensitive stylus. There are three such tools: <strong>Pen</strong>, <strong>Highlighter</strong>, and <strong>Eraser</strong>.</p>
+<h3 id="pen">Pen</h3>
+<p>The <strong>Pen</strong> tool allows you to draw lines on the document. It supports mouse input, as well as pressure-sensitive styluses (e.g. with a graphics tablet).</p>
+<h3 id="highlighter">Highlighter</h3>
+<h3 id="eraser">Eraser</h3>
+<p>The <strong>Eraser</strong> tool can remove strokes or parts of strokes. It has three modes:
+1. <strong>Standard</strong>: remove parts of strokes that the cursor moves over.
+2. <strong>Whiteout</strong>: paint a white stroke.
+3. <strong>Delete Stroke</strong>: remove the entirety of any stroke that the cursor touches.</p>
+<h3 id="colors-and-thickness">Colors and Thickness</h3>
+<p>The <strong>Pen</strong> and <strong>Highlighter</strong> tools can be used to draw strokes of different colors and thicknesses.</p>
+<p>To change the color of any selected stroke or any future strokes you draw, click on one of the color buttons (in the default layout, the color buttons are at the right side of the toolbar second from the top). Besides the preset color buttons, you can also set a custom color by clicking on the <strong>Select color</strong> button.</p>
+<p>To change the thickness, press one of the thickness buttons (in the default layout, they are to the left of the color buttons).</p>
+<p>It is also possible to automatically fill in the area enclosed by a stroke; this <strong>Fill Mode</strong> can be toggled by selecting the paint bucket icon (in the default layout, it is to the left of the color buttons).</p>
+<h3 id="shapes">Shapes</h3>
+<p>The <strong>Pen</strong> and <strong>Highlighter</strong> tool can also draw shapes instead of strokes. In the default layout, you can find the <strong>Shapes Toggle Menu</strong> to the right of the <strong>Text Tool</strong> (the big "T"). The Shapes Toggle Menu will have a dropdown arrow on its right. After selecting one of the shape modes in the menu, the Pen and Highlighter will place down the selected shape instead of strokes.</p>
+<p>The selectable shapes are:</p>
+<ul>
+<li><strong>Draw Rectangle</strong>: Draws a rectangle.</li>
+<li><strong>Draw Circle</strong>: Draws a circle.</li>
+<li><strong>Draw Arrow</strong>: Draws an arrow from the initial point of contact to wherever you finish the stroke.</li>
+<li><strong>Draw Line</strong>: Draws a line.</li>
+<li><strong>Draw Coordinate System</strong>: Draws an "L" shape.</li>
+<li><strong>Stroke Recognizer</strong>: After you finish the stroke, it will attempt to convert the stroke into one of the shape types above (it will leave the stroke as-is if it cannot).</li>
+</ul>
+<h2 id="object-tools">Object Tools</h2>
+<h3 id="text">Text</h3>
+<p>The <strong>Text</strong> tool inserts text (objects) onto the document. To do so, click anywhere on the document to begin editing. Any existing text objects can be altered by clicking on them with the text tool.</p>
+<p>A text object's color and font can be customized by clicking the corresponding buttons in the toolbar.</p>
+<h3 id="image">Image</h3>
+<p>The <strong>Image</strong> button inserts an image onto the document. Clicking on the Image button will bring up a file dialog, which will allow you to choose which image you want to insert.</p>
+<p>An image can be repositioned or resized with one of the selection tools.</p>
+<h3 id="latex">LaTeX</h3>
+<p>The <strong>LaTeX</strong> button inserts a LaTeX formula onto the document. Note that the LaTeX feature requires a working version of LaTeX to be installed on your computer (specifically, the feature needs to be able to call <code>pdflatex</code>). In addition, LaTeX <code>standalone</code> package needs to be installed, which typically requires installation of <code>texlive-latex-extra</code>.  On Ubuntu or similar Linux systems this means</p>
+<pre><code>sudo apt-get texlive-latex-extra
+</code></pre>
+
+<p>For other operating systems you will need to consult your LaTeX installation manual on how to add the <code>standalone</code> package.</p>
+<p>Clicking on the LaTeX button will bring up a dialog which will allow you to type in a formula. A preview will be displayed in the center of the dialog, which will updating as you type and indicate whether your formula is valid. Once you are done, you can click the OK button to insert the LaTeX onto the document; the rendered formula will appear at the top-left corner of the current page. The formula is now a graphical object; it can be selected, moved and scaled as desired, but in the current version of <code>xournal++</code> its LaTeX code cannot be edited and modified - if you need to change something, you have to delete the object and create a new one.</p>
+<h2 id="selection-and-movement-tools">Selection and Movement Tools</h2>
+<h3 id="selection">Selection</h3>
+<h3 id="vertical-space">Vertical Space</h3>
+<h3 id="hand">Hand</h3>
+<h2 id="snapping">Snapping</h2>
+<h1 id="audio-recording-and-playback">Audio Recording and Playback</h1>
+<ul>
+<li>Go to <code>Edit &gt; Preferences &gt; Audio Recording</code> and set the <code>Audio Folder</code> as well as the appropriate <code>Input Device</code> and <code>Output Device</code>.</li>
+<li>If you need to edit the recording audio gain, take a look at the preferences tab mentioned above.</li>
+</ul>
+<p><strong>Please test this new feature in advance before relying on it to work. It could contain undiscovered bugs specific to some hardware or software that we have not tested.</strong></p>
+<h2 id="usage">Usage</h2>
+<p>To record audio, first press the <strong>Start/Stop Recording</strong> button (icon: a solid red circle). Recording will begin when you create the next stroke or object and will stop when the button is pressed again. The audio playback will be attached to that object.</p>
+<p>To playback audio, use the <code>Play Object</code> tool and click on the object for which you recorded audio. You can pause and stop the playback of the audio with the buttons next to the recording button in the toolbar.</p>
+<h1 id="menu-entries">Menu Entries</h1>
+<h2 id="file">File</h2>
+<p>The <strong>File</strong> menu has the usual entries along with an <strong>Annotate PDF</strong> option which allows you to open a PDF and draw on top, and an <strong>Export PDF</strong> option that allows you to save your document as a PDF.</p>
+<h2 id="edit">Edit</h2>
+<p>The <strong>Edit</strong> menu is also pretty standard, with a <strong>Find</strong> function that allows you to search in any text, as well as a <strong>Preferences</strong> dialog.</p>
+<h2 id="view">View</h2>
+<h2 id="navigation">Navigation</h2>
+<h2 id="journal">Journal</h2>
+<p>The <strong>Journal</strong> menu allows you to configure settings for the document that is currently being edited.</p>
+<h2 id="tools_1">Tools</h2>
+<h2 id="help">Help</h2>
+<p><img alt="" src="https://github.com/xournalpp/xournalpp/blob/string_new/development/documentation/wiki/Xournalpp.png" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
