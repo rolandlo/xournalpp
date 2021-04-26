@@ -67,13 +67,9 @@ ToolMenuHandler::~ToolMenuHandler() {
 }
 
 void ToolMenuHandler::freeDynamicToolbarItems() {
-    for (AbstractToolItem* it: this->toolItems) {
-        it->setUsed(false);
-    }
+    for (AbstractToolItem* it: this->toolItems) { it->setUsed(false); }
 
-    for (ColorToolItem* it: this->toolbarColorItems) {
-        delete it;
-    }
+    for (ColorToolItem* it: this->toolbarColorItems) { delete it; }
     this->toolbarColorItems.clear();
 }
 
@@ -212,17 +208,11 @@ void ToolMenuHandler::addColorToolItem(AbstractToolItem* it) {
 }
 
 void ToolMenuHandler::setTmpDisabled(bool disabled) {
-    for (AbstractToolItem* it: this->toolItems) {
-        it->setTmpDisabled(disabled);
-    }
+    for (AbstractToolItem* it: this->toolItems) { it->setTmpDisabled(disabled); }
 
-    for (MenuItem* it: this->menuItems) {
-        it->setTmpDisabled(disabled);
-    }
+    for (MenuItem* it: this->menuItems) { it->setTmpDisabled(disabled); }
 
-    for (ColorToolItem* it: this->toolbarColorItems) {
-        it->setTmpDisabled(disabled);
-    }
+    for (ColorToolItem* it: this->toolbarColorItems) { it->setTmpDisabled(disabled); }
 
     GtkWidget* menuViewSidebarVisible = gui->get("menuViewSidebarVisible");
     gtk_widget_set_sensitive(menuViewSidebarVisible, !disabled);
@@ -430,6 +420,7 @@ void ToolMenuHandler::initToolItems() {
     ADD_CUSTOM_ITEM_TGL("VERTICAL_SPACE", ACTION_TOOL_VERTICAL_SPACE, GROUP_TOOL, true, "stretch", _("Vertical Space"));
     ADD_CUSTOM_ITEM_TGL("PLAY_OBJECT", ACTION_TOOL_PLAY_OBJECT, GROUP_TOOL, true, "object-play", _("Play Object"));
     ADD_CUSTOM_ITEM_TGL("HAND", ACTION_TOOL_HAND, GROUP_TOOL, true, "hand", _("Hand"));
+    ADD_CUSTOM_ITEM_TGL("SETSQUARE", ACTION_TOOL_SETSQUARE, GROUP_TOOL, true, "setsquare", _("Setsquare"));
 
     fontButton = new FontButton(listener, gui, "SELECT_FONT", ACTION_FONT_BUTTON_CHANGED, _("Select Font"));
     addToolItem(fontButton);
