@@ -5,6 +5,8 @@
 
 <table border="0px" ><tr><td width = 600px>
 
+Checkout our new website on [https://xournalpp.github.io](https://xournalpp.github.io)
+
 <img src="readme/main.png" width=550px% title="Xournal++ Screenshot on Linux"/>
 
 </td><td width=400px>
