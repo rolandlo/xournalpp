@@ -7,27 +7,17 @@
 
 <img src="readme/main.png" width=550px% title="Xournal++ Screenshot on Linux"/>
 
-</td><td>
+</td><td width=400px>
 
-## Shout out - Translators Needed!
+## Shout out - Translators Needed
 
-Recently we revisited the settings dialog to improve the feeling and usability.
-While doing that we also added better descriptions, for which we require
-new translations.
+Xournal++ is translated into more than 30 languages, which is only possible thanks to our community.
 
-Partial translations, which need to be updated:
+<img src="readme/languages.png" width=330px% title="Languages"/>
 
-- Czech
-- Polish
-- Chinese
+Some languages (like English, German, Arabic, Basque, Chinese Simplified, Czech, French, Galician, Italian, Polish, Brazilian, Russian and Spanish) are fully or nearly fully translated and only need small updates when some new words have been added to the source code. Other languages need a larger update.
 
-Full translations for all languages not mentioned previously **except**:
-
-- English
-- German
-- Italian
-
-If you would like to help us improve the localization of Xournal++, take a look at [our Crowdin project](https://crowdin.com/project/xournalpp). If you are interested in translating a new language, contact us on [Gitter](https://gitter.im/xournalpp/xournalpp) or create a new issue and we will unlock the language on Crowdin.
+If you would like to help us improve the localization of Xournal++, take a look at [our Crowdin project](https://crowdin.com/project/xournalpp). Contributing is super easy. Just create an account, choose your language and start translating via the web interface. If you are interested in translating a new language, contact us on [Gitter](https://gitter.im/xournalpp/xournalpp) or create a new issue and we will unlock the language on Crowdin.
 
 **Thanks in advance!**
 
