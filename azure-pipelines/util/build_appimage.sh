@@ -48,5 +48,8 @@ appimage_name='appimage'
 
 export UPD_INFO="gh-releases-zsync|xournalpp|xournalpp|latest|$appimage_name.zsync"
 
+LIB=/usr/lib/x86_64-linux-gnu/libthai.so.0
+echo "Bundle libthai"
+
 # call through linuxdeploy
-./"$LINUXDEPLOY" --appdir="$APPDIR" --plugin gtk --plugin gettext --output "$appimage_name" --icon-file="$ICON_FILE" --desktop-file="$DESKTOP_FILE"
+./"$LINUXDEPLOY" --appdir="$APPDIR" --plugin gtk --plugin gettext --library "$LIB" --output "$appimage_name" --icon-file="$ICON_FILE" --desktop-file="$DESKTOP_FILE"
