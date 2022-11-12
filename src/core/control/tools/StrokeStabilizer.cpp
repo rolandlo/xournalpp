@@ -112,6 +112,14 @@ void StrokeStabilizer::Active::quadraticSplineTo(const Event& ev) {
     const double normBC = std::sqrt(squaredNormBC);
     const double normAB = vAB.norm();
 
+    if (normBC < InputHandler::PIXEL_MOTION_THRESHOLD) {
+        return;
+    }
+    if (normAB < DBL_MIN) {
+        drawEvent(ev);
+        return;
+    }
+
     /**
      * The first argument of std::min would give a symmetric quadratic spline segment.
      * The std::min and its second argument ensure the spline segment stays reasonably close to its nodes
