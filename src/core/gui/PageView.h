@@ -49,7 +49,7 @@ class XojPdfPage;
 namespace xoj::view {
 class OverlayView;
 class ToolView;
-}
+}  // namespace xoj::view
 
 class XojPageView: public LegacyRedrawable, public PageListener, public xoj::view::Repaintable {
 public:
@@ -97,7 +97,7 @@ public:
 
     void endSpline();
 
-    bool searchTextOnPage(const std::string& text, size_t* occurrences, double* yOfUpperMostMatch);
+    bool searchTextOnPage(const std::string& text, size_t* occurrences, XojPdfRectangle* upperMostMatch);
 
     bool onKeyPressEvent(GdkEventKey* event);
     bool onKeyReleaseEvent(GdkEventKey* event);
