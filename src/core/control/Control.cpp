@@ -1857,9 +1857,9 @@ auto Control::getCurrentPageNo() const -> size_t {
     return 0;
 }
 
-auto Control::searchTextOnPage(const std::string& text, size_t pageNumber, size_t* occurrences,
+auto Control::searchTextOnPage(const std::string& text, size_t pageNumber, size_t index, size_t* occurrences,
                                XojPdfRectangle* upperMostMatch) -> bool {
-    return getWindow()->getXournal()->searchTextOnPage(text, pageNumber, occurrences, upperMostMatch);
+    return getWindow()->getXournal()->searchTextOnPage(text, pageNumber, index, occurrences, upperMostMatch);
 }
 
 auto Control::getCurrentPage() -> PageRef {
@@ -3143,13 +3143,9 @@ void Control::setClipboardHandlerSelection(EditSelection* selection) {
     }
 }
 
-void Control::addChangedDocumentListener(DocumentListener* dl) {
-    this->changedDocumentListeners.push_back(dl);
-}
+void Control::addChangedDocumentListener(DocumentListener* dl) { this->changedDocumentListeners.push_back(dl); }
 
-void Control::removeChangedDocumentListener(DocumentListener* dl) {
-    this->changedDocumentListeners.remove(dl);
-}
+void Control::removeChangedDocumentListener(DocumentListener* dl) { this->changedDocumentListeners.remove(dl); }
 
 void Control::setCopyCutEnabled(bool enabled) { this->clipboardHandler->setCopyCutEnabled(enabled); }
 

@@ -199,7 +199,8 @@ public:
      *                          (Used for scrolling to the first match)
      * @return true if at least one match was found
      */
-    bool searchTextOnPage(const std::string& text, size_t pageNumber, size_t* occurrences, XojPdfRectangle* upperMostMatch);
+    bool searchTextOnPage(const std::string& text, size_t pageNumber, size_t index, size_t* occurrences,
+                          XojPdfRectangle* upperMostMatch);
 
     /**
      * Fire page selected, but first check if the page Number is valid
