@@ -142,6 +142,7 @@ void SearchBar::searchNext() {
     search([&](const char* text) {
         indexInPage++;
         if (indexInPage > occurrences) {
+            control->searchTextOnPage(text, page, 1, &occurrences, nullptr);  // clear the active marker
             page++;
             if (page >= pageCount) {
                 page = 0;
@@ -156,6 +157,7 @@ void SearchBar::searchPrevious() {
     search([&](const char* text) {
         indexInPage--;
         if (indexInPage == 0 || indexInPage >= occurrences) {
+            control->searchTextOnPage(text, page, 1, &occurrences, nullptr);  // clear the active marker
             page--;
             if (page > pageCount) {
                 page = pageCount - 1;
