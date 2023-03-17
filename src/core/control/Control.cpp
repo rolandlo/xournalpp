@@ -1825,7 +1825,7 @@ void Control::setViewLayoutB2T(bool b2t) {
 }
 
 /**
- * This callback is used by used to be called later in the UI Thread
+ * This callback is used to be called later in the UI Thread
  * On slower machine this feels more fluent, therefore this will not
  * be removed
  */
