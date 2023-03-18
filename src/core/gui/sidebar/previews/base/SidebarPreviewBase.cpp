@@ -104,9 +104,6 @@ auto SidebarPreviewBase::onScrolledwindowMainScrollEvent(GtkWidget* widget, GdkE
     if (new_zoom != current_zoom) {
         // set zoom and save to settings
         settings->setSidebarPreviewZoom(new_zoom);
-        if (sidebar->cache) {
-            sidebar->cache->clearCache();
-        }
         sidebar->updatePreviews();
     }
 
