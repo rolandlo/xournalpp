@@ -104,7 +104,10 @@ auto SidebarPreviewBase::onScrolledwindowMainScrollEvent(GtkWidget* widget, GdkE
     if (new_zoom != current_zoom) {
         // set zoom and save to settings
         settings->setSidebarPreviewZoom(new_zoom);
-        sidebar->updatePreviews();
+        for (auto& p: sidebar->previews) {
+            p->updateSize();
+        }
+        sidebar->layout();
     }
 
     // we have used the zoom event, so don't handle further
@@ -137,6 +140,13 @@ void SidebarPreviewBase::sizeChanged(GtkWidget* widget, GtkAllocation* allocatio
     }
 
     if (std::abs(lastWidth - allocation->width) > 20) {
+        auto* settings = sidebar->getControl()->getSettings();
+        double zoom = settings->getSidebarPreviewZoom();
+        double newZoom = std::clamp(zoom * allocation->width / lastWidth, ZOOM_MIN, ZOOM_MAX);
+        settings->setSidebarPreviewZoom(newZoom);
+        for (auto& p: sidebar->previews) {
+            p->updateSize();
+        }
         sidebar->layout();
         lastWidth = allocation->width;
     }
