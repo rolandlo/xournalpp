@@ -110,7 +110,7 @@ auto InputContext::handle(GdkEvent* sourceEvent) -> bool {
         return false;
     }
 
-    InputEvent event = InputEvents::translateEvent(sourceEvent, this->getSettings());
+    InputEvent event = InputEvents::translateEvent(sourceEvent, this->getSettings(), widget);
 
     // Add the device to the list of known devices if it is currently unknown
     GdkInputSource inputSource = gdk_device_get_source(sourceDevice);
