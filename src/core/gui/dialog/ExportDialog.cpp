@@ -26,10 +26,6 @@ ExportDialog::ExportDialog(GladeSearchpath* gladeSearchPath, ExportGraphicsForma
     gtk_label_set_text(GTK_LABEL(builder.get("lbAllPagesInfo")), ("1 - " + std::to_string(pageCount)).c_str());
     gtk_label_set_text(GTK_LABEL(builder.get("lbCurrentPage")), std::to_string(currentPage).c_str());
 
-#if GTK_MAJOR_VERSION == 3
-    // Widgets are visible by default in gtk4
-    gtk_widget_show_all(builder.get("dialog-main-box"));
-#endif
 
     auto removeQualitySetting = [&builder = this->builder]() {
         gtk_widget_hide(builder.get("lbQuality"));
@@ -126,13 +122,13 @@ void ExportDialog::selectQualityCriterion(GtkComboBox* comboBox, ExportDialog* s
         case EXPORT_QUALITY_DPI:
             gtk_label_set_text(GTK_LABEL(self->builder.get("lbQualityUnit")), "dpi");
             gtk_spin_button_set_adjustment(GTK_SPIN_BUTTON(self->builder.get("sbQualityValue")),
-                                           GTK_ADJUSTMENT(self->builder.get<GObject>("adjustmentDpi")));
+                                           GTK_ADJUSTMENT(self->builder.getObject("adjustmentDpi")));
             break;
         case EXPORT_QUALITY_WIDTH:
         case EXPORT_QUALITY_HEIGHT:
             gtk_label_set_text(GTK_LABEL(self->builder.get("lbQualityUnit")), "px");
             gtk_spin_button_set_adjustment(GTK_SPIN_BUTTON(self->builder.get("sbQualityValue")),
-                                           GTK_ADJUSTMENT(self->builder.get<GObject>("adjustmentHeightWidth")));
+                                           GTK_ADJUSTMENT(self->builder.getObject("adjustmentHeightWidth")));
             break;
     }
 }

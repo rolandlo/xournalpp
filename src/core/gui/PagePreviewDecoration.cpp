@@ -6,7 +6,7 @@
 #include "control/settings/Settings.h"
 #include "gui/MainWindow.h"
 #include "util/raii/CairoWrappers.h"
-
+/*
 void PagePreviewDecoration::drawDecoration(cairo_t* cr, SidebarPreviewPageEntry* pageEntry, Control* control) {
     switch (control->getSettings()->getSidebarNumberingStyle()) {
         case SidebarNumberingStyle::NUMBER_BELOW_PREVIEW:
@@ -127,3 +127,4 @@ void PagePreviewDecoration::drawPageNumberWithSquareBackground(cairo_t* cr, Side
     Util::cairo_set_source_argb(cr, Colors::white);
     cairo_show_text(cr, pageNumber.c_str());
 }
+*/

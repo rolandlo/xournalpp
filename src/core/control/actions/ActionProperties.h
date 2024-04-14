@@ -374,21 +374,21 @@ struct ActionProperties<Action::SHOW_MENUBAR> {
 template <>
 struct ActionProperties<Action::ZOOM_IN> {
     static void callback(GSimpleAction*, GVariant*, Control* ctrl) {
-        Util::execInUiThread([zoom = ctrl->getZoomControl()]() { zoom->zoomOneStep(ZOOM_IN); });
+        Util::execWhenIdle([zoom = ctrl->getZoomControl()]() { zoom->zoomOneStep(ZOOM_IN); });
     }
 };
 
 template <>
 struct ActionProperties<Action::ZOOM_OUT> {
     static void callback(GSimpleAction*, GVariant*, Control* ctrl) {
-        Util::execInUiThread([zoom = ctrl->getZoomControl()]() { zoom->zoomOneStep(ZOOM_OUT); });
+        Util::execWhenIdle([zoom = ctrl->getZoomControl()]() { zoom->zoomOneStep(ZOOM_OUT); });
     }
 };
 
 template <>
 struct ActionProperties<Action::ZOOM_100> {
     static void callback(GSimpleAction*, GVariant*, Control* ctrl) {
-        Util::execInUiThread([zoom = ctrl->getZoomControl()]() { zoom->zoom100(); });
+        Util::execWhenIdle([zoom = ctrl->getZoomControl()]() { zoom->zoom100(); });
     }
 };
 
@@ -399,7 +399,7 @@ struct ActionProperties<Action::ZOOM_FIT> {
     static void callback(GSimpleAction* ga, GVariant* p, Control* ctrl) {
         g_simple_action_set_state(ga, p);
         bool enabled = g_variant_get_boolean(p);
-        Util::execInUiThread([enabled, zoom = ctrl->getZoomControl()]() {
+        Util::execWhenIdle([enabled, zoom = ctrl->getZoomControl()]() {
             if (enabled) {
                 zoom->updateZoomFitValue();
             }
@@ -417,7 +417,7 @@ struct ActionProperties<Action::ZOOM> {
         g_simple_action_set_state(ga, p);
         double scale = g_variant_get_double(p);
         xoj_assert(scale >= DEFAULT_ZOOM_MIN && scale <= DEFAULT_ZOOM_MAX);
-        Util::execInUiThread([scale, zoomctrl = ctrl->getZoomControl()]() {
+        Util::execWhenIdle([scale, zoomctrl = ctrl->getZoomControl()]() {
             double newZoom = zoomctrl->getZoom100Value() * scale;
             zoomctrl->setZoomFitMode(false);
             zoomctrl->startZoomSequence();
@@ -491,6 +491,15 @@ template <>
 struct ActionProperties<Action::DUPLICATE_PAGE> {
     static void callback(GSimpleAction*, GVariant*, Control* ctrl) { ctrl->duplicatePage(); }
 };
+template <>
+struct ActionProperties<Action::MOVE_PAGE_TOWARDS_BEGINNING> {
+    static void callback(GSimpleAction*, GVariant*, Control* ctrl) { ctrl->movePageTowardsBeginning(); }
+};
+template <>
+struct ActionProperties<Action::MOVE_PAGE_TOWARDS_END> {
+    static void callback(GSimpleAction*, GVariant*, Control* ctrl) { ctrl->movePageTowardsEnd(); }
+};
+
 template <>
 struct ActionProperties<Action::APPEND_NEW_PDF_PAGES> {
     static void callback(GSimpleAction*, GVariant*, Control* ctrl) { ctrl->appendNewPdfPages(); }
@@ -750,10 +759,8 @@ struct ActionProperties<Action::AUDIO_RECORD> {
             g_simple_action_set_state(ga, p);
         } else {
             g_simple_action_set_state(ga, g_variant_new_boolean(!enabled));
-            Util::execInUiThread([=]() {
-                std::string msg = _("Recorder could not be started.");
-                g_warning("%s", msg.c_str());
-                XojMsgBox::showErrorToUser(ctrl->getGtkWindow(), msg);
+            Util::execWhenIdle([win = ctrl->getGtkWindow()]() {
+                XojMsgBox::showErrorToUser(win, _("Recorder could not be started."));
             });
         }
     }
@@ -920,6 +927,26 @@ template <>
 struct ActionProperties<Action::LAYER_NEW> {
     static void callback(GSimpleAction*, GVariant*, Control* ctrl) { ctrl->getLayerController()->addNewLayer(); }
 };
+
+template <>
+struct ActionProperties<Action::LAYER_COPY> {
+    static void callback(GSimpleAction*, GVariant*, Control* ctrl) { ctrl->getLayerController()->copyCurrentLayer(); }
+};
+
+template <>
+struct ActionProperties<Action::LAYER_MOVE_UP> {
+    static void callback(GSimpleAction*, GVariant*, Control* ctrl) {
+        ctrl->getLayerController()->moveCurrentLayer(true);
+    }
+};
+
+template <>
+struct ActionProperties<Action::LAYER_MOVE_DOWN> {
+    static void callback(GSimpleAction*, GVariant*, Control* ctrl) {
+        ctrl->getLayerController()->moveCurrentLayer(false);
+    }
+};
+
 template <>
 struct ActionProperties<Action::LAYER_DELETE> {
     static void callback(GSimpleAction*, GVariant*, Control* ctrl) { ctrl->getLayerController()->deleteCurrentLayer(); }

@@ -17,30 +17,22 @@
 
 #include <gtk/gtk.h>  // for GtkWidget, Gtk...
 
-#include "gui/sidebar/previews/base/SidebarToolbar.h"  // for SidebarActions
 #include "model/DocumentChangeType.h"                  // for DocumentChange...
 #include "model/DocumentListener.h"                    // for DocumentListener
 
 class AbstractSidebarPage;
 class Control;
 class GladeGui;
-class SidebarPageButton;
+class SidebarTabButton;
 
-class Sidebar: public DocumentListener, public SidebarToolbarActionListener {
+class Sidebar: public DocumentListener {
 public:
     Sidebar(GladeGui* gui, Control* control);
     ~Sidebar() override;
 
 private:
-    void initPages(GtkWidget* sidebarContents, GladeGui* gui);
+    void initTabs(GtkWidget* sidebarContents);
     void addPage(std::unique_ptr<AbstractSidebarPage> page);
-
-    // SidebarToolbarActionListener
-public:
-    /**
-     * Called when an action is performed
-     */
-    void actionPerformed(SidebarActions action) override;
 
 public:
     /**
@@ -58,7 +50,7 @@ public:
     /**
      * Sets the current selected page
      */
-    void setSelectedPage(size_t page);
+    void setSelectedTab(size_t page);
 
     /**
      * Show/hide tabs based on whether they have content. Select first active tab (page).
@@ -76,11 +68,6 @@ public:
     void saveSize();
 
     /**
-     * Gets the sidebar toolbar
-     */
-    SidebarToolbar* getToolbar();
-
-    /**
      * Ask the user whether a page with the given id
      * should be added to the document.
      */
@@ -89,12 +76,12 @@ public:
     /**
      * Get how many pages are contained in this sidebar
      */
-    size_t getNumberOfPages();
+    size_t getNumberOfTabs();
 
     /**
      * Get index of the currently selected page
      */
-    size_t getSelectedPage();
+    size_t getSelectedTab();
 
 public:
     // DocumentListener interface
@@ -104,17 +91,15 @@ private:
     /**
      * Page selected
      */
-    static void buttonClicked(GtkButton* button, SidebarPageButton* buttonData);
+    static void buttonClicked(GtkButton* button, SidebarTabButton* buttonData);
 
 private:
     Control* control = nullptr;
 
-    GladeGui* gui = nullptr;
-
     /**
      * The sidebar pages
      */
-    std::vector<std::unique_ptr<AbstractSidebarPage>> pages;
+    std::vector<std::unique_ptr<AbstractSidebarPage>> tabs;
 
     /**
      * The bar with the tab selection
@@ -129,27 +114,22 @@ private:
     /**
      * The current visible page in the sidebar
      */
-    GtkWidget* visiblePage = nullptr;
+    GtkWidget* visibleTab = nullptr;
 
     /**
      * Current active page
      */
-    size_t currentPageIdx{0};
+    size_t currentTabIdx{0};
 
     /**
      * The sidebarContents widget
      */
     GtkWidget* sidebarContents = nullptr;
-
-    /**
-     * Sidebar toolbar
-     */
-    SidebarToolbar toolbar;
 };
 
-class SidebarPageButton {
+class SidebarTabButton {
 public:
-    SidebarPageButton(Sidebar* sidebar, size_t index, AbstractSidebarPage* page);
+    SidebarTabButton(Sidebar* sidebar, size_t index, AbstractSidebarPage* page);
 
 public:
     Sidebar* sidebar = nullptr;
