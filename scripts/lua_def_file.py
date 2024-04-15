@@ -181,7 +181,8 @@ if __name__ == "__main__":
             funcs_emitted.add(x[0])
             fmt_luaLS_def(f_out, *x)
 
-        for _,i in funcs.items():
+        for k in sorted(funcs.keys()):
+            i = funcs[k]
             if i not in funcs_emitted:
                 print(f"Warning: Did not find doc-comments for API function {i}")
                 fmt_luaLS_def(f_out, i)
