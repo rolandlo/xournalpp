@@ -1,3 +1,5 @@
+---@meta
+app = {}
 --- Renames file 'from' to file 'to' in the file system.
 --- Overwrites 'to' if it already exists.
 --- 
