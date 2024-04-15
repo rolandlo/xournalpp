@@ -319,7 +319,8 @@ static int applib_openDialog(lua_State* L) {
 /**
  * Allow to register menupoints and toolbar buttons. This needs to be called from initUi
  *
- * @param opts {menu: string, callback: string, toolbarID: string, mode:integer, accelerator:string} options (`mode`, `toolbarID` and `accelerator` are optional)
+ * @param opts {menu: string, callback: string, toolbarID: string, mode:integer, accelerator:string} options (`mode`,
+ `toolbarID` and `accelerator` are optional)
  * @return {menuId:integer}
  *
  * Example 1: app.registerUi({["menu"] = "HelloWorld", callback="printMessage", mode=1, accelerator="<Control>a"})
@@ -395,7 +396,8 @@ static int applib_registerUi(lua_State* L) {
  * The key "group" is currently only used for debugging purpose and can safely be omitted.
  * The key "enabled" is true by default.
  *
- * @param opts {action: string, group: string, enabled:boolean} options (`enabled` is `true` by default, `group` is only for debugging)
+ * @param opts {action: string, group: string, enabled:boolean} options (`enabled` is `true` by default, `group` is only
+ * for debugging)
  *
  * Example 1: app.uiAction({["action"] = "ACTION_PASTE"})
  * pastes the clipboard content into the document
@@ -674,7 +676,8 @@ static void addStrokeHelper(lua_State* L, std::unique_ptr<Stroke> stroke) {
  * Given a table containing a series of splines, draws a batch of strokes on the canvas.
  * Expects a table of tables containing eight coordinate pairs, along with attributes of the stroke.
  *
- * @param opts {splines:{coordinates:number[], tool:string, width:number, color:integer, fill:number, linestyle:string}[], allowUndoRedoAction:string}
+ * @param opts {splines:{coordinates:number[], tool:string, width:number, color:integer, fill:number,
+ * linestyle:string}[], allowUndoRedoAction:string}
  *
  * Required Arguments: splines
  * Optional Arguments: pressure, tool, width, color, fill, lineStyle
@@ -809,7 +812,8 @@ static int applib_addSplines(lua_State* L) {
  * stroke pressure, along with attributes of the stroke. Each stroke has
  * attributes handled individually.
  *
- * @param opts {strokes:{x:number[], y:number[], pressure:number[], tool:string, width:number, color:integer, fill:number, linestyle:string}[], allowUndoRedoAction:string}
+ * @param opts {strokes:{x:number[], y:number[], pressure:number[], tool:string, width:number, color:integer,
+ * fill:number, linestyle:string}[], allowUndoRedoAction:string}
  *
  * Required Arguments: X, Y
  * Optional Arguments: pressure, tool, width, color, fill, lineStyle
@@ -1003,7 +1007,8 @@ static int applib_addStrokes(lua_State* L) {
  *   - allowUndoRedoAction string: Decides how the change gets introduced into the undoRedo action list "individual",
  * "grouped" or "none"
  *
- * @param opts {texts:{text:string, font:{name:string, size:number}, color:integer, x:number, y:number}[], allowUndoRedoAction:string}
+ * @param opts {texts:{text:string, font:{name:string, size:number}, color:integer, x:number, y:number}[],
+ * allowUndoRedoAction:string}
  *
  * Parameters per textbox:
  *   - text string: content of the textbox (required)
@@ -1264,7 +1269,8 @@ static int applib_getTexts(lua_State* L) {
  * Is inverse to app.addStrokes
  *
  * @param type string "selection" or "layer"
- * @return {x:number[], y:number[], pressure:number[], tool:string, width:number, color:integer, fill:number, linestyle:string}[] stokes
+ * @return {x:number[], y:number[], pressure:number[], tool:string, width:number, color:integer, fill:number,
+ * linestyle:string}[] stokes
  *
  * Required argument: type ("selection" or "layer")
  *
@@ -1484,7 +1490,8 @@ static int applib_getColorPalette(lua_State* L) {
 /**
  * Change color of a specified tool or of the current tool
  *
- * @param opts {color: integer, tool: string, selection: boolean} options (`selction=true` -> new color applies to active selection as well, `tool=nil` (unset) -> currently active tool is being used)
+ * @param opts {color: integer, tool: string, selection: boolean} options (`selction=true` -> new color applies to
+ * active selection as well, `tool=nil` (unset) -> currently active tool is being used)
  *
  * Example 1: app.changeToolColor({["color"] = 0xff00ff, ["tool"] = "PEN"})
  * changes the color of the pen tool to violet without applying this change to the current selection
@@ -1951,7 +1958,10 @@ static int applib_getToolInfo(lua_State* L) {
 /**
  * Returns a table encoding the document structure in a Lua table.
  *
- * @return {pages:{pageWidth:number, pageHeight:number, isAnnotated:boolean, pageTypeFormat:string, pageTypeConfig:string, backgroundColor:integer, pdfBackgroundPageNo:integer, layers:{isVisible:boolean, isAnnotated:boolean}[], currentLayer:integer}[], currentPage:integer, pdfBackgroundFilename:string, xoppFilename:string}
+ * @return {pages:{pageWidth:number, pageHeight:number, isAnnotated:boolean, pageTypeFormat:string,
+ * pageTypeConfig:string, backgroundColor:integer, pdfBackgroundPageNo:integer, layers:{isVisible:boolean,
+ * isAnnotated:boolean}[], currentLayer:integer}[], currentPage:integer, pdfBackgroundFilename:string,
+ * xoppFilename:string}
  *
  * The shape of the returned Lua table will be:
  * {
@@ -2488,7 +2498,8 @@ static int applib_openFile(lua_State* L) {
 /**
  * Adds images from the provided paths or the provided image data on the current page on the current layer.
  *
- * @param opts {images:{path:string, data:string, x:number, y:number, maxHeight:number, maxWidth:number, aspectRatio:boolean}[], allowUndoRedoAction:string}
+ * @param opts {images:{path:string, data:string, x:number, y:number, maxHeight:number, maxWidth:number,
+ * aspectRatio:boolean}[], allowUndoRedoAction:string}
  *
  * Global parameters:
  *  - images table: array of image-parameter-tables
@@ -2699,7 +2710,8 @@ static int applib_addImages(lua_State* L) {
  * Is inverse to app.addImages
  *
  * @param type string "selection" or "layer"
- * @return {path:string, data:string, x:number, y:number, maxHeight:number, maxWidth:number, aspectRatio:boolean}[] images
+ * @return {path:string, data:string, x:number, y:number, maxHeight:number, maxWidth:number, aspectRatio:boolean}[]
+ * images
  *
  * Required argument: type ("selection" or "layer")
  *
