@@ -1,0 +1,44 @@
+trigger: none
+pr:
+  branches:
+    include:
+    - '*'
+  paths:
+    include:
+      - 'src/core/plugin/luapi_application.h'
+
+stages:
+- stage: 'Build_Test_Stage'
+  jobs:
+  - job: 'Build_Test'
+    pool:
+      vmImage: 'ubuntu-20.04'
+    displayName: 'Test if lua definitions file is up-to-date'
+    steps:
+    - checkout: self
+    - bash: |
+        sudo apt-get update
+        sudo apt-get install python3
+      displayName: 'Install python3'
+    - bash: |
+        echo $(git status)
+        git fetch origin $(System.PullRequest.TargetBranch):$(System.PullRequest.TargetBranch)
+        git switch -c this_pr
+        git switch $(System.PullRequest.TargetBranch)
+        git switch this_pr
+        BASE_COMMIT=$(git merge-base this_pr $(System.PullRequest.TargetBranch))
+        #
+        echo Computing diff to commit hash $BASE_COMMIT
+        # Exit on git merge-base failure
+        [[ -z "$BASE_COMMIT" ]] && { echo "Error: BASE_COMMIT is empty" ; exit 1; }
+        git fetch origin $BASE_COMMIT
+
+        # generate the file freshly
+        python3 scripts/lua_def_file.py
+        # check if it matches the one present in the repository
+        git diff --exit-code src/core/plugin/luapi_application.def.lua  && { echo "Success: changes are compatible with clang-format-$VERSION"; exit 0; }
+
+        # Failure: None of the allowed clang-format versions validated the changes
+        echo "Error: generated lua definitions file does not match the present one"
+        exit 1
+      displayName: 'Generate lua definitions file'
