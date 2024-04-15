@@ -38,6 +38,9 @@ def gather_functions(file_name:str):
                     groups = match.groups()
                     yield (groups[1], groups[0])
 
+    if not capture:
+        raise Exception("luaL_Reg applib not found -> is this file really defining the lua-API?")
+
 
 def docs_for_functions(file_name:str, functions: dict[str, str]):
     '''
@@ -116,11 +119,19 @@ def docs_for_functions(file_name:str, functions: dict[str, str]):
                 match = extract_func.match(line)
                 if match and match.groups()[0] in functions:
                     yield (functions[match.groups()[0]], comments, params)
+                    # remove function to ensure the doc is only emitted once
+                    # and to mark it as processed
+                    del functions[match.groups()[0]]
                 # re-initialize state variables
                 comments = list()
                 params = list()
                 state = STATE_SEARCHING
                 continue
+
+        # 'functions' only contains the unprocessed functions -> check if there
+        # are any left
+        if len(functions) > 0:
+            raise Exception(f"doc strings for functions [{', '.join(functions.values())}] missing")
 
 def fmt_luaLS_def(file, function_name:str, comments:list[str] = [], params:list[str] = []):
     '''
