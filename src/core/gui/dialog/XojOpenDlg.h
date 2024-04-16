@@ -27,4 +27,6 @@ void showOpenTemplateDialog(GtkWindow* parent, Settings* settings, std::function
 
 /// @param callback(path, attachImg)
 void showOpenImageDialog(GtkWindow* parent, Settings* settings, std::function<void(fs::path, bool)> callback);
+
+void showOpenTexDialog(GtkWindow* parent, const fs::path& preset, std::function<void(fs::path)> callback);
 };  // namespace xoj::OpenDlg
