@@ -22,18 +22,7 @@ stages:
       displayName: 'Install python3'
     - bash: |
         echo $(git status)
-        git fetch origin $(System.PullRequest.TargetBranch):$(System.PullRequest.TargetBranch)
-        git switch -c this_pr
-        git switch $(System.PullRequest.TargetBranch)
-        git switch this_pr
-        BASE_COMMIT=$(git merge-base this_pr $(System.PullRequest.TargetBranch))
-        #
-        echo Computing diff to commit hash $BASE_COMMIT
-        # Exit on git merge-base failure
-        [[ -z "$BASE_COMMIT" ]] && { echo "Error: BASE_COMMIT is empty" ; exit 1; }
-        git fetch origin $BASE_COMMIT
-
-        # generate the file freshly
+        echo "generate the file fresh"
         python3 scripts/lua_def_file.py
         # check if it matches the one present in the repository
         git diff --exit-code src/core/plugin/luapi_application.def.lua  && { echo "Success: changes are compatible with clang-format-$VERSION"; exit 0; }
