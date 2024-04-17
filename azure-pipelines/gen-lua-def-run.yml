@@ -23,11 +23,17 @@ stages:
     - bash: |
         echo $(git status)
         echo "generate the file fresh"
-        python3 scripts/lua_def_file.py
-        # check if it matches the one present in the repository
-        git diff --exit-code src/core/plugin/luapi_application.def.lua  && { echo "Success: changes are compatible with clang-format-$VERSION"; exit 0; }
+        if ! python3 scripts/lua_def_file.py ; then
+            # Failure: Generating script failed
+            echo "Error generating the definitions file"
+            exit 1
+        fi
 
-        # Failure: None of the allowed clang-format versions validated the changes
-        echo "Error: generated lua definitions file does not match the present one"
-        exit 1
-      displayName: 'Generate lua definitions file'
+        # check if it matches the one present in the repository
+        if ! git diff --exit-code src/core/plugin/luapi_application.def.lua ; then
+            # Failure: lua definitions file is not up-to-date
+            echo "Error: generated lua definitions file does not match the present one"
+            exit 1
+        fi
+        echo "Success: lua definitions file is up-to-date"; exit 0; }
+      displayName: 'Generate lua definitions file and check if the one in the repo is still up-to-date'
