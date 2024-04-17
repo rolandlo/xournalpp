@@ -4,7 +4,8 @@ import re
 import sys
 import os.path
 
-def gather_functions(file_name:str):
+# def gather_functions(file_name:str):
+def gather_functions(file_name):
     '''
     Gathers the (lua) API functions defined in the given file
 
@@ -42,7 +43,8 @@ def gather_functions(file_name:str):
         raise Exception("luaL_Reg applib not found -> is this file really defining the lua-API?")
 
 
-def docs_for_functions(file_name:str, functions: dict[str, str]):
+# def docs_for_functions(file_name:str, functions: dict[str, str]):
+def docs_for_functions(file_name, functions):
     '''
     Search for doc-comments for given functions in given file
 
@@ -133,7 +135,8 @@ def docs_for_functions(file_name:str, functions: dict[str, str]):
         if len(functions) > 0:
             raise Exception(f"doc strings for functions [{', '.join(functions.values())}] missing")
 
-def fmt_luaLS_def(file, function_name:str, comments:list[str] = [], params:list[str] = []):
+# def fmt_luaLS_def(file, function_name:str, comments:list[str] = [], params:list[str] = []):
+def fmt_luaLS_def(file, function_name, comments = [], params = []):
     '''
     Emit code for a luaLS definition to given file for a function
 
