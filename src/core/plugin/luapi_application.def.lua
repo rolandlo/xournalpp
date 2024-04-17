@@ -18,7 +18,7 @@ app = {}
 function app.glib_rename(from, to) end
 
 --- Create a 'Save As' native dialog and return as a string
---- the filepath of the location the user chose to save.
+--- the filepath of the location the user chose the file to save.
 --- 
 --- @param filename string suggestion for a filename, defaults to "untitlted"
 --- @return string path of the selected location
