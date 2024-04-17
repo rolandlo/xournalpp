@@ -35,5 +35,5 @@ stages:
             echo "Error: generated lua definitions file does not match the present one"
             exit 1
         fi
-        echo "Success: lua definitions file is up-to-date"; exit 0; }
+        echo "Success: lua definitions file is up-to-date"; exit 0
       displayName: 'Generate lua definitions file and check if the one in the repo is still up-to-date'
