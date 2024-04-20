@@ -24,8 +24,8 @@ void ImageElementView::calcSize() {
         } else {
             zoom = 128.0 / this->width;
         }
-        this->width = ceil_cast<int>(this->width * zoom);
-        this->height = ceil_cast<int>(this->height * zoom);
+        this->width = floor_cast<int>(this->width * zoom);
+        this->height = floor_cast<int>(this->height * zoom);
     }
 }
 

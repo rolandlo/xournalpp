@@ -5,16 +5,43 @@
 #include "control/settings/Settings.h"  // for Settings
 #include "gui/Shadow.h"                 // for Shadow
 #include "util/Color.h"                 // for cairo_set_source_rgbi
+#include "util/gtk4_helper.h"
 
 #include "BackgroundSelectDialogBase.h"  // for BackgroundSelectDialogBase
 
 BaseElementView::BaseElementView(size_t id, BackgroundSelectDialogBase* dlg): dlg(dlg), id(id) {
     this->widget = gtk_drawing_area_new();
-    gtk_widget_show(this->widget);
+    gtk_drawing_area_set_draw_func(GTK_DRAWING_AREA(widget),
+                                   GtkDrawingAreaDrawFunc(+[](GtkWidget*, cairo_t* cr, int, int, gpointer element) {
+                                       static_cast<BaseElementView*>(element)->paint(cr);
+                                   }),
+                                   this, nullptr);
 
-    gtk_widget_set_events(widget, GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK);
-    g_signal_connect(this->widget, "draw", G_CALLBACK(drawCallback), this);
-    g_signal_connect(this->widget, "button-press-event", G_CALLBACK(mouseButtonPressCallback), this);
+#if GTK_MAJOR_VERSION == 3
+    gtk_widget_show(this->widget);
+    gtk_widget_add_events(widget, GDK_BUTTON_PRESS_MASK);
+    g_signal_connect(this->widget, "button-press-event", G_CALLBACK(+[](GtkWidget*, GdkEventButton*, gpointer d) {
+                         auto* element = static_cast<BaseElementView*>(d);
+                         element->dlg->setSelected(element->id);
+                         return true;
+                     }),
+                     this);
+#else  // Set up right button clicks to pop up the context menu
+    auto* ctrl = gtk_gesture_click_new();
+    gtk_widget_add_controller(button.get(), GTK_EVENT_CONTROLLER(ctrl));
+    gtk_gesture_single_set_button(GTK_GESTURE_SINGLE(ctrl), 1);  // 1 = left button
+    g_signal_connect(ctrl, "pressed",
+                     G_CALLBACK(+[](GtkGestureClick* g, gint n_press, gdouble x, gdouble y, gpointer d) {
+                         if (n_press == 1) {
+                             auto* self = static_cast<SidebarPreviewBaseEntry*>(d);
+                             self->mouseButtonPressCallback();
+                             self->sidebar->openPreviewContextMenu(
+                                     x, y, gtk_event_controller_get_widget(GTK_EVENT_CONTROLLER(g)));
+                         }
+                     }),
+                     this);
+
+#endif
 }
 
 BaseElementView::~BaseElementView() {
@@ -25,18 +52,6 @@ BaseElementView::~BaseElementView() {
         this->crBuffer = nullptr;
     }
 }
-
-auto BaseElementView::drawCallback(GtkWidget* widget, cairo_t* cr, BaseElementView* element) -> gboolean {
-    element->paint(cr);
-    return true;
-}
-
-auto BaseElementView::mouseButtonPressCallback(GtkWidget* widget, GdkEventButton* event, BaseElementView* element)
-        -> gboolean {
-    element->dlg->setSelected(element->id);
-    return true;
-}
-
 
 void BaseElementView::setSelected(bool selected) {
     if (this->selected == selected) {
@@ -67,7 +82,7 @@ void BaseElementView::paint(cairo_t* cr) {
 
         cairo_t* cr2 = cairo_create(this->crBuffer);
 
-        cairo_set_source_rgb(cr2, 1, 1, 1);
+        cairo_set_source_rgba(cr2, 1, 1, 1, 0);
         cairo_rectangle(cr2, 0, 0, alloc.width, alloc.height);
         cairo_fill(cr2);
 
