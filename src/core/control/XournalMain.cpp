@@ -38,7 +38,7 @@
 #include "util/PathUtil.h"                   // for getConfigFolder, openFil...
 #include "util/PlaceholderString.h"          // for PlaceholderString
 #include "util/Stacktrace.h"                 // for Stacktrace
-#include "util/Util.h"                       // for execInUiThread
+#include "util/Util.h"                       // for execWhenIdle
 #include "util/XojMsgBox.h"                  // for XojMsgBox
 #include "util/i18n.h"                       // for _, FS, _F
 
@@ -198,7 +198,7 @@ void checkForErrorlog() {
                                               {_("Open Logfile directory"), OPEN_DIR},
                                               {_("Delete Logfile"), DELETE_FILE},
                                               {_("Cancel"), CANCEL}};
-    Util::execInUiThread(
+    Util::execWhenIdle(
             [msg = std::move(msg), buttons = std::move(buttons), errorlogPath = fs::path(errorList.front())]() {
                 XojMsgBox::askQuestion(nullptr, _("Crash log"), msg, buttons,
                                        [errorlogPath = std::move(errorlogPath)](int response) {
@@ -225,7 +225,7 @@ void checkForEmergencySave(Control* control) {
 
     const std::string msg = _("Xournal++ crashed last time. Would you like to restore the last edited file?");
     enum { DELETE_FILE = 1, RESTORE_FILE };
-    Util::execInUiThread([msg = std::move(msg), file = std::move(file), ctrl = control]() {
+    Util::execWhenIdle([msg = std::move(msg), file = std::move(file), ctrl = control]() {
         XojMsgBox::askQuestion(
                 nullptr, _("Recovery file detected"), msg,
                 {{_("Delete file"), DELETE_FILE}, {_("Restore file"), RESTORE_FILE}},
@@ -511,7 +511,7 @@ void on_startup(GApplication* application, XMPtr app_data) {
     app_data->win->populate(app_data->gladePath.get());
 
     if (migrateResult.status != MigrateStatus::NotNeeded) {
-        Util::execInUiThread(
+        Util::execWhenIdle(
                 [=]() { XojMsgBox::showErrorToUser(app_data->control->getGtkWindow(), migrateResult.message); });
     }
 
@@ -548,7 +548,7 @@ void on_startup(GApplication* application, XMPtr app_data) {
 
                 // There is a timing issue with the layout
                 // This fixes it, see #405
-                Util::execInUiThread([=]() { ctrl->getWindow()->getXournal()->layoutPages(); });
+                Util::execWhenIdle([ctrl]() { ctrl->getWindow()->getXournal()->layoutPages(); });
                 gtk_application_add_window(app, ctrl->getGtkWindow());
             });
 }
