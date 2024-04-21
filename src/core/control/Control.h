@@ -243,11 +243,13 @@ public:
     void appendNewPdfPages();
     void insertPage(const PageRef& page, size_t position, bool shouldScrollToPage = true);
     void deletePage();
+    void movePageTowardsBeginning();
+    void movePageTowardsEnd();
 
     /**
-     * Disable / enable delete page button
+     * Disable / enable page action buttons
      */
-    void updateDeletePageButton();
+    void updatePageActions();
 
     // selection handling
     void clearSelection();

@@ -17,7 +17,6 @@
 #include "model/Document.h"                           // for Document
 #include "model/XojPage.h"                            // for XojPage
 #include "pdf/base/XojPdfPage.h"                      // for XojPdfPageSPtr
-#include "previews/layer/SidebarLayersContextMenu.h"  // for SidebarLayersCo...
 #include "previews/layer/SidebarPreviewLayers.h"      // for SidebarPreviewL...
 #include "previews/page/SidebarPreviewPages.h"        // for SidebarPreviewP...
 #include "util/Util.h"                                // for npos
@@ -25,34 +24,40 @@
 #include "util/glib_casts.h"                          // for closure_notify_cb
 #include "util/i18n.h"                                // for _, FC, _F
 
-Sidebar::Sidebar(GladeGui* gui, Control* control): control(control), gui(gui), toolbar(this, gui) {
+Sidebar::Sidebar(GladeGui* gui, Control* control): control(control) {
     this->tbSelectTab = GTK_BOX(gui->get("bxSidebarTopActions"));
     this->buttonCloseSidebar = gui->get("buttonCloseSidebar");
 
     this->sidebarContents = gui->get("sidebarContents");
 
-    this->initPages(sidebarContents, gui);
+    this->initTabs(sidebarContents);
+
+    GtkPaned* paned = GTK_PANED(gui->get("panedMainContents"));
+    // For some reason, putting those in the .ui file doesn't work
+    gtk_paned_set_shrink_start_child(paned, false);
+    gtk_paned_set_shrink_end_child(paned, false);
+    gtk_paned_set_resize_start_child(paned, false);
+    gtk_paned_set_resize_end_child(paned, true);
 
     registerListener(control);
 }
 
-void Sidebar::initPages(GtkWidget* sidebarContents, GladeGui* gui) {
-    addPage(std::make_unique<SidebarIndexPage>(this->control, &this->toolbar));
-    addPage(std::make_unique<SidebarPreviewPages>(this->control, this->gui, &this->toolbar));
-    auto layersContextMenu = std::make_shared<SidebarLayersContextMenu>(this->gui, &this->toolbar);
-    addPage(std::make_unique<SidebarPreviewLayers>(this->control, this->gui, &this->toolbar, false, layersContextMenu));
-    addPage(std::make_unique<SidebarPreviewLayers>(this->control, this->gui, &this->toolbar, true, layersContextMenu));
+void Sidebar::initTabs(GtkWidget* sidebarContents) {
+    addPage(std::make_unique<SidebarIndexPage>(this->control));
+    addPage(std::make_unique<SidebarPreviewPages>(this->control));
+    addPage(std::make_unique<SidebarPreviewLayers>(this->control, false));
+    addPage(std::make_unique<SidebarPreviewLayers>(this->control, true));
 
     // Init toolbar with icons
 
     size_t i = 0;
-    for (auto&& p: this->pages) {
+    for (auto&& p: this->tabs) {
         GtkWidget* btn = gtk_toggle_button_new();
         p->tabButton = btn;
 
         gtk_button_set_icon_name(GTK_BUTTON(btn), p->getIconName().c_str());
-        g_signal_connect_data(btn, "clicked", G_CALLBACK(&buttonClicked), new SidebarPageButton(this, i, p.get()),
-                              xoj::util::closure_notify_cb<SidebarPageButton>, GConnectFlags(0));
+        g_signal_connect_data(btn, "clicked", G_CALLBACK(&buttonClicked), new SidebarTabButton(this, i, p.get()),
+                              xoj::util::closure_notify_cb<SidebarTabButton>, GConnectFlags(0));
         gtk_widget_set_tooltip_text(btn, p->getName().c_str());
         gtk_box_append(tbSelectTab, btn);
 
@@ -66,17 +71,17 @@ void Sidebar::initPages(GtkWidget* sidebarContents, GladeGui* gui) {
     updateVisibleTabs();
 }
 
-void Sidebar::buttonClicked(GtkButton* button, SidebarPageButton* buttonData) {
+void Sidebar::buttonClicked(GtkButton* button, SidebarTabButton* buttonData) {
     if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(button))) {
-        if (buttonData->sidebar->visiblePage != buttonData->page->getWidget()) {
-            buttonData->sidebar->setSelectedPage(buttonData->index);
+        if (buttonData->sidebar->visibleTab != buttonData->page->getWidget()) {
+            buttonData->sidebar->setSelectedTab(buttonData->index);
         }
-    } else if (buttonData->sidebar->visiblePage == buttonData->page->getWidget()) {
+    } else if (buttonData->sidebar->visibleTab == buttonData->page->getWidget()) {
         gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(button), true);
     }
 }
 
-void Sidebar::addPage(std::unique_ptr<AbstractSidebarPage> page) { this->pages.push_back(std::move(page)); }
+void Sidebar::addPage(std::unique_ptr<AbstractSidebarPage> page) { this->tabs.push_back(std::move(page)); }
 
 void Sidebar::askInsertPdfPage(size_t pdfPage) {
     using Responses = enum { CANCEL = 1, AFTER = 2, END = 3 };
@@ -111,42 +116,31 @@ void Sidebar::askInsertPdfPage(size_t pdfPage) {
 
 Sidebar::~Sidebar() = default;
 
-/**
- * Called when an action is performed
- */
-void Sidebar::actionPerformed(SidebarActions action) {
-    if (this->currentPageIdx >= this->pages.size()) {
-        return;
-    }
-
-    this->pages.at(this->currentPageIdx)->actionPerformed(action);
-}
-
 void Sidebar::selectPageNr(size_t page, size_t pdfPage) {
-    for (auto&& p: this->pages) {
+    for (auto&& p: this->tabs) {
         p->selectPageNr(page, pdfPage);
     }
 }
 
-size_t Sidebar::getNumberOfPages() { return this->pages.size(); }
+size_t Sidebar::getNumberOfTabs() { return this->tabs.size(); }
 
-size_t Sidebar::getSelectedPage() { return this->currentPageIdx; }
+size_t Sidebar::getSelectedTab() { return this->currentTabIdx; }
 
-void Sidebar::setSelectedPage(size_t page) {
-    this->visiblePage = nullptr;
+void Sidebar::setSelectedTab(size_t tab) {
+    this->visibleTab = nullptr;
 
     size_t i = 0;
-    for (auto&& p: this->pages) {
-        if (page == i) {
-            gtk_widget_show(p->getWidget());
-            gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(p->tabButton), true);
-            this->visiblePage = p->getWidget();
-            this->currentPageIdx = i;
-            p->enableSidebar();
+    for (auto&& t: this->tabs) {
+        if (tab == i) {
+            gtk_widget_show(t->getWidget());
+            gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(t->tabButton), true);
+            this->visibleTab = t->getWidget();
+            this->currentTabIdx = i;
+            t->enableSidebar();
         } else {
-            p->disableSidebar();
-            gtk_widget_hide(p->getWidget());
-            gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(p->tabButton), false);
+            t->disableSidebar();
+            gtk_widget_hide(t->getWidget());
+            gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(t->tabButton), false);
         }
 
         i++;
@@ -157,7 +151,7 @@ void Sidebar::updateVisibleTabs() {
     size_t i = 0;
     size_t selected = npos;
 
-    for (auto&& p: this->pages) {
+    for (auto&& p: this->tabs) {
         gtk_widget_set_visible(GTK_WIDGET(p->tabButton), p->hasData());
 
         if (p->hasData() && selected == npos) {
@@ -167,15 +161,15 @@ void Sidebar::updateVisibleTabs() {
         i++;
     }
 
-    setSelectedPage(selected);
+    setSelectedTab(selected);
 }
 
 void Sidebar::setTmpDisabled(bool disabled) {
     gtk_widget_set_sensitive(this->buttonCloseSidebar, !disabled);
     gtk_widget_set_sensitive(GTK_WIDGET(this->tbSelectTab), !disabled);
 
-    for (auto&& p: this->pages) {
-        p->setTmpDisabled(disabled);
+    for (auto&& t: this->tabs) {
+        t->setTmpDisabled(disabled);
     }
 
     gdk_display_sync(gdk_display_get_default());
@@ -188,8 +182,6 @@ void Sidebar::saveSize() {
     this->control->getSettings()->setSidebarWidth(alloc.width);
 }
 
-auto Sidebar::getToolbar() -> SidebarToolbar* { return &this->toolbar; }
-
 auto Sidebar::getControl() -> Control* { return this->control; }
 
 void Sidebar::documentChanged(DocumentChangeType type) {
@@ -198,11 +190,11 @@ void Sidebar::documentChanged(DocumentChangeType type) {
     }
 }
 
-SidebarPageButton::SidebarPageButton(Sidebar* sidebar, size_t index, AbstractSidebarPage* page):
+SidebarTabButton::SidebarTabButton(Sidebar* sidebar, size_t index, AbstractSidebarPage* page):
         sidebar(sidebar), index(index), page(page) {}
 
 void Sidebar::layout() {
-    for (auto&& page: this->pages) {
-        page->layout();
+    for (auto&& tab: this->tabs) {
+        tab->layout();
     }
 }

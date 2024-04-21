@@ -406,6 +406,7 @@ void XournalView::pageSelected(size_t page) {
     control->updatePageNumbers(currentPage, pdfPage);
 
     control->updateBackgroundSizeButton();
+    control->updatePageActions();
 
     if (control->getSettings()->isEagerPageCleanup()) {
         this->cleanupBufferCache();

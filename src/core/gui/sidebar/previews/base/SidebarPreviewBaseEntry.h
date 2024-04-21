@@ -18,6 +18,7 @@
 #include <gtk/gtk.h>  // for GtkWidget
 
 #include "model/PageRef.h"  // for PageRef
+#include "util/raii/GObjectSPtr.h"
 
 class SidebarPreviewBase;
 
@@ -46,8 +47,6 @@ public:
 
 public:
     virtual GtkWidget* getWidget();
-    virtual int getWidth();
-    virtual int getHeight();
 
     virtual void setSelected(bool selected);
 
@@ -65,18 +64,17 @@ private:
 protected:
     virtual void mouseButtonPressCallback() = 0;
 
-    virtual int getWidgetWidth();
-    virtual int getWidgetHeight();
+    void setMiniature(xoj::util::WidgetSPtr child);
 
-    virtual void drawLoadingPage();
-    virtual void paint(cairo_t* cr);
-
-private:
 protected:
     /**
      * If this page is currently selected
      */
     bool selected = false;
+
+    int imageWidth;
+    int imageHeight;
+    int DPIscaling;  ///< 1, maybe 2 in HiDPI setups
 
     /**
      * The sidebar which displays the previews
@@ -93,15 +91,8 @@ protected:
      */
     std::mutex drawingMutex{};
 
-    /**
-     * The Widget which is used for drawing
-     */
-    GtkWidget* widget;
-
-    /**
-     * Buffer because of performance reasons
-     */
-    cairo_surface_t* crBuffer = nullptr;
+    /// The main widget, containing the miniature
+    xoj::util::WidgetSPtr button;
 
     friend class PreviewJob;
 };

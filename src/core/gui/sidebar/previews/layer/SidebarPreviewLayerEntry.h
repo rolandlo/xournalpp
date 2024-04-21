@@ -19,18 +19,17 @@
 #include "gui/sidebar/previews/base/SidebarPreviewBaseEntry.h"  // for Previ...
 #include "model/Layer.h"                                        // for Layer
 #include "model/PageRef.h"                                      // for PageRef
+#include "util/raii/GObjectSPtr.h"
 
 class SidebarPreviewLayers;
 
 class SidebarPreviewLayerEntry: public SidebarPreviewBaseEntry {
 public:
     SidebarPreviewLayerEntry(SidebarPreviewLayers* sidebar, const PageRef& page, Layer::Index layerId,
-                             const std::string& layerName, size_t index, bool stacked);
+                             const std::string& layerName, bool stacked);
     ~SidebarPreviewLayerEntry() override;
 
 public:
-    int getHeight() override;
-
     /**
      * @return What should be rendered
      * @override
@@ -56,39 +55,17 @@ protected:
     SidebarPreviewLayers* sidebar;
 
 private:
-    /**
-     * Layer preview index
-     */
-    size_t index;
-
-    /**
-     * Layer to render
-     */
+    /// Layer to render
     Layer::Index layerId;
 
-    /**
-     * Toolbar with controls
-     */
-    int toolbarHeight = 0;
+    /// Container box for the preview and the button
+    xoj::util::WidgetSPtr box;
 
-    /**
-     * Container box for the preview and the button
-     */
-    GtkWidget* box;
-
-    /**
-     * Visible checkbox
-     */
+    /// Visibility checkbox
     GtkWidget* cbVisible = nullptr;
+    gulong callbackId = 0;
 
-    /**
-     * Ignore events
-     */
-    bool inUpdate = false;
-
-    /**
-     * render as stacked
-     */
+    /// render as stacked
     bool stacked = false;
 
     friend class PreviewJob;
