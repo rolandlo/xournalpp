@@ -220,38 +220,6 @@ static int applib_getFilePath(lua_State* L) {
 }
 
 /**
- * THIS FUNCTION IS DEPRECATED AND WILL BE REMOVED SOON. Use applib_openDialog() instead.
- *
- * Example: local result = app.msgbox("Test123", {[1] = "Yes", [2] = "No"})
- * Pops up a message box with two buttons "Yes" and "No" and returns 1 for yes, 2 for no
- */
-static int applib_msgbox(lua_State* L) {
-    const char* msg = luaL_checkstring(L, 1);
-
-    // discard any extra arguments passed in
-    lua_settop(L, 2);
-    luaL_checktype(L, 2, LUA_TTABLE);
-
-    lua_pushnil(L);  // initial key for table traversal with `next`
-
-    std::vector<XojMsgBox::Button> buttons;
-
-    while (lua_next(L, 2) != 0) {
-        int index = static_cast<int>(lua_tointeger(L, -2));
-        const char* buttonText = luaL_checkstring(L, -1);
-        lua_pop(L, 1);
-
-        buttons.emplace_back(buttonText, index);
-    }
-
-    Plugin* plugin = Plugin::getPluginFromLua(L);
-
-    int result = XojMsgBox::askPluginQuestion(plugin->getName(), msg, buttons);
-    lua_pushinteger(L, result);
-    return 1;
-}
-
-/**
  * Example 1: app.openDialog("Test123", {[1] = "Yes", [2] = "No"}, "cb", false)
  *   or       app.openDialog("Test123", {"Yes", "No"}, "cb")
  * Pops up a message box with two buttons "Yes" and "No" and executed function "cb" whose single parameter is the number
@@ -2696,8 +2664,7 @@ static int applib_getImages(lua_State* L) {
  * The full Lua Plugin API.
  * See above for example usage of each function.
  */
-static const luaL_Reg applib[] = {{"msgbox", applib_msgbox},  // Todo(gtk4) remove this deprecated function
-                                  {"openDialog", applib_openDialog},
+static const luaL_Reg applib[] = {{"openDialog", applib_openDialog},
                                   {"glib_rename", applib_glib_rename},
                                   {"saveAs", applib_saveAs},
                                   {"registerUi", applib_registerUi},
