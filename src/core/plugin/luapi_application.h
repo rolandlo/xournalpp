@@ -135,6 +135,7 @@ static int applib_glib_rename(lua_State* L) {
  *   local filename = app.saveAs() -- defaults to suggestion "Untitled"
  *   local filename = app.saveAs("foo") -- suggests "foo" as filename
  */
+/*
 static int applib_saveAs(lua_State* L) {
     gint res;
     int args_returned = 0;  // change to 1 if user chooses file
@@ -166,7 +167,7 @@ static int applib_saveAs(lua_State* L) {
 
     return args_returned;
 }
-
+*/
 /**
  * Create a 'Open File' native dialog and return as a string
  * the filepath the user chose to open.
@@ -175,6 +176,7 @@ static int applib_saveAs(lua_State* L) {
  *   path = app.getFilePath()
  *   path = app.getFilePath({'*.bmp', '*.png'})
  */
+/*
 static int applib_getFilePath(lua_State* L) {
     xoj::util::GObjectSPtr<GtkFileChooserNative> native(
             gtk_file_chooser_native_new(_("Open file"), nullptr, GTK_FILE_CHOOSER_ACTION_OPEN, nullptr, nullptr),
@@ -218,6 +220,7 @@ static int applib_getFilePath(lua_State* L) {
     // Destroy the dialog and free memory
     return args_returned;
 }
+*/
 
 /**
  * Example 1: app.openDialog("Test123", {[1] = "Yes", [2] = "No"}, "cb", false)
@@ -2666,7 +2669,7 @@ static int applib_getImages(lua_State* L) {
  */
 static const luaL_Reg applib[] = {{"openDialog", applib_openDialog},
                                   {"glib_rename", applib_glib_rename},
-                                  {"saveAs", applib_saveAs},
+                                  //                                  {"saveAs", applib_saveAs},
                                   {"registerUi", applib_registerUi},
                                   {"uiAction", applib_uiAction},
                                   {"sidebarAction", applib_sidebarAction},
@@ -2694,7 +2697,7 @@ static const luaL_Reg applib[] = {{"openDialog", applib_openDialog},
                                   {"addSplines", applib_addSplines},
                                   {"addImages", applib_addImages},
                                   {"addTexts", applib_addTexts},
-                                  {"getFilePath", applib_getFilePath},
+                                  //{"getFilePath", applib_getFilePath},
                                   {"refreshPage", applib_refreshPage},
                                   {"getStrokes", applib_getStrokes},
                                   {"getImages", applib_getImages},
