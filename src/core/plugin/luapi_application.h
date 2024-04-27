@@ -35,6 +35,7 @@
 #include "gui/XournalView.h"
 #include "gui/sidebar/Sidebar.h"
 // #include "gui/sidebar/previews/base/SidebarToolbar.h"
+#include "gui/dialog/XojOpenDlg.h"                  // for XojO...
 #include "gui/toolbarMenubar/model/ColorPalette.h"  // for Palette
 #include "gui/widgets/XournalWidget.h"
 #include "model/Document.h"
@@ -171,58 +172,44 @@ static int applib_saveAs(lua_State* L) {
 }
 */
 /**
- * Create a 'Open File' native dialog and return as a string
- * the filepath the user chose to open.
+ * Create a 'Open File' dialog and when the user has chosen a filepath
+ * call a callback function whose sole argument is the filepath.
  *
  * Examples:
- *   path = app.getFilePath()
- *   path = app.getFilePath({'*.bmp', '*.png'})
+ *   path = app.getFilePath("cb")
+ *   path = app.getFilePath("cb", {'*.bmp', '*.png'})
  */
-/*
+
 static int applib_getFilePath(lua_State* L) {
-    xoj::util::GObjectSPtr<GtkFileChooserNative> native(
-            gtk_file_chooser_native_new(_("Open file"), nullptr, GTK_FILE_CHOOSER_ACTION_OPEN, nullptr, nullptr),
-            xoj::util::adopt);
-    gint res;
-    int args_returned = 0;  // change to 1 if user chooses file
-    char* filename;
+
+    // discard any extra arguments passed in
+    lua_settop(L, 2);
+    const char* callback = luaL_checkstring(L, 1);
 
     // Get vector of supported formats from Lua stack
     std::vector<std::string> formats;
     // stack now contains: -1 => table
     lua_pushnil(L);
-    // stack now contains: -1 => nil; -2 => table
-    while (lua_next(L, -2)) {
-        // stack now contains: -1 => value; -2 => key; -3 => table
+    // stack now contains: -1 => nil; 2 => table, 1 => string
+    while (lua_next(L, 2)) {
+        // stack now contains: -1 => value; -2 => key; 2 => table, 1 => string
         const char* value = lua_tostring(L, -1);
         formats.push_back(value);
         lua_pop(L, 1);
-        // stack now contains: -1 => key; -2 => table
+        // stack now contains: -1 => key; 2 => table, 1 => string
     }
-    // stack now contains: -1 => table
     lua_pop(L, 1);  // Stack is now the same as it was on entry to this function
-    if (formats.size() > 0) {
-        GtkFileFilter* filterSupported = gtk_file_filter_new();
-        gtk_file_filter_set_name(filterSupported, _("Supported files"));
-        for (std::string format: formats) {
-            gtk_file_filter_add_pattern(filterSupported, format.c_str());
-        }
-        gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(native.get()), filterSupported);
-    }
 
-    // Wait until user responds to dialog
-    res = gtk_native_dialog_run(GTK_NATIVE_DIALOG(native.get()));
-    // Return the filename chosen to lua
-    if (res == GTK_RESPONSE_ACCEPT) {
-        filename = static_cast<char*>(gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(native.get())));
-        lua_pushlstring(L, filename, strlen(filename));
-        g_free(static_cast<gchar*>(filename));
-        args_returned = 1;
-    }
-    // Destroy the dialog and free memory
-    return args_returned;
+    Plugin* plugin = Plugin::getPluginFromLua(L);
+    Control* ctrl = plugin->getControl();
+
+    xoj::OpenDlg::showMultiFormatDialog(ctrl->getGtkWindow(), formats, [plugin, callback](fs::path path) {
+        g_message("%s", (_F("file: {1}") % path.string()).c_str());
+        plugin->callFunction(callback, path.string().c_str());
+    });
+    return 0;
 }
-*/
+
 
 /**
  * Example 1: app.openDialog("Test123", {[1] = "Yes", [2] = "No"}, "cb", false)
@@ -2715,7 +2702,7 @@ static const luaL_Reg applib[] = {{"openDialog", applib_openDialog},
                                   {"addSplines", applib_addSplines},
                                   {"addImages", applib_addImages},
                                   {"addTexts", applib_addTexts},
-                                  //{"getFilePath", applib_getFilePath},
+                                  {"getFilePath", applib_getFilePath},
                                   {"refreshPage", applib_refreshPage},
                                   {"getStrokes", applib_getStrokes},
                                   {"getImages", applib_getImages},

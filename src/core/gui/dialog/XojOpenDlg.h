@@ -32,4 +32,6 @@ void showOpenTexDialog(GtkWindow* parent, const fs::path& preset, std::function<
 
 void showSelectFolderDialog(GtkWindow* parent, const char* title, const fs::path& preset,
                             std::function<void(fs::path)> callback);
+
+void showMultiFormatDialog(GtkWindow* parent, std::vector<std::string> formats, std::function<void(fs::path)> callback);
 };  // namespace xoj::OpenDlg
