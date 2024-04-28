@@ -34,8 +34,10 @@
 #include "gui/MainWindow.h"
 #include "gui/XournalView.h"
 #include "gui/sidebar/Sidebar.h"
+#include "util/PopupWindowWrapper.h"  // for PopupWindowWrapper
 // #include "gui/sidebar/previews/base/SidebarToolbar.h"
 #include "gui/dialog/XojOpenDlg.h"                  // for XojO...
+#include "gui/dialog/XojSaveDlg.h"                  // for XojS...
 #include "gui/toolbarMenubar/model/ColorPalette.h"  // for Palette
 #include "gui/widgets/XournalWidget.h"
 #include "model/Document.h"
@@ -131,46 +133,51 @@ static int applib_glib_rename(lua_State* L) {
 
 
 /**
- * Create a 'Save As' native dialog and return as a string
- * the filepath of the location the user chose to save.
+ * Create a 'Save As' native dialog and once the user has chosen the filepath of the location to save
+ * calls the specified callback function to which it passes the filepath or the empty string, if the
+ * operation was cancelled.
  *
  * Examples:
- *   local filename = app.saveAs() -- defaults to suggestion "Untitled"
- *   local filename = app.saveAs("foo") -- suggests "foo" as filename
+ *   local filename = app.saveAs("cb") -- defaults to suggestion "Untitled" in current working directory
+ *   local filename = app.saveAs("cb", "foo") -- suggests "foo" as filename in current working directory
+ *   local filename = app.saveAs("cb", "/path/to/folder/bar.png") -- suggestes the given absolute path
  */
-/*
+
 static int applib_saveAs(lua_State* L) {
-    gint res;
-    int args_returned = 0;  // change to 1 if user chooses file
 
-    const char* filename = luaL_checkstring(L, -1);
-
-    // Create a 'Save As' native dialog
-    xoj::util::GObjectSPtr<GtkFileChooserNative> native(
-            gtk_file_chooser_native_new(_("Save file"), nullptr, GTK_FILE_CHOOSER_ACTION_SAVE, nullptr, nullptr),
-            xoj::util::adopt);
-
-    // If user tries to overwrite a file, ask if it's OK
-    gtk_file_chooser_set_do_overwrite_confirmation(GTK_FILE_CHOOSER(native.get()), TRUE);
-    // Offer a suggestion for the filename if filename absent
-    gtk_file_chooser_set_current_name(GTK_FILE_CHOOSER(native.get()),
-                                      filename ? filename : (std::string{_("Untitled")}).c_str());
-
-    // Wait until user responds to dialog
-    res = gtk_native_dialog_run(GTK_NATIVE_DIALOG(native.get()));
-
-    // Return the filename chosen to lua
-    if (res == GTK_RESPONSE_ACCEPT) {
-        char* filename = static_cast<char*>(gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(native.get())));
-
-        lua_pushlstring(L, filename, strlen(filename));
-        g_free(static_cast<gchar*>(filename));
-        args_returned = 1;
+    lua_settop(L, 2);  // discard extra arguments
+    const char* luaCallback = luaL_checkstring(L, 1);
+    const char* filename = luaL_optstring(L, 2, _("Untitled"));
+    if (auto s = std::string(filename);
+        s.find("/") == std::string::npos &&
+        s.find("\\") == std::string::npos) {  // relative path (contains no slashes and backslashes)
+        filename = ("./" + s).c_str();
     }
+    fs::path suggestedPath{filename};
 
-    return args_returned;
+
+    auto pathValidation = [](fs::path& p, const char* filterName) { return true; };
+
+    Plugin* plugin = Plugin::getPluginFromLua(L);
+    Control* ctrl = plugin->getControl();
+
+    auto callback = [plugin, luaCallback](std::optional<fs::path> p) {
+        if (p && !p->empty()) {
+            plugin->callFunction(luaCallback, p.value().string().c_str());
+        } else {
+            plugin->callFunction(luaCallback, "");
+        }
+    };
+
+    auto popup = xoj::popup::PopupWindowWrapper<xoj::SaveExportDialog>(ctrl->getSettings(), std::move(suggestedPath),
+                                                                       _("Save File"), _("Save"),
+                                                                       std::move(pathValidation), std::move(callback));
+
+    popup.show(GTK_WINDOW(ctrl->getWindow()->getWindow()));
+
+    return 0;
 }
-*/
+
 /**
  * Create a 'Open File' dialog and when the user has chosen a filepath
  * call a callback function whose sole argument is the filepath.
@@ -2674,7 +2681,7 @@ static int applib_getImages(lua_State* L) {
  */
 static const luaL_Reg applib[] = {{"openDialog", applib_openDialog},
                                   {"glib_rename", applib_glib_rename},
-                                  //                                  {"saveAs", applib_saveAs},
+                                  {"saveAs", applib_saveAs},
                                   {"registerUi", applib_registerUi},
                                   {"uiAction", applib_uiAction},
                                   {"sidebarAction", applib_sidebarAction},
