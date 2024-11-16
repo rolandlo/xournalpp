@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp 1.2.4+dev\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-21 18:49+0000\n"
+"POT-Creation-Date: 2024-11-16 06:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,154 +31,166 @@ msgstr ""
 msgid "Could not remove old autosave file \"{1}\": {2}"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:551
+#: ../src/core/control/Control.cpp:559
 msgid "You deleted the active toolbar. Falling back to the default toolbar."
 msgstr ""
 
-#: ../src/core/control/Control.cpp:571
+#: ../src/core/control/Control.cpp:579
 msgid ""
 "The Toolbarconfiguration \"{1}\" is predefined, would you create a copy to "
 "edit?"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:574 ../src/core/control/Control.cpp:1516
+#: ../src/core/control/Control.cpp:582 ../src/core/control/Control.cpp:1533
 msgid "Yes"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:574 ../src/core/control/Control.cpp:1516
+#: ../src/core/control/Control.cpp:582 ../src/core/control/Control.cpp:1533
 msgid "No"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:798 ../src/core/control/Control.cpp:1683
-#: ../src/core/control/Control.cpp:2021 ../src/core/control/XournalMain.cpp:206
+#: ../src/core/control/Control.cpp:812 ../src/core/control/Control.cpp:1700
+#: ../src/core/control/Control.cpp:2038 ../src/core/control/XournalMain.cpp:206
 msgid "Cancel"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:799
+#: ../src/core/control/Control.cpp:813
 msgid "Insert after current page"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:800
+#: ../src/core/control/Control.cpp:814
 msgid "Insert at end"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:803
+#: ../src/core/control/Control.cpp:817
+msgid "_Journal"
+msgstr ""
+
+#: ../src/core/control/Control.cpp:817
+msgid "Paper B_ackground"
+msgstr ""
+
+#: ../src/core/control/Control.cpp:818
+#: ../src/core/control/pagetype/PageTypeHandler.cpp:40
+msgid "With PDF background"
+msgstr ""
+
+#: ../src/core/control/Control.cpp:821
 msgid ""
 "Your current document does not contain PDF Page no {1}\n"
 "Would you like to insert this page?\n"
 "\n"
-"Tip: You can select Journal → Paper Background → PDF Background to insert a "
-"PDF page."
+"Tip: You can select {2} to insert a PDF page."
 msgstr ""
 
-#: ../src/core/control/Control.cpp:847
+#: ../src/core/control/Control.cpp:864
 msgid ""
 "No pdf pages available to append. You may need to reopen the document first."
 msgstr ""
 
-#: ../src/core/control/Control.cpp:861
+#: ../src/core/control/Control.cpp:878
 msgid "Unable to retrieve pdf page."
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1441
+#: ../src/core/control/Control.cpp:1458
 msgid ""
 "Do not open Autosave files. They may will be overwritten!\n"
 "Copy the files to another folder.\n"
 "Files from Folder {1} cannot be opened."
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1461
+#: ../src/core/control/Control.cpp:1478
 msgid "file: {1}"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1493
+#: ../src/core/control/Control.cpp:1510
 msgid "Error opening file \"{1}\""
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1518
+#: ../src/core/control/Control.cpp:1535
 msgid "File version mismatch"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1519
+#: ../src/core/control/Control.cpp:1536
 msgid ""
 "The file being loaded has a file format version newer than the one currently "
 "supported by this version of Xournal++, so it may not load properly. Open "
 "anyways?"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1542
+#: ../src/core/control/Control.cpp:1559
 msgid ""
 "Error reading PDF file \"{1}\"\n"
 "{2}"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1663
+#: ../src/core/control/Control.cpp:1680
 msgid ""
 "The attached background file could not be found. It might have been moved, "
 "renamed or deleted."
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1666
+#: ../src/core/control/Control.cpp:1683
 msgid ""
 "The background file \"{1}\" could not be found. It might have been moved, "
 "renamed or deleted.\n"
 "It was last seen at: \"{2}\""
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1676
+#: ../src/core/control/Control.cpp:1693
 msgid ""
 "\n"
 "Proposed replacement file: \"{1}\""
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1681
+#: ../src/core/control/Control.cpp:1698
 msgid "Select another PDF"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1682
+#: ../src/core/control/Control.cpp:1699
 msgid "Remove PDF Background"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1686
+#: ../src/core/control/Control.cpp:1703
 msgid "Use proposed PDF"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1689
+#: ../src/core/control/Control.cpp:1706
 msgid "Missing PDF background file"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1821
+#: ../src/core/control/Control.cpp:1838
 msgid "Select font"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1840
+#: ../src/core/control/Control.cpp:1857
 #: ../src/core/gui/toolbarMenubar/ColorSelectorToolItem.cpp:57
 msgid "Select color"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:1865
+#: ../src/core/control/Control.cpp:1882
 msgid "Unsaved Document"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:2014
+#: ../src/core/control/Control.cpp:2031
 msgid "Document file was removed."
 msgstr ""
 
-#: ../src/core/control/Control.cpp:2014
+#: ../src/core/control/Control.cpp:2031
 msgid "This document is not saved yet."
 msgstr ""
 
-#: ../src/core/control/Control.cpp:2016
+#: ../src/core/control/Control.cpp:2033
 msgid "Save As..."
 msgstr ""
 
-#: ../src/core/control/Control.cpp:2016 ../src/core/control/jobs/SaveJob.cpp:25
+#: ../src/core/control/Control.cpp:2033 ../src/core/control/jobs/SaveJob.cpp:25
 #: ../src/core/gui/dialog/XojSaveDlg.cpp:80
 #: ../src/core/gui/toolbarMenubar/ToolMenuHandler.cpp:282
 msgid "Save"
 msgstr ""
 
-#: ../src/core/control/Control.cpp:2019
+#: ../src/core/control/Control.cpp:2036
 msgid "Discard"
 msgstr ""
 
@@ -462,7 +474,7 @@ msgstr ""
 
 #: ../src/core/control/XournalMain.cpp:692
 msgid ""
-"On export, only export the layers specified by RANGE (e.g. \"2-3,5,7-\")\n"
+"Only export the layers specified by RANGE (e.g. \"2-3,5,7-\")\n"
 "                                 No effect without -p/--create-pdf or -i/--"
 "create-img"
 msgstr ""
@@ -652,10 +664,6 @@ msgstr ""
 
 #: ../src/core/control/pagetype/PageTypeHandler.cpp:36
 msgid "Isometric Graph"
-msgstr ""
-
-#: ../src/core/control/pagetype/PageTypeHandler.cpp:40
-msgid "With PDF background"
 msgstr ""
 
 #: ../src/core/control/pagetype/PageTypeHandler.cpp:41
@@ -2180,8 +2188,8 @@ msgstr ""
 
 #: ../ui/backgroundSelection.glade:49 ../ui/exportSettings.glade:425
 #: ../ui/goto.glade:108 ../ui/pageFormat.glade:346 ../ui/pageTemplate.glade:278
-#: ../ui/plugin.glade:113 ../ui/renameLayerDialog.glade:71
-#: ../ui/selectOpacity.glade:134 ../ui/settings.glade:6288
+#: ../ui/plugin.glade:114 ../ui/renameLayerDialog.glade:71
+#: ../ui/selectOpacity.glade:134 ../ui/settings.glade:6287
 #: ../ui/texdialog.glade:203
 msgid "Ok"
 msgstr ""
@@ -2496,23 +2504,23 @@ msgstr ""
 msgid "Plugins"
 msgstr ""
 
-#: ../ui/plugin.glade:80
+#: ../ui/plugin.glade:81
 msgid "Plugin changes are only applied after Xournal++ is restarted"
 msgstr ""
 
-#: ../ui/pluginEntry.glade:50
+#: ../ui/pluginEntry.glade:51
 msgid "Author: "
 msgstr ""
 
-#: ../ui/pluginEntry.glade:87
+#: ../ui/pluginEntry.glade:88
 msgid "Path: "
 msgstr ""
 
-#: ../ui/pluginEntry.glade:123
+#: ../ui/pluginEntry.glade:124
 msgid "Version: "
 msgstr ""
 
-#: ../ui/pluginEntry.glade:158
+#: ../ui/pluginEntry.glade:159
 msgid "enabled,"
 msgstr ""
 
@@ -2764,12 +2772,14 @@ msgid "1,30"
 msgstr ""
 
 #: ../ui/settings.glade:1196 ../ui/settings.glade:1208
+msgctxt "Drag = Noun: force opposing the movement"
 msgid ""
 "Drag: If the value is too small, unwanted oscillations may appear. If the "
 "value is too high, there will be no stabilization."
 msgstr ""
 
 #: ../ui/settings.glade:1197
+msgctxt "Noun: force opposing the movement"
 msgid "Drag"
 msgstr ""
 
@@ -2778,10 +2788,12 @@ msgid "0,4"
 msgstr ""
 
 #: ../ui/settings.glade:1228 ../ui/settings.glade:1240
+msgctxt "Mass = Noun: physics term, related to weight"
 msgid "Mass: the higher the mass, the more inertia and the more stabilization"
 msgstr ""
 
 #: ../ui/settings.glade:1229
+msgctxt "Noun: physics term, related to weight"
 msgid "Mass"
 msgstr ""
 
@@ -3151,10 +3163,6 @@ msgstr ""
 msgid "Color"
 msgstr ""
 
-#: ../ui/settings.glade:3142
-msgid "Lucide"
-msgstr ""
-
 #: ../ui/settings.glade:3155
 msgid "(requires restart)"
 msgstr ""
@@ -3383,10 +3391,6 @@ msgstr ""
 msgid "Speed for a Zoomstep"
 msgstr ""
 
-#: ../ui/settings.glade:4252 ../ui/settings.glade:4263
-msgid "%"
-msgstr ""
-
 #: ../ui/settings.glade:4285
 msgid "Zoom Speed"
 msgstr ""
@@ -3541,90 +3545,88 @@ msgstr ""
 msgid "Minimum Stroke Size"
 msgstr ""
 
-#: ../ui/settings.glade:5132
-msgid "0.20"
-msgstr ""
-
-#: ../ui/settings.glade:5175
+#: ../ui/settings.glade:5174
+msgctxt "Short taps/clicks will trigger special actions"
 msgid "Enable Tap action"
 msgstr ""
 
-#: ../ui/settings.glade:5180
+#: ../ui/settings.glade:5179
 msgid ""
 "Do not draw for inputs of short time and length unless it comes in short "
 "succession. Instead, show floating toolbox."
 msgstr ""
 
-#: ../ui/settings.glade:5192
-msgid "Ignore Time (ms)"
+#: ../ui/settings.glade:5191
+msgid "Time limit (ms)"
 msgstr ""
 
-#: ../ui/settings.glade:5204
+#: ../ui/settings.glade:5203
 msgid ""
-"How short (time)  AND...\n"
+"Time limit: taps lasting longer will not trigger a special action\n"
 "\n"
 "<i>Recommended: 150ms</i>"
 msgstr ""
 
-#: ../ui/settings.glade:5224
+#: ../ui/settings.glade:5223
 msgid ""
-"How short (screen mm)  of the stroke  AND...\n"
+"Length limit: taps moving further away will not trigger a special action\n"
 "\n"
 "<i>Recommended: 1 mm</i>"
 msgstr ""
 
-#: ../ui/settings.glade:5244
-msgid "Max Length (mm)"
+#: ../ui/settings.glade:5243
+msgid "Length limit (mm)"
 msgstr ""
 
-#: ../ui/settings.glade:5255
-msgid "Successive (ms)"
+#: ../ui/settings.glade:5254
+msgid "Frequency limit (ms)"
 msgstr ""
 
-#: ../ui/settings.glade:5267
+#: ../ui/settings.glade:5266
 msgid ""
-"... AND How much time must have passed since last stroke.\n"
+"Frequency limit: A tap happening within this time period after a stroke will "
+"not trigger a special action.\n"
 "\n"
 "<i>Recommended: 500ms</i>"
 msgstr ""
 
-#: ../ui/settings.glade:5284
+#: ../ui/settings.glade:5283
 msgid "Try to select object first."
 msgstr ""
 
-#: ../ui/settings.glade:5289 ../ui/settings.glade:5319
+#: ../ui/settings.glade:5288 ../ui/settings.glade:5318
 msgid ""
 "Try to select object first; if nothing selected then show floating toolbox "
 "if enabled."
 msgstr ""
 
-#: ../ui/settings.glade:5302
+#: ../ui/settings.glade:5301
 msgid ""
 "All three conditions must be met before stroke is ignored.\n"
 "It must be short in time and length and we can't have ignored another stroke "
 "recently."
 msgstr ""
 
-#: ../ui/settings.glade:5305
+#: ../ui/settings.glade:5304
 msgid "Settings:"
 msgstr ""
 
-#: ../ui/settings.glade:5314
+#: ../ui/settings.glade:5313
 msgid "Show Floating Toolbox"
 msgstr ""
 
-#: ../ui/settings.glade:5333
+#: ../ui/settings.glade:5332
 msgid "Action on Tool Tap"
 msgstr ""
 
-#: ../ui/settings.glade:5361
+#: ../ui/settings.glade:5360
 msgid ""
 "<i>Re-render PDF backgrounds more often while zooming for better render "
 "quality.\n"
 "<b>Note:</b> This should not affect print quality.</i>"
 msgstr ""
 
-#: ../ui/settings.glade:5383
+#: ../ui/settings.glade:5382
 msgid ""
 "When zoomed in on a high-resolution PDF, each re-render can take a long "
 "time. Setting this to a large value causes these re-renders to happen less "
@@ -3633,39 +3635,39 @@ msgid ""
 "Set this to 0% to always re-render on zoom."
 msgstr ""
 
-#: ../ui/settings.glade:5386
+#: ../ui/settings.glade:5385
 msgid "Re-render when the page's zoom changes by more than "
 msgstr ""
 
-#: ../ui/settings.glade:5399
+#: ../ui/settings.glade:5398
 msgid "0.00"
 msgstr ""
 
-#: ../ui/settings.glade:5416
+#: ../ui/settings.glade:5415
 msgid "%."
 msgstr ""
 
-#: ../ui/settings.glade:5437
+#: ../ui/settings.glade:5436
 msgid "PDF Cache"
 msgstr ""
 
-#: ../ui/settings.glade:5468
+#: ../ui/settings.glade:5467
 msgid "Drawing Area"
 msgstr ""
 
-#: ../ui/settings.glade:5515
+#: ../ui/settings.glade:5514
 msgid "<i>Select the tool and Settings if you press the Default Button.</i>"
 msgstr ""
 
-#: ../ui/settings.glade:5567
+#: ../ui/settings.glade:5566
 msgid "<b>Default</b>"
 msgstr ""
 
-#: ../ui/settings.glade:5607
+#: ../ui/settings.glade:5606
 msgid "Defaults"
 msgstr ""
 
-#: ../ui/settings.glade:5660
+#: ../ui/settings.glade:5659
 msgid ""
 "<i>\n"
 "Using the checkbox the audio system can be disabled or enabled for future "
@@ -3675,29 +3677,29 @@ msgid ""
 "</i>"
 msgstr ""
 
-#: ../ui/settings.glade:5676
+#: ../ui/settings.glade:5675
 msgid "Disable Audio"
 msgstr ""
 
-#: ../ui/settings.glade:5698
+#: ../ui/settings.glade:5697
 msgid "Enable or Disable Audio"
 msgstr ""
 
-#: ../ui/settings.glade:5725
+#: ../ui/settings.glade:5724
 msgid ""
 "<i>Audio recordings are currently stored in a separate folder and referenced "
 "from the journal.</i>"
 msgstr ""
 
-#: ../ui/settings.glade:5744 ../ui/settings.glade:5780
+#: ../ui/settings.glade:5743 ../ui/settings.glade:5779
 msgid "Storage Folder"
 msgstr ""
 
-#: ../ui/settings.glade:5759
+#: ../ui/settings.glade:5758
 msgid "Select Folder"
 msgstr ""
 
-#: ../ui/settings.glade:5807
+#: ../ui/settings.glade:5806
 msgid ""
 "<i>Specify the audio devices used for recording and playback of audio "
 "attachments.\n"
@@ -3705,67 +3707,63 @@ msgid ""
 "i>"
 msgstr ""
 
-#: ../ui/settings.glade:5831
+#: ../ui/settings.glade:5830
 msgid "Input Device"
 msgstr ""
 
-#: ../ui/settings.glade:5853
+#: ../ui/settings.glade:5852
 msgid "Output Device"
 msgstr ""
 
-#: ../ui/settings.glade:5884
+#: ../ui/settings.glade:5883
 msgid "Audio Devices"
 msgstr ""
 
-#: ../ui/settings.glade:5913
+#: ../ui/settings.glade:5912
 msgid "Sample Rate"
 msgstr ""
 
-#: ../ui/settings.glade:5924
+#: ../ui/settings.glade:5923
 msgid "Gain"
 msgstr ""
 
-#: ../ui/settings.glade:5971
+#: ../ui/settings.glade:5970
 msgid "Recording Quality"
 msgstr ""
 
-#: ../ui/settings.glade:5997
+#: ../ui/settings.glade:5996
 msgid "Default Seek Time (in seconds)"
 msgstr ""
 
-#: ../ui/settings.glade:6010
+#: ../ui/settings.glade:6009
 msgid "1,00"
 msgstr ""
 
-#: ../ui/settings.glade:6029
+#: ../ui/settings.glade:6028
 msgid "Playback Settings"
 msgstr ""
 
-#: ../ui/settings.glade:6043
+#: ../ui/settings.glade:6042
 msgid "<i>Changes take only effect on new recordings and playbacks.</i>"
 msgstr ""
 
-#: ../ui/settings.glade:6074
+#: ../ui/settings.glade:6073
 msgid "Audio Recording"
 msgstr ""
 
-#: ../ui/settings.glade:6099
-msgid "LaTeX"
-msgstr ""
-
-#: ../ui/settings.glade:6147
+#: ../ui/settings.glade:6146
 msgid "<i>Select language (requires restart)</i>"
 msgstr ""
 
-#: ../ui/settings.glade:6179 ../ui/settings.glade:6225
+#: ../ui/settings.glade:6178 ../ui/settings.glade:6224
 msgid "Language"
 msgstr ""
 
-#: ../ui/settings.glade:6195
+#: ../ui/settings.glade:6194
 msgid "Language Settings"
 msgstr ""
 
-#: ../ui/settings.glade:6249
+#: ../ui/settings.glade:6248
 msgid "Palette"
 msgstr ""
 
@@ -4110,10 +4108,6 @@ msgstr ""
 msgid "P_revious Annotated Page"
 msgstr ""
 
-#: ../ui/mainmenubar.xml:434
-msgid "_Journal"
-msgstr ""
-
 #: ../ui/mainmenubar.xml:437
 msgid "New Page _Before"
 msgstr ""
@@ -4164,10 +4158,6 @@ msgstr ""
 
 #: ../ui/mainmenubar.xml:495
 msgid "Paper _Color"
-msgstr ""
-
-#: ../ui/mainmenubar.xml:499
-msgid "Paper B_ackground"
 msgstr ""
 
 #: ../ui/mainmenubar.xml:504
@@ -4367,8 +4357,8 @@ msgstr ""
 msgid "tablet;Wacom;pen input;PDF Annotation;markup"
 msgstr ""
 
-#: ../desktop/com.github.xournalpp.xournalpp.desktop.in:15
-msgid "com.github.xournalpp.xournalpp"
+#: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:8
+msgid "Xournalpp Developers"
 msgstr ""
 
 #: ../resources-templates/com.github.xournalpp.xournalpp.appdata.xml.in:10
