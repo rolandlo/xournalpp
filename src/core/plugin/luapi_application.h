@@ -25,6 +25,7 @@
 #include "control/ScrollHandler.h"
 #include "control/Tool.h"
 #include "control/actions/ActionDatabase.h"  // for ActionDatabase
+#include "control/actions/ActionProperties.h"
 #include "control/layer/LayerController.h"
 #include "control/pagetype/PageTypeHandler.h"
 #include "control/settings/Settings.h"
@@ -52,6 +53,7 @@
 #include "model/XojPage.h"  // IWYU pragma: keep for XojPage
 #include "plugin/Plugin.h"
 #include "undo/InsertUndoAction.h"
+#include "util/GVariantTemplate.h"    // for makeGVariant
 #include "util/PathUtil.h"            // for clea...
 #include "util/PopupWindowWrapper.h"  // for PopupWindowWrapper
 #include "util/StringUtils.h"
@@ -67,6 +69,26 @@ extern "C" {
 
 #include "undo/PageSizeChangeUndoAction.h"
 }
+
+template <Action a, class U = void>
+struct helper {
+    static void setup(EnumIndexedArray<const GVariantType*, Action>& expectedTypes) { expectedTypes[a] = nullptr; };
+};
+template <Action a>
+struct helper<a, std::void_t<typename ActionProperties<a>::parameter_type>> {
+    static void setup(EnumIndexedArray<const GVariantType*, Action>& expectedTypes) {
+        expectedTypes[a] = gVariantType<typename ActionProperties<a>::parameter_type>();
+    }
+};
+
+template <size_t... As>
+static auto setupImpl(std::index_sequence<As...>) {
+    EnumIndexedArray<const GVariantType*, Action> expectedTypes;
+    ((helper<static_cast<Action>(As)>::setup(expectedTypes)), ...);
+    return expectedTypes;
+}
+
+static const auto expectedTypes = setupImpl(std::make_index_sequence<xoj::to_underlying(Action::ENUMERATOR_COUNT)>());
 
 
 static std::tuple<std::optional<std::string>, std::vector<const Element*>> getElementsFromHelper(
@@ -502,6 +524,102 @@ static int applib_registerUi(lua_State* L) {
 
     return 1;
 }
+
+GVariant* lua_to_gvariant(lua_State* L, int idx, const GVariantType* type) {
+    if (type) {
+        g_message(g_variant_type_dup_string(type));
+    } else {
+        g_message("No type. Ignore");
+    }
+    switch (lua_type(L, idx)) {
+        case LUA_TNONE:
+        case LUA_TNIL:
+            break;
+        case LUA_TBOOLEAN:
+            xoj_assert(type == G_VARIANT_TYPE_BOOLEAN);
+            return g_variant_new_boolean(lua_toboolean(L, idx));
+            break;
+        case LUA_TNUMBER:
+            if (lua_isinteger(L, idx)) {
+                if (type == G_VARIANT_TYPE_INT32) {
+                    return g_variant_new_int32(lua_tointeger(L, idx));
+                } else if (type == G_VARIANT_TYPE_UINT64) {
+                    return g_variant_new_uint64(as_unsigned(lua_tointeger(L, idx)));
+                } else {
+                    g_warning("Unhandled type: %s", type ? g_variant_type_dup_string(type) : "none");
+                }
+            } else {
+                return g_variant_new_double(lua_tonumber(L, idx));
+            }
+            break;
+        case LUA_TSTRING:
+            return g_variant_new_string(lua_tostring(L, idx));
+            break;
+        case LUA_TTABLE:
+        case LUA_TUSERDATA:
+        case LUA_TLIGHTUSERDATA:
+        case LUA_TFUNCTION:
+        case LUA_TTHREAD:
+        default:
+            g_warning("Cannot convert to GVariant");
+    }
+    return nullptr;
+}
+
+/***
+ * Change the action's state, triggering callbacks
+ * @param action string
+ * @param state any
+ *
+ * Example 1: app.changeActionState("select-tool", 4)  -- but what does 4 mean?
+ * Example 2: app.changeActionState("set-layout-vertical", false)
+ * Example 3: app.changeActionState("set-columns-or-rows", -3)
+ */
+static int applib_changeActionState(lua_State* L) {
+    const char* actionStr = luaL_checkstring(L, 1);
+    if (actionStr == nullptr) {
+        return luaL_error(L, "Missing action!");
+    }
+    Action action = Action_fromString(actionStr);
+    auto type = expectedTypes[action];
+    GVariant* state = lua_to_gvariant(L, 2, type);
+
+    Plugin* plugin = Plugin::getPluginFromLua(L);
+    Control* control = plugin->getControl();
+    auto* actionDB = control->getActionDatabase();
+    actionDB->fireChangeActionState(action, state);
+    return 0;
+}
+
+/***
+ * Activate the action, triggering callbacks
+ * @param action string
+ * @param state nilt | any
+ *
+ * Example 1: app.activateAction("arrange-selection-order", 1) -- but what does 1 mean?
+ * Example 2: app.activateAction("setsquare")
+ * Example 3: app.activateAction("tool-fill")
+ */
+static int applib_activateAction(lua_State* L) {
+    const char* actionStr = luaL_checkstring(L, 1);
+    if (actionStr == nullptr) {
+        return luaL_error(L, "Missing action!");
+    }
+    Action action = Action_fromString(actionStr);
+    auto type = expectedTypes[action];
+    GVariant* state = lua_to_gvariant(L, 2, type);
+    Plugin* plugin = Plugin::getPluginFromLua(L);
+    Control* control = plugin->getControl();
+    auto* actionDB = control->getActionDatabase();
+    if (state) {
+        g_message(g_variant_print_string(state, nullptr, true)->str);
+        actionDB->fireActivateAction(action, state);
+    } else {
+        actionDB->fireActivateAction(action);
+    }
+    return 0;
+}
+
 
 /**
  * Execute an UI action (usually internally called from Toolbar / Menu)
@@ -3130,6 +3248,8 @@ static int applib_addToSelection(lua_State* L) {
  */
 static const luaL_Reg applib[] = {{"msgbox", applib_msgbox},  // Todo(gtk4) remove this deprecated function
                                   {"openDialog", applib_openDialog},
+                                  {"changeActionState", applib_changeActionState},
+                                  {"activateAction", applib_activateAction},
                                   {"getPageLabel", applib_getPageLabel},
                                   {"glib_rename", applib_glib_rename},
                                   {"saveAs", applib_saveAs},  // Todo(gtk4) remove this deprecated function

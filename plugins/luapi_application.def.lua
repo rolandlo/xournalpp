@@ -113,6 +113,26 @@ function app.openDialog(message, options, cb, error) end
 ---    that receives the mode. This is useful for callback functions that are shared among multiple menu entries.
 function app.registerUi(opts) end
 
+--- *
+--- Change the action's state, triggering callbacks
+--- @param action string
+--- @param state any
+--- 
+--- Example 1: app.changeActionState("select-tool", 4)  -- but what does 4 mean?
+--- Example 2: app.changeActionState("set-layout-vertical", false)
+--- Example 3: app.changeActionState("set-columns-or-rows", -3)
+function app.changeActionState(action, state) end
+
+--- *
+--- Activate the action, triggering callbacks
+--- @param action string
+--- @param state nilt | any
+--- 
+--- Example 1: app.activateAction("arrange-selection-order", 1) -- but what does 1 mean?
+--- Example 2: app.activateAction("setsquare")
+--- Example 3: app.activateAction("tool-fill")
+function app.activateAction(action, state) end
+
 --- Execute an UI action (usually internally called from Toolbar / Menu)
 --- The argument consists of a Lua table with 3 keys: "action", "group" and "enabled"
 --- The key "group" is currently only used for debugging purpose and can safely be omitted.
