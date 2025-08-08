@@ -2592,10 +2592,10 @@ static int applib_setZoom(lua_State* L) {
 /**
  * Exports the current document as a pdf or as a svg or png image
  *
- * @param opts {outputFile:string, range:string, background:string, progressiveMode: boolean}
+ * @param opts {outputFile:string, backend: string, range:string, background:string, progressiveMode: boolean}
  *
  * Example 1:
- * app.export({["outputFile"] = "Test.pdf", ["range"] = "2-5; 7", ["background"] = "none", ["progressiveMode"] = true})
+ * app.export({["outputFile"] = "Test.pdf", ["backend"] = ["cairo"], ["range"] = "2-5; 7", ["background"] = "none", ["progressiveMode"] = true})
  * uses progressiveMode, so for each page of the document, instead of rendering one PDF page, the page layers are
  * rendered one by one to produce as many pages as there are layers.
  *
@@ -2615,6 +2615,7 @@ static int applib_export(lua_State* L) {
     luaL_checktype(L, 1, LUA_TTABLE);
 
     lua_getfield(L, 1, "outputFile");
+    lua_getfield(L, 1, "backend");
     lua_getfield(L, 1, "range");
     lua_getfield(L, 1, "layerRange");
     lua_getfield(L, 1, "background");
@@ -2625,7 +2626,8 @@ static int applib_export(lua_State* L) {
 
     // stack now has following:
     //    1 = param table
-    //   -8 = outputFile
+    //   -9 = outputFile
+    //   -8 = backend
     //   -7 = range
     //   -6 = layerRange
     //   -5 = background
@@ -2634,7 +2636,8 @@ static int applib_export(lua_State* L) {
     //   -2 = pngWidth
     //   -1 = dpiHeight
 
-    const char* outputFile = luaL_optstring(L, -8, nullptr);
+    const char* outputFile = luaL_optstring(L, -9, nullptr);
+    const char* backend = luaL_optstring(L, -8, "default");
     const char* range = luaL_optstring(L, -7, nullptr);
     const char* layerRange = luaL_optstring(L, -6, nullptr);
     const char* background = luaL_optstring(L, -5, "all");
@@ -2650,6 +2653,13 @@ static int applib_export(lua_State* L) {
         bgType = EXPORT_BACKGROUND_NONE;
     }
 
+    ExportBackend backendType = ExportBackend::DEFAULT;
+    if (strcmp(backend, "cairo") == 0) {
+        backendType = ExportBackend::CAIRO;
+    } else if (strcmp(backend, "qpdf") == 0) {
+        backendType = ExportBackend::QPDF;
+    }
+
     if (outputFile == nullptr) {
         return luaL_error(L, "Missing output file!");
     }
@@ -2658,7 +2668,7 @@ static int applib_export(lua_State* L) {
     auto extension = file.extension();
 
     if (extension == ".pdf") {
-        ExportHelper::exportPdf(doc, outputFile, range, layerRange, bgType, progressiveMode);
+        ExportHelper::exportPdf(doc, outputFile, range, layerRange, bgType, progressiveMode, backendType);
     } else if (extension == ".svg" || extension == ".png") {
         ExportHelper::exportImg(doc, outputFile, range, layerRange, pngDpi, pngWidth, pngHeight, bgType);
     }
