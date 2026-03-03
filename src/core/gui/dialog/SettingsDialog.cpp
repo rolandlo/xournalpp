@@ -53,7 +53,7 @@ SettingsDialog::SettingsDialog(GladeSearchpath* gladeSearchPath, Settings* setti
         window(GTK_WINDOW(builder.get(UI_DIALOG_NAME))),
         languageConfig(GTK_BOX(builder.get("hboxLanguageSelect")), settings),
         latexPanel(gladeSearchPath),
-        paletteTab(gladeSearchPath, paletteDirectories),
+        paletteTab(gladeSearchPath, paletteDirectories, window.get()),
         callback(callback) {
 
     gtk_box_append(GTK_BOX(builder.get("zoomVBox")), callib);

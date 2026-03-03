@@ -12,7 +12,8 @@
 #include "gui/toolbarMenubar/model/ColorPalette.h"
 class SettingsDialogPaletteTab {
 public:
-    SettingsDialogPaletteTab(GladeSearchpath* gladeSearchPath, const std::vector<fs::path>& paletteDirectories);
+    SettingsDialogPaletteTab(GladeSearchpath* gladeSearchPath, const std::vector<fs::path>& paletteDirectories,
+                             GtkWindow* window = nullptr);
     void renderPaletteTab(const fs::path& currentlySetPalettePath);
     auto getSelectedPalette() const -> std::optional<fs::path>;
     inline GtkWidget* getPanel() const { return GTK_WIDGET(panel); }
@@ -25,7 +26,7 @@ private:
     GtkScrolledWindow* panel;
 
     void setAllPaletteFilePaths(const std::vector<fs::path>& paletteDirectories);
-    void renderColorPaletteExplainLabel() const;
+    void renderColorPaletteExplainLabel(GtkWindow* window) const;
 
     static auto newErrorListBoxRow(const fs::path& palettePath, const std::string& error) -> GtkWidget*;
     static auto newPaletteTextBox(const std::string& mainContent, const fs::path& path) -> GtkWidget*;

@@ -2,6 +2,7 @@
 
 #include "gui/toolbarMenubar/icon/ColorIcon.h"
 #include "util/PathUtil.h"
+#include "util/XojMsgBox.h"
 #include "util/gtk4_helper.h"
 #include "util/i18n.h"
 
@@ -47,12 +48,12 @@ constexpr auto UI_FILE = "paletteSettings.glade";
 constexpr auto UI_PANEL_NAME = "paletteSettingsPanel";
 
 SettingsDialogPaletteTab::SettingsDialogPaletteTab(GladeSearchpath* gladeSearchPath,
-                                                   const std::vector<fs::path>& paletteDirectories):
+                                                   const std::vector<fs::path>& paletteDirectories, GtkWindow* window):
         builder(gladeSearchPath, UI_FILE) {
     colorPaletteExplainLabel = GTK_LABEL(builder.get("colorPaletteExplainLabel"));
     paletteListBox = GTK_LIST_BOX(builder.get("paletteListBox"));
     panel = GTK_SCROLLED_WINDOW(builder.get(UI_PANEL_NAME));
-    renderColorPaletteExplainLabel();
+    renderColorPaletteExplainLabel(window);
     setAllPaletteFilePaths(paletteDirectories);
 }
 
@@ -94,15 +95,20 @@ auto SettingsDialogPaletteTab::renderPaletteListBoxRow(GtkListBox* lb, const fs:
     return listBoxRow;
 }
 
-void SettingsDialogPaletteTab::renderColorPaletteExplainLabel() const {
+void SettingsDialogPaletteTab::renderColorPaletteExplainLabel(GtkWindow* window) const {
     gtk_label_set_label(colorPaletteExplainLabel, FS(_F("<i>The palettes shown below are obtained from the "
-                                                        "<a href=\"file://{1}\">Built-in palettes</a> and "
-                                                        "<a href=\"file://{2}\">User palettes</a> directories:</i>\n") %
-                                                     Util::getBuiltInPaletteDirectoryPath().u8string() %
-                                                     Util::getCustomPaletteDirectoryPath().u8string())
+                                                        "<a href=\"{1}\">Built-in palettes</a> and "
+                                                        "<a href=\"{2}\">User palettes</a> directories:</i>\n") %
+                                                     Util::toUri(Util::getBuiltInPaletteDirectoryPath()).value() %
+                                                     Util::toUri(Util::getCustomPaletteDirectoryPath()).value())
                                                           .c_str());
     gtk_label_set_wrap(colorPaletteExplainLabel, true);
     gtk_label_set_use_markup(colorPaletteExplainLabel, true);
+    g_signal_connect(colorPaletteExplainLabel, "activate-link", G_CALLBACK(+[](GtkLabel*, gchar* uri, gpointer d) {
+                         XojMsgBox::openURL(static_cast<GtkWindow*>(d), uri);
+                         return true;  // default handler does not work on Windows
+                     }),
+                     window);
 }
 
 void SettingsDialogPaletteTab::renderNoPaletteFoundDisclaimer(GtkListBox* lb) {
