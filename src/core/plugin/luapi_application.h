@@ -1796,7 +1796,7 @@ static int applib_addTexImages(lua_State* L) {
                     texItems->push_back(texImagePtr);
                     layer->addElement(std::move(texImage));
 
-                    plugin->callFunction(callbackRef, const_cast<void*>(static_cast<const void*>(texImagePtr)));
+                    plugin->callFunction(callbackRef, texImagePtr);
 
                     if (texItems->size() == numItems) {
                         plugin->unrefFunction(callbackRef);
