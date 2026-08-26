@@ -386,10 +386,10 @@ function app.addStrokes(opts) end
 --- }
 function app.addTexts(opts) end
 
---- Adds rendered LaTeX elements as specified to the current layer.
+--- Asynchronously adds rendered LaTeX elements as specified to the current layer.
 --- 
 --- Global parameters:
----   - texItems table: array of latex-parameter-tables
+---   - texItems table: array of TeX-parameter-tables
 ---   - cb function: Callback function run after a TexImage has been added
 --- 
 --- @param opts {textItems:{formula:string, color:integer, x:number, y:number, width:number|nil, height:number|nil}[],
@@ -402,6 +402,10 @@ function app.addTexts(opts) end
 ---   - y number: y-position of the box (upper left corner) (required)
 ---   - width number: the width (default: auto)
 ---   - height number: the height (default: auto)
+--- 
+--- cb: callback function(ref_or_msg:userdata|string, no:int) to call when a TexImage has been added
+---     The first argument is either a reference to the TexImage or the error message/Tex generator output
+---     The second argument specifies the corresponding position in the texItems table
 --- 
 --- Example:
 --- 
@@ -423,7 +427,16 @@ function app.addTexts(opts) end
 --- 
 ---   app.addTexImages{
 ---       texItems=texItems,
----       cb=function(ref) print(ref); app.refreshPage() end
+---       cb=function(ref_or_msg, no)
+---              if type(ref_or_msg) == "userdata" then
+---                  print("Added TexImage: ", no)
+---                  print("Address: ", ref_or_msg)
+---              else
+---                  print("An error occured with item: ", no)
+---                  print("TeX generator output: ", ref_or_msg)
+---              end
+---              app.refreshPage()
+---          end
 ---   }
 function app.addTexImages(opts) end
 

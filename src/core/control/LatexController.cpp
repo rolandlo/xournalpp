@@ -206,6 +206,8 @@ void LatexController::onPdfRenderComplete(GObject* procObj, GAsyncResult* res, L
     if (self->callback) {  // tex formula from plugin
         if (self->isValidTex) {
             self->callback(self->loadRendered(self->initialTex));
+        } else {
+            self->callback(self->texProcessOutput);
         }
         g_clear_object(&proc);
         return;
@@ -382,7 +384,7 @@ void LatexController::insertLatex(PageRef page, Control* ctrl, double x, double 
 static int jobNo = 0;
 
 void LatexController::renderTexImage(Control* ctrl, std::string latex, Color color,
-                                     const std::function<void(std::unique_ptr<TexImage>)>& callback, std::string* errorMessage) {
+                                     const std::function<void(CallbackArg)>& callback, std::string* errorMessage) {
     auto self = std::make_unique<LatexController>(ctrl, jobNo++);
     self->callback = callback;
     self->initialTex = latex;

@@ -36,6 +36,8 @@ class Element;
 class LatexSettings;
 class IntEdLatexDialog;
 
+using CallbackArg = std::variant<std::unique_ptr<TexImage>, std::string>;
+
 class LatexController final {
 public:
     LatexController() = delete;
@@ -58,7 +60,7 @@ public:
      * Returns nullptr on failure and optionally writes a human-readable error.
      */
     static void renderTexImage(Control* ctrl, std::string latex, Color color,
-                               const std::function<void(std::unique_ptr<TexImage>)>& callback, std::string* errorMessage = nullptr);
+                               const std::function<void(CallbackArg)>& callback, std::string* errorMessage = nullptr);
 
 private:
     /**
@@ -202,5 +204,6 @@ private:
     std::unique_ptr<TexImage> temporaryRender;
 
     LatexGenerator generator;
-    std::function<void(std::unique_ptr<TexImage>)> callback;
+
+    std::function<void(CallbackArg)> callback;
 };

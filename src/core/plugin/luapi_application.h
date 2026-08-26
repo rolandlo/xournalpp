@@ -1637,10 +1637,10 @@ static int applib_addTexts(lua_State* L) {
 }
 
 /**
- * Adds rendered LaTeX elements as specified to the current layer.
+ * Asynchronously adds rendered LaTeX elements as specified to the current layer.
  *
  * Global parameters:
- *   - texItems table: array of latex-parameter-tables
+ *   - texItems table: array of TeX-parameter-tables
  *   - cb function: Callback function run after a TexImage has been added
  *
  * @param opts {textItems:{formula:string, color:integer, x:number, y:number, width:number|nil, height:number|nil}[],
@@ -1653,6 +1653,10 @@ static int applib_addTexts(lua_State* L) {
  *   - y number: y-position of the box (upper left corner) (required)
  *   - width number: the width (default: auto)
  *   - height number: the height (default: auto)
+ *
+ * cb: callback function(ref_or_msg:userdata|string, no:int) to call when a TexImage has been added
+ *     The first argument is either a reference to the TexImage or the error message/Tex generator output
+ *     The second argument specifies the corresponding position in the texItems table
  *
  * Example:
  *
@@ -1674,7 +1678,16 @@ static int applib_addTexts(lua_State* L) {
  *
  *   app.addTexImages{
  *       texItems=texItems,
- *       cb=function(ref) print(ref); app.refreshPage() end
+ *       cb=function(ref_or_msg, no)
+ *              if type(ref_or_msg) == "userdata" then
+ *                  print("Added TexImage: ", no)
+ *                  print("Address: ", ref_or_msg)
+ *              else
+ *                  print("An error occured with item: ", no)
+ *                  print("TeX generator output: ", ref_or_msg)
+ *              end
+ *              app.refreshPage()
+ *          end
  *   }
  */
 static int applib_addTexImages(lua_State* L) {
@@ -1771,12 +1784,16 @@ static int applib_addTexImages(lua_State* L) {
 
         LatexController::renderTexImage(
                 control, formula, col,
-                [control, layer, texItems, index, numItems, plugin, callbackRef, x, y,
-                width, height](std::unique_ptr<TexImage> texImage) {
-                    if (!texImage) {  // handle error properly (TODO)
-                        g_message("TexItem could not be added");
+                [control, layer, texItems, index, numItems, plugin, callbackRef, x, y, width, height](CallbackArg arg) {
+                    if (std::holds_alternative<std::string>(arg)) {
+                        std::string msg = std::get<std::string>(arg);
+                        if (msg.empty()) {
+                            msg = "TexItem could not be added";
+                        }
+                        plugin->callFunction(callbackRef, msg, index);
                         return;
                     }
+                    auto texImage = std::get<std::unique_ptr<TexImage>>(std::move(arg));
                     texImage->setOrigin(x, y);
 
                     const auto& box = texImage->getBoundingBox();
@@ -1796,7 +1813,7 @@ static int applib_addTexImages(lua_State* L) {
                     texItems->push_back(texImagePtr);
                     layer->addElement(std::move(texImage));
 
-                    plugin->callFunction(callbackRef, texImagePtr);
+                    plugin->callFunction(callbackRef, texImagePtr, index);
 
                     if (texItems->size() == numItems) {
                         plugin->unrefFunction(callbackRef);
@@ -1809,6 +1826,9 @@ static int applib_addTexImages(lua_State* L) {
                 },
                 &errorMessage);
 
+        if (!errorMessage.empty()) {
+            return luaL_error(L, "%s", errorMessage.c_str());
+        }
         lua_pop(L, 7);  // pop values read out from the texItems table + texItems-table itself
     }
 
