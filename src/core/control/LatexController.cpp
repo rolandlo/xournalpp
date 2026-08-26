@@ -52,13 +52,11 @@ using std::string;
 constexpr Color LIGHT_PREVIEW_BACKGROUND = Colors::white;
 constexpr Color DARK_PREVIEW_BACKGROUND = Colors::black;
 
-LatexController::LatexController(Control* control):
+LatexController::LatexController(Control* control, int jobNo):
         control(control),
         settings(control->getSettings()->latexSettings),
-        texTmpDir(Util::getTmpDirSubfolder("tex")),
-        generator(settings) {
-    Util::ensureFolderExists(this->texTmpDir);
-}
+        texTmpDir(Util::getTmpDirSubfolder("tex", jobNo)),
+        generator(settings) {}
 
 LatexController::~LatexController() {
     if (updating_cancellable) {
@@ -156,6 +154,11 @@ void LatexController::onPdfRenderComplete(GObject* procObj, GAsyncResult* res, L
     bool procExited = false;
     GSubprocess* proc = G_SUBPROCESS(procObj);
 
+    std::unique_ptr<LatexController> guard(self);
+    if (!self->callback) {
+        guard.release();  // don't delete the LatexController on exit
+    }
+
     // Extract the process' output and store it.
     {
         char* procStdout_ptr = nullptr;
@@ -198,6 +201,14 @@ void LatexController::onPdfRenderComplete(GObject* procObj, GAsyncResult* res, L
     if (!self->isValidTex) {
         fs::path pdfPath = self->texTmpDir / "tex.pdf";
         fs::remove(pdfPath);
+    }
+
+    if (self->callback) {  // tex formula from plugin
+        if (self->isValidTex) {
+            self->callback(self->loadRendered(self->initialTex));
+        }
+        g_clear_object(&proc);
+        return;
     }
 
     const string currentTex = self->dlg->getBufferContents();
@@ -366,4 +377,40 @@ void LatexController::insertLatex(PageRef page, Control* ctrl, double x, double 
     lock.unlock();
 
     showTexEditDialog(std::move(self));
+}
+
+static int jobNo = 0;
+
+void LatexController::renderTexImage(Control* ctrl, std::string latex, Color color,
+                                     const std::function<void(std::unique_ptr<TexImage>)>& callback, std::string* errorMessage) {
+    auto self = std::make_unique<LatexController>(ctrl, jobNo++);
+    self->callback = callback;
+    self->initialTex = latex;
+
+    auto depStatus = self->findTexDependencies();
+    if (!depStatus.success) {
+        if (errorMessage) {
+            *errorMessage = depStatus.errorMsg;
+        }
+        return;
+    }
+
+    const std::string texContents = LatexGenerator::templateSub(latex, self->latexTemplate, color);
+    auto result = self->generator.asyncRun(self->texTmpDir, texContents);
+    if (auto* err = std::get_if<LatexGenerator::GenError>(&result)) {
+        if (errorMessage) {
+            *errorMessage = err->message;
+        }
+        return;
+    }
+
+    auto* proc = std::get<GSubprocess*>(result);
+
+    // Render the TeX and capture the process' output.
+    char* stdinBuff = nullptr;  // No stdin
+
+    LatexController* self_ptr = self.release();
+
+    g_subprocess_communicate_utf8_async(proc, stdinBuff, nullptr,
+                                        reinterpret_cast<GAsyncReadyCallback>(onPdfRenderComplete), self_ptr);
 }

@@ -24,6 +24,7 @@
 
 #include "control/Control.h"
 #include "control/ExportHelper.h"
+#include "control/LatexController.h"
 #include "control/PageBackgroundChangeController.h"
 #include "control/ScrollHandler.h"
 #include "control/Tool.h"
@@ -54,6 +55,7 @@
 #include "model/SplineSegment.h"
 #include "model/Stroke.h"
 #include "model/StrokeStyle.h"
+#include "model/TexImage.h"
 #include "model/Text.h"
 #include "model/XojPage.h"  // IWYU pragma: keep for XojPage
 #include "plugin/Plugin.h"
@@ -1632,6 +1634,189 @@ static int applib_addTexts(lua_State* L) {
 
     refsHelper(L, texts);
     return 1;
+}
+
+/**
+ * Adds rendered LaTeX elements as specified to the current layer.
+ *
+ * Global parameters:
+ *   - texItems table: array of latex-parameter-tables
+ *   - cb string: Name of the callback function run after a TexImage has been added
+ *
+ * @param opts {textItems:{formula:string, color:integer, x:number, y:number, width:number|nil, height:number|nil}[],
+cb:string}
+}
+ *
+ * Parameters per texImage:
+ *   - formula string: the tex formula (required)
+ *   - color integer: RGB hex code for the text-color (default: color of latex tool)
+ *   - x number: x-position of the box (upper left corner) (required)
+ *   - y number: y-position of the box (upper left corner) (required)
+ *   - width number: the width (default: auto)
+ *   - height number: the height (default: auto)
+ *
+ * Example:
+ *
+ *   local texItems = {
+ *       {
+ *        formula = [[\int_a^b f(x)\ dx]],
+ *        x=100,
+ *        y=50,
+ *        color=0x990000
+ *       },
+ *       {
+ *        formula = [[\mathrm{e}^{i\pi} + 1 = 0]],
+ *        x=100,
+ *        y=100,
+ *        color=0x006600,
+ *        height=50,
+ *       },
+ *   }
+ *
+ *   local refs
+ *
+ *   function cb(ref)
+ *      table.insert(refs, ref)
+ *      if #refs == #texItems then
+ *          app.refreshPage()
+ *      end
+ *   end
+ *
+ *   refs = {}
+ *   app.addTexImages{texItems=texItems, cb="cb"}
+ */
+static int applib_addTexImages(lua_State* L) {
+    Plugin* plugin = Plugin::getPluginFromLua(L);
+    Control* control = plugin->getControl();
+    PageRef const& page = control->getCurrentPage();
+    Layer* layer = page->getSelectedLayer();
+
+    // get default color
+    ToolHandler* toolHandler = control->getToolHandler();
+    Tool& tool = toolHandler->getTool(TOOL_LATEX);
+    Color default_color = tool.getColor();
+
+    auto texItems = std::make_shared<std::vector<Element const*>>();
+
+    lua_settop(L, 1);
+    luaL_checktype(L, 1, LUA_TTABLE);
+
+    lua_getfield(L, 1, "cb");
+    const char* cb = lua_tostring(L, -1);
+    lua_pop(L, 1);  // pop the value of "cb"
+
+    lua_getfield(L, 1, "texItems");
+    if (!lua_istable(L, -1)) {
+        return luaL_error(L, "Missing texItems table!");
+    }
+
+    size_t numItems = lua_rawlen(L, -1);
+    for (size_t index = 1; index <= numItems; index++) {
+        lua_pushinteger(L, as_signed(index));
+        lua_gettable(L, -2);
+        luaL_checktype(L, -1, LUA_TTABLE);
+
+        lua_getfield(L, -1, "formula");
+        lua_getfield(L, -2, "x");
+        lua_getfield(L, -3, "y");
+        lua_getfield(L, -4, "width");
+        lua_getfield(L, -5, "height");
+        lua_getfield(L, -6, "color");
+
+        // stack now has following:
+        //    1 = global params table
+        //   -8 = textItems array
+        //   -7 = current tex-params table
+        //   -6 = formula
+        //   -5 = x
+        //   -4 = y
+        //   -3 = width
+        //   -2 = height
+        //   -1 = color
+
+        if (!lua_isstring(L, -6)) {
+            return luaL_error(L, "Missing formula!/'formula' must be a string");
+        }
+        std::string formula = lua_tostring(L, -6);
+
+        if (!lua_isnumber(L, -5)) {
+            return luaL_error(L, "Missing X-Coordinate!/must be a number");
+        }
+        double x = lua_tonumber(L, -5);
+
+        if (!lua_isnumber(L, -4)) {
+            return luaL_error(L, "Missing Y-Coordinate!/must be a number");
+        }
+        double y = lua_tonumber(L, -4);
+
+        if (!lua_isnil(L, -3) && !lua_isnumber(L, -3)) {
+            return luaL_error(L, "'width' must be a number or unset");
+        }
+        double width = luaL_optnumber(L, -3, 0);
+
+        if (!lua_isnil(L, -2) && !lua_isnumber(L, -2)) {
+            return luaL_error(L, "'height' must be a number or unset");
+        }
+        double height = luaL_optnumber(L, -2, 0);
+
+        Color col;
+        if (lua_isinteger(L, -1)) {  // Check if the color was provided
+            auto color = static_cast<uint32_t>(as_unsigned(lua_tointeger(L, -1)));
+            if (color > 0xffffff) {
+                std::stringstream msg;
+                msg << "Color 0x" << std::hex << color << " is no valid RGB color.";
+                return luaL_error(L, msg.str().c_str());  // luaL_error does not support %x for hex numbers
+            }
+            col = Color(color | 0xff000000U);
+        } else if (lua_isnil(L, -3)) {
+            col = default_color;
+        } else {
+            return luaL_error(L, "'color' must be an integer/hex-code or unset");
+        }
+
+
+        std::string errorMessage;
+
+        LatexController::renderTexImage(
+                control, formula, col,
+                [control, layer, texItems, index, numItems, plugin, cb = std::string(cb), x, y,
+                width, height](std::unique_ptr<TexImage> texImage) {
+                    if (!texImage) {  // handle error properly (TODO)
+                        g_message("TexItem could not be added");
+                        return;
+                    }
+                    texImage->setOrigin(x, y);
+
+                    const auto& box = texImage->getBoundingBox();
+                    if (width != 0 && height != 0) {
+                        texImage->setWidth(width);
+                        texImage->setHeight(height);
+                    } else if (height != 0) {
+                        double ratio = box.width / box.height;
+                        texImage->setHeight(height);
+                        texImage->setWidth(box.width != 0 ? height * ratio : 10);
+                    } else if (width != 0) {
+                        const double ratio = box.height / box.width;
+                        texImage->setWidth(width);
+                        texImage->setHeight(box.height != 0 ? width * ratio : 10);
+                    }
+                    auto* texImagePtr = texImage.get();
+                    texItems->push_back(texImagePtr);
+                    layer->addElement(std::move(texImage));
+
+                    plugin->callFunction(cb, const_cast<void*>(static_cast<const void*>(texImagePtr)));
+
+                    PageRef const& page = control->getCurrentPage();
+                    Layer* layer = page->getSelectedLayer();
+                    UndoRedoHandler* undo = control->getUndoRedoHandler();
+                    undo->addUndoAction(std::make_unique<InsertUndoAction>(page, layer, texImagePtr));
+                },
+                &errorMessage);
+
+        lua_pop(L, 7);  // pop values read out from the texItems table + texItems-table itself
+    }
+
+    return 0;
 }
 
 /**
@@ -4263,6 +4448,7 @@ static const luaL_Reg applib[] = {
         {"addStrokes", applib_addStrokes},
         {"addSplines", applib_addSplines},
         {"addImages", applib_addImages},
+        {"addTexImages", applib_addTexImages},
         {"addTexts", applib_addTexts},
         {"addLinks", applib_addLinks},
         {"addToSelection", applib_addToSelection},

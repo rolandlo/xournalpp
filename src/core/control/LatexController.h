@@ -41,7 +41,7 @@ public:
     LatexController() = delete;
     LatexController(const LatexController& other) = delete;
     LatexController& operator=(const LatexController& other) = delete;
-    LatexController(Control* control);
+    LatexController(Control* control, int jobNo = 0);
     ~LatexController();
 
 public:
@@ -52,6 +52,13 @@ public:
      * An existing text or latex element at the given position is replaced.
      */
     static void insertLatex(PageRef page, Control* ctrl, double x, double y);
+
+    /**
+     * Render a TeX formula to a TexImage without opening the editor dialog.
+     * Returns nullptr on failure and optionally writes a human-readable error.
+     */
+    static void renderTexImage(Control* ctrl, std::string latex, Color color,
+                               const std::function<void(std::unique_ptr<TexImage>)>& callback, std::string* errorMessage = nullptr);
 
 private:
     /**
@@ -94,6 +101,7 @@ private:
      * will be called again.
      */
     static void onPdfRenderComplete(GObject* procObj, GAsyncResult* res, LatexController* self);
+    static void onPluginRenderComplete(GObject* procObj, GAsyncResult* res, LatexController* self);
 
     void updateStatus();
     bool isUpdating();
@@ -194,4 +202,5 @@ private:
     std::unique_ptr<TexImage> temporaryRender;
 
     LatexGenerator generator;
+    std::function<void(std::unique_ptr<TexImage>)> callback;
 };

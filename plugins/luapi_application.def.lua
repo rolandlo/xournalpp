@@ -386,6 +386,55 @@ function app.addStrokes(opts) end
 --- }
 function app.addTexts(opts) end
 
+--- Adds rendered LaTeX elements as specified to the current layer.
+--- 
+--- Global parameters:
+---   - texItems table: array of latex-parameter-tables
+---   - cb string: Name of the callback function run after a TexImage has been added
+--- 
+--- @param opts {textItems:{formula:string, color:integer, x:number, y:number, width:number|nil, height:number|nil}[],
+--- cb:string}
+--- }
+--- 
+--- Parameters per texImage:
+---   - formula string: the tex formula (required)
+---   - color integer: RGB hex code for the text-color (default: color of latex tool)
+---   - x number: x-position of the box (upper left corner) (required)
+---   - y number: y-position of the box (upper left corner) (required)
+---   - width number: the width (default: auto)
+---   - height number: the height (default: auto)
+--- 
+--- Example:
+--- 
+---   local texItems = {
+---       {
+---        formula = [[\int_a^b f(x)\ dx]],
+---        x=100,
+---        y=50,
+---        color=0x990000
+---       },
+---       {
+---        formula = [[\mathrm{e}^{i\pi} + 1 = 0]],
+---        x=100,
+---        y=100,
+---        color=0x006600,
+---        height=50,
+---       },
+---   }
+--- 
+---   local refs
+--- 
+---   function cb(ref)
+---      table.insert(refs, ref)
+---      if #refs == #texItems then
+---          app.refreshPage()
+---      end
+---   end
+--- 
+---   refs = {}
+---   app.addTexImages{texItems=texItems, cb="cb"}
+function app.addTexImages(opts) end
+
 --- Returns a list of lua table of the texts (from current selection / current layer / current page / all pages).
 --- When called with "page" to retrieve all elements on the current page, it also adds a field "layer" for the
 --- layer containing the element, and when called with "all" it additionally adds a field "page" containing its page
