@@ -1641,11 +1641,10 @@ static int applib_addTexts(lua_State* L) {
  *
  * Global parameters:
  *   - texItems table: array of latex-parameter-tables
- *   - cb string: Name of the callback function run after a TexImage has been added
+ *   - cb function: Callback function run after a TexImage has been added
  *
  * @param opts {textItems:{formula:string, color:integer, x:number, y:number, width:number|nil, height:number|nil}[],
-cb:string}
-}
+ * cb:function}
  *
  * Parameters per texImage:
  *   - formula string: the tex formula (required)
@@ -1673,17 +1672,10 @@ cb:string}
  *       },
  *   }
  *
- *   local refs
- *
- *   function cb(ref)
- *      table.insert(refs, ref)
- *      if #refs == #texItems then
- *          app.refreshPage()
- *      end
- *   end
- *
- *   refs = {}
- *   app.addTexImages{texItems=texItems, cb="cb"}
+ *   app.addTexImages{
+ *       texItems=texItems,
+ *       cb=function(ref) print(ref); app.refreshPage() end
+ *   }
  */
 static int applib_addTexImages(lua_State* L) {
     Plugin* plugin = Plugin::getPluginFromLua(L);
@@ -1702,8 +1694,8 @@ static int applib_addTexImages(lua_State* L) {
     luaL_checktype(L, 1, LUA_TTABLE);
 
     lua_getfield(L, 1, "cb");
-    const char* cb = lua_tostring(L, -1);
-    lua_pop(L, 1);  // pop the value of "cb"
+    int callbackRef =
+            luaL_ref(L, LUA_REGISTRYINDEX);  // stores the function in the Lua registry and pops it from the stack
 
     lua_getfield(L, 1, "texItems");
     if (!lua_istable(L, -1)) {
@@ -1779,7 +1771,7 @@ static int applib_addTexImages(lua_State* L) {
 
         LatexController::renderTexImage(
                 control, formula, col,
-                [control, layer, texItems, index, numItems, plugin, cb = std::string(cb), x, y,
+                [control, layer, texItems, index, numItems, plugin, callbackRef, x, y,
                 width, height](std::unique_ptr<TexImage> texImage) {
                     if (!texImage) {  // handle error properly (TODO)
                         g_message("TexItem could not be added");
@@ -1804,7 +1796,11 @@ static int applib_addTexImages(lua_State* L) {
                     texItems->push_back(texImagePtr);
                     layer->addElement(std::move(texImage));
 
-                    plugin->callFunction(cb, const_cast<void*>(static_cast<const void*>(texImagePtr)));
+                    plugin->callFunction(callbackRef, const_cast<void*>(static_cast<const void*>(texImagePtr)));
+
+                    if (texItems->size() == numItems) {
+                        plugin->unrefFunction(callbackRef);
+                    }
 
                     PageRef const& page = control->getCurrentPage();
                     Layer* layer = page->getSelectedLayer();

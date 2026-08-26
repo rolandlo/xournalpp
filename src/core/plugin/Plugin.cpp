@@ -374,9 +374,8 @@ auto Plugin::callFunction(const std::string& fnc, const char* s) -> bool {
     return true;
 }
 
-auto Plugin::callFunction(const std::string& fnc, void* ptr) -> bool {
-    lua_getglobal(lua.get(), fnc.c_str());
-
+auto Plugin::callFunction(int callbackRef, void* ptr) -> bool {
+    lua_rawgeti(lua.get(), LUA_REGISTRYINDEX, callbackRef);  // pushes the function from the Lua registry onto the stack
     lua_pushlightuserdata(lua.get(), ptr);
 
     // Run the function
@@ -391,6 +390,7 @@ auto Plugin::callFunction(const std::string& fnc, void* ptr) -> bool {
     return true;
 }
 
+void Plugin::unrefFunction(int callbackRef) { luaL_unref(lua.get(), LUA_REGISTRYINDEX, callbackRef); }
 
 auto Plugin::getName() const -> std::string const& { return name; }
 auto Plugin::getDescription() const -> std::string const& { return description; }

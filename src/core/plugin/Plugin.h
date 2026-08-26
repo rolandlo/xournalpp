@@ -198,7 +198,8 @@ public:
     /// Execute lua function
     auto callFunction(const std::string& fnc, ptrdiff_t mode = std::numeric_limits<ptrdiff_t>::max()) -> bool;
     auto callFunction(const std::string& fnc, const char* s) -> bool;
-    auto callFunction(const std::string& fnc, void* ptr) -> bool;
+    auto callFunction(int callbackRef, void* ptr) -> bool;
+    void unrefFunction(int callbackRef);
 
 private:
     Control* control;                                      ///< The main controller

@@ -390,11 +390,10 @@ function app.addTexts(opts) end
 --- 
 --- Global parameters:
 ---   - texItems table: array of latex-parameter-tables
----   - cb string: Name of the callback function run after a TexImage has been added
+---   - cb function: Callback function run after a TexImage has been added
 --- 
 --- @param opts {textItems:{formula:string, color:integer, x:number, y:number, width:number|nil, height:number|nil}[],
---- cb:string}
---- }
+--- cb:function}
 --- 
 --- Parameters per texImage:
 ---   - formula string: the tex formula (required)
@@ -422,17 +421,10 @@ function app.addTexts(opts) end
 ---       },
 ---   }
 --- 
----   local refs
---- 
----   function cb(ref)
----      table.insert(refs, ref)
----      if #refs == #texItems then
----          app.refreshPage()
----      end
----   end
---- 
----   refs = {}
----   app.addTexImages{texItems=texItems, cb="cb"}
+---   app.addTexImages{
+---       texItems=texItems,
+---       cb=function(ref) print(ref); app.refreshPage() end
+---   }
 function app.addTexImages(opts) end
 
 --- Returns a list of lua table of the texts (from current selection / current layer / current page / all pages).
