@@ -1642,9 +1642,11 @@ static int applib_addTexts(lua_State* L) {
  * Global parameters:
  *   - texItems table: array of TeX-parameter-tables
  *   - cb function: Callback function run after a TexImage has been added
- *
+ *   - allowUndoRedoAction string: Decides how the change gets introduced into the undoRedo action list "individual",
+ * "grouped" or "none"
+
  * @param opts {textItems:{formula:string, color:integer, x:number, y:number, width:number|nil, height:number|nil}[],
- * cb:function}
+ * cb:function, allowUndoRedoAction:string}
  *
  * Parameters per texImage:
  *   - formula string: the tex formula (required)
@@ -1695,6 +1697,7 @@ static int applib_addTexImages(lua_State* L) {
     Control* control = plugin->getControl();
     PageRef const& page = control->getCurrentPage();
     Layer* layer = page->getSelectedLayer();
+    UndoRedoHandler* undo = control->getUndoRedoHandler();
 
     // get default color
     ToolHandler* toolHandler = control->getToolHandler();
@@ -1709,6 +1712,15 @@ static int applib_addTexImages(lua_State* L) {
     lua_getfield(L, 1, "cb");
     int callbackRef =
             luaL_ref(L, LUA_REGISTRYINDEX);  // stores the function in the Lua registry and pops it from the stack
+
+    // Check how the user wants to handle undoing
+    lua_getfield(L, 1, "allowUndoRedoAction");
+    std::string allowUndoRedoAction = luaL_optstring(L, -1, "grouped");
+    if (allowUndoRedoAction != "grouped" && allowUndoRedoAction != "individual" && allowUndoRedoAction != "none") {
+        return luaL_error(L, "Unrecognized undo/redo option: %s", allowUndoRedoAction.c_str());
+    }
+    lua_pop(L, 1);
+
 
     lua_getfield(L, 1, "texItems");
     if (!lua_istable(L, -1)) {
@@ -1784,11 +1796,15 @@ static int applib_addTexImages(lua_State* L) {
 
         LatexController::renderTexImage(
                 control, formula, col,
-                [control, layer, texItems, index, numItems, plugin, callbackRef, x, y, width, height](CallbackArg arg) {
+                [control, page, layer, undo, texItems, index, numItems, plugin, callbackRef, x, y, allowUndoRedoAction,
+                 width, height](CallbackArg arg) {
                     if (std::holds_alternative<std::string>(arg)) {
                         std::string msg = std::get<std::string>(arg);
                         if (msg.empty()) {
                             msg = "TexItem could not be added";
+                        }
+                        if (allowUndoRedoAction == "grouped" && index == numItems) {
+                            undo->addUndoAction(std::make_unique<InsertsUndoAction>(page, layer, *texItems.get()));
                         }
                         plugin->callFunction(callbackRef, msg, index);
                         return;
@@ -1812,17 +1828,17 @@ static int applib_addTexImages(lua_State* L) {
                     auto* texImagePtr = texImage.get();
                     texItems->push_back(texImagePtr);
                     layer->addElement(std::move(texImage));
+                    if (allowUndoRedoAction == "individual") {
+                        undo->addUndoAction(std::make_unique<InsertUndoAction>(page, layer, texImagePtr));
+                    } else if (allowUndoRedoAction == "grouped" && index == numItems) {
+                        undo->addUndoAction(std::make_unique<InsertsUndoAction>(page, layer, *texItems.get()));
+                    }
 
                     plugin->callFunction(callbackRef, texImagePtr, index);
 
                     if (texItems->size() == numItems) {
                         plugin->unrefFunction(callbackRef);
                     }
-
-                    PageRef const& page = control->getCurrentPage();
-                    Layer* layer = page->getSelectedLayer();
-                    UndoRedoHandler* undo = control->getUndoRedoHandler();
-                    undo->addUndoAction(std::make_unique<InsertUndoAction>(page, layer, texImagePtr));
                 },
                 &errorMessage);
 

@@ -391,9 +391,11 @@ function app.addTexts(opts) end
 --- Global parameters:
 ---   - texItems table: array of TeX-parameter-tables
 ---   - cb function: Callback function run after a TexImage has been added
+---   - allowUndoRedoAction string: Decides how the change gets introduced into the undoRedo action list "individual",
+--- "grouped" or "none"
 --- 
 --- @param opts {textItems:{formula:string, color:integer, x:number, y:number, width:number|nil, height:number|nil}[],
---- cb:function}
+--- cb:function, allowUndoRedoAction:string}
 --- 
 --- Parameters per texImage:
 ---   - formula string: the tex formula (required)
