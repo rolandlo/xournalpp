@@ -1710,6 +1710,9 @@ static int applib_addTexImages(lua_State* L) {
     luaL_checktype(L, 1, LUA_TTABLE);
 
     lua_getfield(L, 1, "cb");
+    if (!lua_isfunction(L, -1)) {
+        return luaL_error(L, "Missing callback function!/'cb' must be a function!");
+    }
     int callbackRef =
             luaL_ref(L, LUA_REGISTRYINDEX);  // stores the function in the Lua registry and pops it from the stack
 
@@ -1827,7 +1830,10 @@ static int applib_addTexImages(lua_State* L) {
                     }
                     auto* texImagePtr = texImage.get();
                     texItems->push_back(texImagePtr);
-                    layer->addElement(std::move(texImage));
+                    {
+                        std::lock_guard lock(*control->getDocument());
+                        layer->addElement(std::move(texImage));
+                    }
                     if (allowUndoRedoAction == "individual") {
                         undo->addUndoAction(std::make_unique<InsertUndoAction>(page, layer, texImagePtr));
                     } else if (allowUndoRedoAction == "grouped" && index == numItems) {

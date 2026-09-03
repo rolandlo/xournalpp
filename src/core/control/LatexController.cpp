@@ -154,10 +154,8 @@ void LatexController::onPdfRenderComplete(GObject* procObj, GAsyncResult* res, L
     bool procExited = false;
     GSubprocess* proc = G_SUBPROCESS(procObj);
 
-    std::unique_ptr<LatexController> guard(self);
-    if (!self->callback) {
-        guard.release();  // don't delete the LatexController on exit
-    }
+    // When called from a plugin, this function owns *self and will destroy it upon return
+    std::unique_ptr<LatexController> guard(self->callback ? self : nullptr);
 
     // Extract the process' output and store it.
     {
@@ -408,11 +406,6 @@ void LatexController::renderTexImage(Control* ctrl, std::string latex, Color col
 
     auto* proc = std::get<GSubprocess*>(result);
 
-    // Render the TeX and capture the process' output.
-    char* stdinBuff = nullptr;  // No stdin
-
-    LatexController* self_ptr = self.release();
-
-    g_subprocess_communicate_utf8_async(proc, stdinBuff, nullptr,
-                                        reinterpret_cast<GAsyncReadyCallback>(onPdfRenderComplete), self_ptr);
+    // Render the TeX and capture the process' output. The callback takes ownship of *self
+    g_subprocess_communicate_utf8_async(proc, nullptr, nullptr, xoj::util::wrap_v<onPdfRenderComplete>, self.release());
 }
